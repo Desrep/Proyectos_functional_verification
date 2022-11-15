@@ -6,7 +6,9 @@
 *.vcd
 *.vpd
 *.log
-
+*.tcl
+*.key
+*.old
 #run directories
 /DVEfiles
 /urgReport
