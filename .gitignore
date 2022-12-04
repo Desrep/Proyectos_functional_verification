@@ -16,7 +16,7 @@
 /p2/simv.daidir
 /p2/simv
 /p2/csrc
-/p3/uvm
+#/p3/uvm
 /p3/DVEfiles
 /p3/urgReport
 /p3/simv.vdb
@@ -114,10 +114,10 @@ wlf*
 *.out
 
 # ND proj files
-*.uvm_ref/nd/Proj/Data/
-*.uvm_ref/nd/Proj/Languages.txt
-*.uvm_ref/nd/Proj/LastCrash.txt
-*.uvm_ref/nd/Proj/Menu_Backup.txt
-*.uvm_ref/nd/Proj/Menu_save.txt
-*.uvm_ref/nd/Proj/Topics.txt
-
+/p3/uvm/uvm/uvm_ref/nd/Proj/Data/
+/p3/uvm/uvm/uvm_ref/nd/Proj/Languages.txt
+/p3/uvm/uvm/uvm_ref/nd/Proj/LastCrash.txt
+/p3/uvm/uvm/uvm_ref/nd/Proj/Menu_Backup.txt
+/p3/uvm/uvm/uvm_ref/nd/Proj/Menu_save.txt
+/p3/uvm/uvm/uvm_ref/nd/Proj/Topics.txt
+/p3/uvm/uvm/uvm_ref/nd/Images
