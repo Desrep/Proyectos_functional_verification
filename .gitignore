@@ -10,12 +10,20 @@
 *.key
 *.old
 #run directories
-/DVEfiles
-/urgReport
-/simv.vdb
-/simv.daidir
-simv
-/csrc
+/p2/DVEfiles
+/p2/urgReport
+/p2/simv.vdb
+/p2/simv.daidir
+/p2/simv
+/p2/csrc
+/p3/uvm
+/p3/DVEfiles
+/p3/urgReport
+/p3/simv.vdb
+/p3/simv.daidir
+/p3/simv
+/p3/csrc
+
 
 # Compiled Object files
 *.slo
@@ -49,17 +57,67 @@ simv
 *.app
 
 # CMake Stuff
-CMakeLists.txt.user
-CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
-Makefile
-cmake_install.cmake
-install_manifest.txt
-compile_commands.json
-CTestTestfile.cmake
-_deps
-build/*
-.cache/*
-.vscode/
+*.CMakeLists.txt.user
+*.CMakeCache.txt
+*.CMakeFiles
+*.CMakeScripts
+*.Testing
+*.Makefile
+*.cmake_install.cmake
+*.install_manifest.txt
+*.compile_commands.json
+*.CTestTestfile.cmake
+*._deps
+*.build/*
+*.cache/*
+*.vscode/
+*~
+core.*
+*.[oa]
+*.patch
+*.orig
+*.tar.gz
+*.diff
+
+
+# ius results are not for the vc
+*.irun.log
+*.INCA_libs
+*.simvision
+*.irun.key
+
+# created by flow
+*.fails
+*.qa
+
+# vcs results are not for the vc
+*.csrc
+*.simv*
+*.vc_hdrs.h
+*.ucli.key
+*.err
+
+# editor tmp / save files
+*.orig
+*.swp
+*.swo
+
+# questa results are not for the vc
+vsim.wlf
+wlf*
+*.questa.tops
+*.questa.fails*
+*.work
+*.vstf
+*.log
+*.transcript
+*.out
+
+# ND proj files
+*.uvm_ref/nd/Proj/Data/
+*.uvm_ref/nd/Proj/Languages.txt
+*.uvm_ref/nd/Proj/LastCrash.txt
+*.uvm_ref/nd/Proj/Menu_Backup.txt
+*.uvm_ref/nd/Proj/Menu_save.txt
+*.uvm_ref/nd/Proj/Topics.txt
+
