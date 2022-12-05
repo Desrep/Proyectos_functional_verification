@@ -1,22 +1,22 @@
-class mem_monitor_decode extends uvm_monitor;
+class sdr_monitor_decode extends uvm_monitor;
 
   //---------------------------------------
   //Interface
   //---------------------------------------
-  virtual mem_if vif;
+  virtual sdr_if vif;
 
   //---------------------------------------
   // analysis port, to send the transaction to scoreboard
   //---------------------------------------
-  uvm_analysis_port #(mem_seq_item) item_collected_port;
+  uvm_analysis_port #(sdr_seq_item) item_collected_port;
   
   //---------------------------------------
   // The following property holds the transaction information currently
   // begin captured (by the collect_address_phase and data_phase methods).
   //---------------------------------------
-  mem_seq_item trans_collected;
+  sdr_seq_item trans_collected;
 
-  `uvm_component_utils(mem_monitor_decode)
+  `uvm_component_utils(sdr_monitor_decode)
 
   //---------------------------------------
   // new - constructor
@@ -32,7 +32,7 @@ class mem_monitor_decode extends uvm_monitor;
   //---------------------------------------
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    if(!uvm_config_db#(virtual mem_if)::get(this, "", "vif", vif))
+    if(!uvm_config_db#(virtual sdr_if)::get(this, "", "vif", vif))
        `uvm_fatal("NOVIF",{"virtual interface must be set for: ",get_full_name(),".vif"});
   endfunction: build_phase
   
@@ -61,4 +61,4 @@ class mem_monitor_decode extends uvm_monitor;
       end 
   endtask : run_phase
 
-endclass : mem_monitor_decode
+endclass : sdr_monitor_decode

@@ -350,7 +350,7 @@ module mt48lc4m32b2
             DQ0_zd } = DQ_zd;
 
     parameter UserPreload   = 1'b1;
-    parameter mem_file_name = "none";  //"mt48lc4m32b2.mem";
+    parameter sdr_file_name = "none";  //"mt48lc4m32b2.mem";
     parameter TimingModel   = "DefaultTimingModel";
     parameter PartID        = "mt48lc4m32b2";
     parameter hi_bank       = 3;
@@ -1025,8 +1025,8 @@ module mt48lc4m32b2
         //   @bbbbbb - <bbbbbb> stands for address within memory,
         //   dd      - <dd> is word to be written at Mem(bbbbbb++)
         //              (bbbbbb is incremented at every load)
-        if (UserPreload && !(mem_file_name == "none"))
-            $readmemh(mem_file_name,Mem);
+        if (UserPreload && !(sdr_file_name == "none"))
+            $readmemh(sdr_file_name,Mem);
     end
 
     //Power Up time 100 us;

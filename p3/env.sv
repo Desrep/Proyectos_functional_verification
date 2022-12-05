@@ -1,21 +1,21 @@
 //-------------------------------------------------------------------------
-//						mem_env - www.verificationguide.com
+//						sdr_env - www.verificationguide.com
 //-------------------------------------------------------------------------
 
 
 
-class mem_model_env extends uvm_env;
+class sdr_model_env extends uvm_env;
   
   //---------------------------------------
   // agent and scoreboard instance
   //---------------------------------------
-  mem_agent      mem_agnt; //datos
-  mem_agent_passive mem_agntp; //fila
-  mem_agent_passive_col mem_agntpc;//columna
-  mem_scoreboard mem_scb;
+  sdr_agent      sdr_agnt; //datos
+  sdr_agent_passive sdr_agntp; //fila
+  sdr_agent_passive_col sdr_agntpc;//columna
+  sdr_scoreboard sdr_scb;
   
   
-  `uvm_component_utils(mem_model_env)
+  `uvm_component_utils(sdr_model_env)
   
   //--------------------------------------- 
   // constructor
@@ -30,13 +30,13 @@ class mem_model_env extends uvm_env;
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     
-    mem_agnt = mem_agent::type_id::create("mem_agnt", this);
-    mem_agntp = mem_agent_passive::type_id::create("mem_agntp", this);
-    mem_agntpc = mem_agent_passive_col::type_id::create("mem_agntpc", this);
-    mem_scb  = mem_scoreboard::type_id::create("mem_scb", this);
+    sdr_agnt = sdr_agent::type_id::create("sdr_agnt", this);
+    sdr_agntp = sdr_agent_passive::type_id::create("sdr_agntp", this);
+    sdr_agntpc = sdr_agent_passive_col::type_id::create("sdr_agntpc", this);
+    sdr_scb  = sdr_scoreboard::type_id::create("sdr_scb", this);
     
-    uvm_config_db#(uvm_active_passive_enum)::set(this, "mem_agntp", "is_active", UVM_PASSIVE);
-    uvm_config_db#(uvm_active_passive_enum)::set(this, "mem_agntpc", "is_active", UVM_PASSIVE);
+    uvm_config_db#(uvm_active_passive_enum)::set(this, "sdr_agntp", "is_active", UVM_PASSIVE);
+    uvm_config_db#(uvm_active_passive_enum)::set(this, "sdr_agntpc", "is_active", UVM_PASSIVE);
     
   endfunction : build_phase
   
@@ -44,9 +44,9 @@ class mem_model_env extends uvm_env;
   // connect_phase - connecting monitor and scoreboard port
   //---------------------------------------
   function void connect_phase(uvm_phase phase);
-    mem_agnt.monitor.item_collected_port.connect(mem_scb.item_collected_export_data);
-    mem_agntp.monitor.item_collected_port.connect(mem_scb.item_collected_export_decode);
-    mem_agntpc.monitor.item_collected_port.connect(mem_scb.item_collected_export_decode_col);
+    sdr_agnt.monitor.item_collected_port.connect(sdr_scb.item_collected_export_data);
+    sdr_agntp.monitor.item_collected_port.connect(sdr_scb.item_collected_export_decode);
+    sdr_agntpc.monitor.item_collected_port.connect(sdr_scb.item_collected_export_decode_col);
   endfunction : connect_phase
 
-endclass : mem_model_env
+endclass : sdr_model_env

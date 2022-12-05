@@ -1,8 +1,8 @@
 //-------------------------------------------------------------------------
-//						mem_interface - www.verificationguide.com
+//						sdr_interface - www.verificationguide.com
 //-------------------------------------------------------------------------
 import uvm_pkg::*;
-interface mem_if(input logic clk, sdram_clk);
+interface sdr_if(input logic clk, sdram_clk);
   
   
   	`timescale 1ns/1ps

@@ -1,7 +1,7 @@
-class sr_coverage extends uvm_subscriber #(mem_seq_item);
+class sr_coverage extends uvm_subscriber #(sdr_seq_item);
 
   //----------------------------------------------------------------------------
-  virtual mem_if vif;
+  virtual sdr_if vif;
   `uvm_component_utils(sr_coverage)
   //----------------------------------------------------------------------------
 
@@ -26,7 +26,7 @@ class sr_coverage extends uvm_subscriber #(mem_seq_item);
   //----------------------------------------------------------------------------
 
   //----------------------------------------------------------------------------
-  mem_seq_item req;
+  sdr_seq_item req;
   real cov0;
   real  cov1;
   real  cov2;
@@ -250,7 +250,7 @@ endgroup:dut_cov8;
   //----------------------------------------------------------------------------
 
   //---------------------  write method ----------------------------------------
-  function void write(mem_seq_item t);
+  function void write(sdr_seq_item t);
     req=t;
     //dut_cov.sample();
   endfunction

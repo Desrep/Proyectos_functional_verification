@@ -1,10 +1,10 @@
 //-------------------------------------------------------------------------
-//						mem_sequencer - www.verificationguide.com
+//						sdr_sequencer - www.verificationguide.com
 //-------------------------------------------------------------------------
 
-class mem_sequencer extends uvm_sequencer#(mem_seq_item);
+class sdr_sequencer extends uvm_sequencer#(sdr_seq_item);
 
-  `uvm_component_utils(mem_sequencer) 
+  `uvm_component_utils(sdr_sequencer) 
 
   //---------------------------------------
   //constructor

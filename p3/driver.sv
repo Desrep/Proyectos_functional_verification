@@ -1,12 +1,12 @@
 
 
-class mem_driver extends uvm_driver #(mem_seq_item);
+class sdr_driver extends uvm_driver #(sdr_seq_item);
 
   //--------------------------------------- 
   // Interface
   //--------------------------------------- 
-  virtual mem_if vif;
-  `uvm_component_utils(mem_driver)
+  virtual sdr_if vif;
+  `uvm_component_utils(sdr_driver)
     
   //--------------------------------------- 
   // Constructor
@@ -20,7 +20,7 @@ class mem_driver extends uvm_driver #(mem_seq_item);
   //---------------------------------------
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-     if(!uvm_config_db#(virtual mem_if)::get(this, "", "vif", vif))
+     if(!uvm_config_db#(virtual sdr_if)::get(this, "", "vif", vif))
        `uvm_fatal("NO_VIF",{"virtual interface must be set for: ",get_full_name(),".vif"});
   endfunction: build_phase
 
@@ -30,7 +30,7 @@ class mem_driver extends uvm_driver #(mem_seq_item);
   virtual task run_phase(uvm_phase phase);
     //sdrm_init();
     //sdrm_reset();
-    mem_seq_item req;
+    sdr_seq_item req;
     forever begin
       seq_item_port.get_next_item(req);
       write_read_sdrm(req);
@@ -45,7 +45,7 @@ class mem_driver extends uvm_driver #(mem_seq_item);
   //---------------------------------------
 
   
-    virtual task write_read_sdrm(mem_seq_item req);
+    virtual task write_read_sdrm(sdr_seq_item req);
       int wait_count = 0;
       if(req.wr_en&&req.rd_en)
         begin
@@ -169,4 +169,4 @@ class mem_driver extends uvm_driver #(mem_seq_item);
    wait(vif.sdr_init_done == 1); 
   endtask
   
-endclass : mem_driver
+endclass : sdr_driver

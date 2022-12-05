@@ -11,7 +11,7 @@ module duv_top();
 	always #(P_SYS/2) sys_clk = !sys_clk;
 	always #(P_SDR/2) sdram_clk = !sdram_clk;
 	// Interface
-	mem_if intf(sys_clk,sdram_clk);
+	sdr_if intf(sys_clk,sdram_clk);
 	// to fix the sdram interface timing issue
   
   
@@ -123,7 +123,7 @@ initial begin
   $dumpfile("dump.vcd"); 
   $dumpvars;
 
-  uvm_config_db#(virtual mem_if)::set(uvm_root::get(),"*","vif",intf);
+  uvm_config_db#(virtual sdr_if)::set(uvm_root::get(),"*","vif",intf);
    #10000
    $dumpoff;
 end  

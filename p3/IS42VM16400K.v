@@ -26,7 +26,7 @@
     parameter no_of_data =      16;
     parameter no_of_col  =       8;
     parameter no_of_dqm  =       2;
-    parameter mem_sizes  = 1048575;
+    parameter sdr_sizes  = 1048575;
 
 
     // Timing Parameters for -50 PC200 
@@ -104,10 +104,10 @@
 
 `protect
 
-    reg       [no_of_data - 1 : 0] bank0 [0 : mem_sizes];
-    reg       [no_of_data - 1 : 0] bank1 [0 : mem_sizes];
-    reg       [no_of_data - 1 : 0] bank2 [0 : mem_sizes];
-    reg       [no_of_data - 1 : 0] bank3 [0 : mem_sizes];
+    reg       [no_of_data - 1 : 0] bank0 [0 : sdr_sizes];
+    reg       [no_of_data - 1 : 0] bank1 [0 : sdr_sizes];
+    reg       [no_of_data - 1 : 0] bank2 [0 : sdr_sizes];
+    reg       [no_of_data - 1 : 0] bank3 [0 : sdr_sizes];
 
     reg       [no_of_bank - 1 : 0] bank_addr [0 : 3];                 // bank address Pipeline
     reg       [no_of_col - 1 : 0] Col_addr [0 : 3];                 // Column address Pipeline
@@ -226,7 +226,7 @@
     real  SELF_chk, DPDN_chk ;
 
     initial begin
-	mem_init;
+	sdr_init;
         dq_reg = {no_of_data{1'bz}};
         Data_in_enable = 0; Data_out_enable = 0;
         Act_b0 = 1; Act_b1 = 1; Act_b2 = 1; Act_b3 = 1; 
@@ -1354,7 +1354,7 @@
 	    dpdn_check_start = 1'b1;
             Act_b0 = 0; Act_b1 = 0; Act_b2 = 0; Act_b3 = 0;
             Pc_b0 = 1; Pc_b1 = 1; Pc_b2 = 1; Pc_b3 = 1;
-	    mem_init;
+	    sdr_init;
             if (Debug) $display ("Time = %t : OPERATION = DPDN  : Deep Powerdown", $realtime);
 
             // Precharge to Auto Refresh
@@ -1608,7 +1608,7 @@
         end
     endtask
 
-    task mem_init;
+    task sdr_init;
 	begin
 	  for (ccc=0;ccc<'b1000_0000_0000_0000_0000;ccc=ccc+1)
 	  begin

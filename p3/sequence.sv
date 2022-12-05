@@ -3,7 +3,7 @@
 //=========================================================================
 // write_sequence - "write" one value
 //=========================================================================
-class write_sequence extends uvm_sequence#(mem_seq_item);
+class write_sequence extends uvm_sequence#(sdr_seq_item);
   
   `uvm_object_utils(write_sequence)
    
@@ -25,7 +25,7 @@ endclass
 //=========================================================================
 // read_sequence - "Read" one value
 //=========================================================================
-class read_sequence extends uvm_sequence#(mem_seq_item);
+class read_sequence extends uvm_sequence#(sdr_seq_item);
   
   `uvm_object_utils(read_sequence)
    
@@ -47,11 +47,11 @@ endclass
 //=========================================================================
 // write_read_sequence - "write" followed by "read" 
 //=========================================================================
-class write_read_sequence extends uvm_sequence#(mem_seq_item);
+class write_read_sequence extends uvm_sequence#(sdr_seq_item);
    
    
   `uvm_object_utils(write_read_sequence)
-  `uvm_declare_p_sequencer(mem_sequencer)
+  `uvm_declare_p_sequencer(sdr_sequencer)
    
   //--------------------------------------- 
   //Constructor
@@ -62,7 +62,7 @@ class write_read_sequence extends uvm_sequence#(mem_seq_item);
   
   virtual task body();
     for (int i = 0;i<1;i++) begin
-      req = mem_seq_item::type_id::create($sformatf("req%0d",i));
+      req = sdr_seq_item::type_id::create($sformatf("req%0d",i));
       wait_for_grant();
       //start_item(req);
     req.randomize();

@@ -1,16 +1,16 @@
 
 
 
-class mem_agent extends uvm_agent;
+class sdr_agent extends uvm_agent;
 
   //---------------------------------------
   // component instances
   //---------------------------------------
-  mem_driver    driver;
-  mem_sequencer sequencer;
-  mem_monitor   monitor;
+  sdr_driver    driver;
+  sdr_sequencer sequencer;
+  sdr_monitor   monitor;
   
-  `uvm_component_utils(mem_agent)
+  `uvm_component_utils(sdr_agent)
   
   //---------------------------------------
   // constructor
@@ -25,12 +25,12 @@ class mem_agent extends uvm_agent;
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     
-    monitor = mem_monitor::type_id::create("monitor", this);
+    monitor = sdr_monitor::type_id::create("monitor", this);
 
     //creating driver and sequencer only for ACTIVE agent
     if(get_is_active() == UVM_ACTIVE) begin
-      driver    = mem_driver::type_id::create("driver", this);
-      sequencer = mem_sequencer::type_id::create("sequencer", this);
+      driver    = sdr_driver::type_id::create("driver", this);
+      sequencer = sdr_sequencer::type_id::create("sequencer", this);
     end
   endfunction : build_phase
   
@@ -43,4 +43,4 @@ class mem_agent extends uvm_agent;
     end
   endfunction : connect_phase
 
-endclass : mem_agent
+endclass : sdr_agent

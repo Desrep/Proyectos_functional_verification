@@ -46,7 +46,7 @@ module mt48lc8m8a2 (Dq, Addr, Ba, Clk, Cke, Cs_n, Ras_n, Cas_n, We_n, Dqm);
     parameter addr_bits =      12;
     parameter data_bits =      8;
     parameter col_bits  =       9;
-    parameter mem_sizes = 2097151;                                  // 2 Meg
+    parameter sdr_sizes = 2097151;                                  // 2 Meg
 
     inout     [data_bits - 1 : 0] Dq;
     input     [addr_bits - 1 : 0] Addr;
@@ -59,10 +59,10 @@ module mt48lc8m8a2 (Dq, Addr, Ba, Clk, Cke, Cs_n, Ras_n, Cas_n, We_n, Dqm);
     input                         We_n;
     input                 [0 : 0] Dqm;
 
-    reg       [data_bits - 1 : 0] Bank0 [0 : mem_sizes];
-    reg       [data_bits - 1 : 0] Bank1 [0 : mem_sizes];
-    reg       [data_bits - 1 : 0] Bank2 [0 : mem_sizes];
-    reg       [data_bits - 1 : 0] Bank3 [0 : mem_sizes];
+    reg       [data_bits - 1 : 0] Bank0 [0 : sdr_sizes];
+    reg       [data_bits - 1 : 0] Bank1 [0 : sdr_sizes];
+    reg       [data_bits - 1 : 0] Bank2 [0 : sdr_sizes];
+    reg       [data_bits - 1 : 0] Bank3 [0 : sdr_sizes];
 
     reg                   [1 : 0] Bank_addr [0 : 3];                // Bank Address Pipeline
     reg        [col_bits - 1 : 0] Col_addr [0 : 3];                 // Column Address Pipeline

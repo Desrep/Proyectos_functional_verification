@@ -1,22 +1,22 @@
 //-------------------------------------------------------------------------
-//						mem_test - www.verificationguide.com 
+//						sdr_test - www.verificationguide.com 
 //-------------------------------------------------------------------------
 
 
-class mem_model_base_test extends uvm_test;
+class sdr_model_base_test extends uvm_test;
 
-  `uvm_component_utils(mem_model_base_test)
+  `uvm_component_utils(sdr_model_base_test)
   
   //---------------------------------------
   // env instance 
   //--------------------------------------- 
-  mem_model_env env;
+  sdr_model_env env;
 
 
   //---------------------------------------
   // constructor
   //---------------------------------------
-  function new(string name = "mem_model_base_test",uvm_component parent=null);
+  function new(string name = "sdr_model_base_test",uvm_component parent=null);
     super.new(name,parent);
   endfunction : new
 
@@ -27,7 +27,7 @@ class mem_model_base_test extends uvm_test;
     super.build_phase(phase);
 
     // Create the env
-    env = mem_model_env::type_id::create("env", this);
+    env = sdr_model_env::type_id::create("env", this);
     
   endfunction : build_phase
   
@@ -56,4 +56,4 @@ class mem_model_base_test extends uvm_test;
     end
   endfunction 
 
-endclass : mem_model_base_test
+endclass : sdr_model_base_test

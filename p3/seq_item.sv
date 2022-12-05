@@ -1,8 +1,8 @@
 //-------------------------------------------------------------------------
-//						mem_seq_item - www.verificationguide.com 
+//						sdr_seq_item - www.verificationguide.com 
 //-------------------------------------------------------------------------
 
-class mem_seq_item extends uvm_sequence_item;
+class sdr_seq_item extends uvm_sequence_item;
   //---------------------------------------
   //data and control fields
   //---------------------------------------
@@ -22,7 +22,7 @@ class mem_seq_item extends uvm_sequence_item;
   //---------------------------------------
   //Utility and Field macros
   //---------------------------------------
-  `uvm_object_utils_begin(mem_seq_item)
+  `uvm_object_utils_begin(sdr_seq_item)
     `uvm_field_int(addr,UVM_ALL_ON)
     //`uvm_field_int(wr_en,UVM_ALL_ON)
     //`uvm_field_int(rd_en,UVM_ALL_ON)
@@ -33,7 +33,7 @@ class mem_seq_item extends uvm_sequence_item;
   //---------------------------------------
   //Constructor
   //---------------------------------------
-  function new(string name = "mem_seq_item");
+  function new(string name = "sdr_seq_item");
     super.new(name);
     wr_en = 1;
     rd_en = 1;
