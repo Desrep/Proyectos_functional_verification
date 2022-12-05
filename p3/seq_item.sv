@@ -57,17 +57,54 @@ class sdr_seq_item extends uvm_sequence_item;
   function new(string name = "sdr_seq_item");
     super.new(name);
   endfunction
+
   
- constraint c1 {  cfg_req_depth != 0; }
+  constraint c1 {  cfg_req_depth == 3; }
  constraint c2 {  cfg_sdr_mode_reg != 0; }
- constraint c3 {  cfg_sdr_tras_d != 0; }
- constraint c4 {  cfg_sdr_trp_d != 0; }
- constraint c5 {  cfg_sdr_trcd_d != 0; }
- constraint c6 {  cfg_sdr_cas != 0; }
- constraint c7 {  cfg_sdr_trcar_d != 0; }
- constraint c8 {  cfg_sdr_twr_d != 0; }
- constraint c9 {  cfg_sdr_rfsh != 0; cfg_sdr_rfsh < 12'hC35;}
- constraint c10 {  cfg_sdr_rfmax != 0; }
- constraint c11 {  cfg_sdr_mode_reg == 13'h033; }
+ constraint c3 {  cfg_sdr_tras_d >= 4 ; }
+ constraint c4 {  cfg_sdr_trp_d  >= 2 ; }
+ constraint c5 {  cfg_sdr_trcd_d >= 2 ; }
+ constraint c6 {  cfg_sdr_cas == 3; }
+ constraint c7 {  cfg_sdr_trcar_d == 7;}
+ constraint c8 {  cfg_sdr_twr_d >=  1;}
+ constraint c9 {  cfg_sdr_rfsh == 12'h100;}
+ constraint c10 {  cfg_sdr_rfmax == 6;}
+ constraint c11 {  cfg_sdr_mode_reg == 12'h033; }
+ constraint c12 { cfg_sdr_en == 1;}
+
+  
+  /*
+constraint c1 {  cfg_req_depth == 3; }
+ constraint c2 {  cfg_sdr_mode_reg != 0; }
+ constraint c3 {  cfg_sdr_tras_d == 4 ; }
+ constraint c4 {  cfg_sdr_trp_d  == 2 ; }
+ constraint c5 {  cfg_sdr_trcd_d == 2 ; }
+ constraint c6 {  cfg_sdr_cas == 2; }
+ constraint c7 {  cfg_sdr_trcar_d == 7;}
+ constraint c8 {  cfg_sdr_twr_d ==  1;}
+ constraint c9 {  cfg_sdr_rfsh == 12'h100;}
+ constraint c10 {  cfg_sdr_rfmax == 6;}
+ constraint c11 {  cfg_sdr_mode_reg == 12'h033; }
+ constraint c12 { cfg_sdr_en == 1;}
+
+
+constraint c1 {  cfg_req_depth > 2; }
+ constraint c2 {  cfg_sdr_mode_reg != 0; }
+ constraint c3 {  cfg_sdr_tras_d >2 ; }
+ constraint c4 {  cfg_sdr_trp_d >1 ; }
+ constraint c5 {  cfg_sdr_trcd_d >1 ; }
+ constraint c6 {  cfg_sdr_cas > 2; }
+ constraint c7 {  cfg_sdr_trcar_d > 6;}
+ constraint c8 {  cfg_sdr_twr_d > 0;}
+ constraint c9 {  cfg_sdr_rfsh >= 12'h100; cfg_sdr_rfsh < 12'hC35;}
+ constraint c10 {  cfg_sdr_rfmax != 0;}
+ constraint c11 {  cfg_sdr_mode_reg inside {[12'h000:12'h033]}; }
+ constraint c12 { cfg_sdr_en inside {0,1};}
+
+
+
+
+
+*/
   
 endclass

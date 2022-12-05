@@ -41,7 +41,12 @@ class read_sequence extends uvm_sequence#(sdr_seq_item);
     `uvm_do_with(req,{req.wr_en==0;req.rd_en==1;})
     
   endtask
+
+
+
 endclass
+
+
 
 
 //=========================================================================

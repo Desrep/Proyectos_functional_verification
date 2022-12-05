@@ -60,17 +60,17 @@ module duv_top();
 
     /* Parameters */
           .sdr_init_done      (intf.sdr_init_done),
-          .cfg_req_depth      (2'h3               ),	        //how many req. buffer should hold
-          .cfg_sdr_en         (1'b1               ),
-          .cfg_sdr_mode_reg   (13'h033            ),
-          .cfg_sdr_tras_d     (4'h4               ),
-          .cfg_sdr_trp_d      (4'h2               ),
-          .cfg_sdr_trcd_d     (4'h2               ),
-          .cfg_sdr_cas        (3'h3               ),
-          .cfg_sdr_trcar_d    (4'h7               ),
-          .cfg_sdr_twr_d      (4'h1               ),
-          .cfg_sdr_rfsh       (12'h100            ), // reduced from 12'hC35
-          .cfg_sdr_rfmax      (3'h6               )
+          .cfg_req_depth      (intf.cfg_req_depth),	        //how many req. buffer should hold
+          .cfg_sdr_en         (intf.cfg_sdr_en  ),
+          .cfg_sdr_mode_reg   (intf.cfg_sdr_mode_reg ),
+          .cfg_sdr_tras_d     (intf.cfg_sdr_tras_d ),
+          .cfg_sdr_trp_d      (intf.cfg_sdr_trp_d  ),
+          .cfg_sdr_trcd_d     (intf.cfg_sdr_trcd_d ),
+          .cfg_sdr_cas        (intf.cfg_sdr_cas),
+          .cfg_sdr_trcar_d    (intf.cfg_sdr_trcar_d),
+          .cfg_sdr_twr_d      (intf.cfg_sdr_twr_d ),
+          .cfg_sdr_rfsh       (intf.cfg_sdr_rfsh), // reduced from 12'hC35
+          .cfg_sdr_rfmax      (intf.cfg_sdr_rfmax  )
 );
 
 
@@ -124,8 +124,6 @@ initial begin
   $dumpvars;
 
   uvm_config_db#(virtual sdr_if)::set(uvm_root::get(),"*","vif",intf);
-   #10000
-   $dumpoff;
 end  
       
 endmodule

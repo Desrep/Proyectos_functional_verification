@@ -42,7 +42,22 @@ interface sdr_if(input logic clk, sdram_clk);
 	wire            sdr_we_n 		   ;  
     wire #(2.0) sdram_clk_d   = sdram_clk;
     wire sys_clk = clk;
-  
+        
+          logic  [1:0]  cfg_req_depth; // configuration signals
+          logic       cfg_sdr_en;
+         logic [12:0] cfg_sdr_mode_reg;
+         logic [3:0]  cfg_sdr_tras_d;
+         logic  [3:0]  cfg_sdr_trp_d;
+         logic  [3:0]  cfg_sdr_trcd_d;
+         logic [2:0]  cfg_sdr_cas;
+         logic [3:0]  cfg_sdr_trcar_d;
+         logic [3:0]  cfg_sdr_twr_d;
+        logic [11:0] cfg_sdr_rfsh;
+        logic  [2:0] cfg_sdr_rfmax;
+
+
+
+        
   //---------------------------------------
   //declaring the signals
   //---------------------------------------

@@ -28,9 +28,6 @@ class sdr_driver extends uvm_driver #(sdr_seq_item);
   // run phase
   //---------------------------------------  
   virtual task run_phase(uvm_phase phase);
-    //sdrm_init();
-    //sdrm_reset();
-    sdr_seq_item req;
     forever begin
       seq_item_port.get_next_item(req);
       write_read_sdrm(req);
@@ -157,6 +154,21 @@ class sdr_driver extends uvm_driver #(sdr_seq_item);
    	vif.wb_cyc_i  = 0;
     
    	#100;  
+  endtask
+
+  virtual task config_reg(sdr_seq_item req);
+	vif.cfg_req_depth = req.cfg_req_depth;
+	vif.cfg_sdr_en = req.cfg_sdr_en;
+        vif.cfg_sdr_mode_reg = req.cfg_sdr_mode_reg;
+	vif.cfg_sdr_tras_d = req.cfg_sdr_tras_d ;
+	vif.cfg_sdr_trp_d = req.cfg_sdr_trp_d;
+	vif.cfg_sdr_trcd_d = req.cfg_sdr_trcd_d;
+	vif.cfg_sdr_cas= req.cfg_sdr_cas;
+	vif.cfg_sdr_trcar_d= req.cfg_sdr_trcar_d;
+	vif.cfg_sdr_twr_d = req.cfg_sdr_twr_d;
+	vif.cfg_sdr_rfsh = req.cfg_sdr_rfsh;
+	vif.cfg_sdr_rfmax = req.cfg_sdr_rfmax ;
+        #10;
   endtask
   
    virtual task sdrm_reset();  // Reset method
