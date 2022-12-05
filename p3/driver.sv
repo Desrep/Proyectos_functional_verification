@@ -168,6 +168,7 @@ class sdr_driver extends uvm_driver #(sdr_seq_item);
 	vif.cfg_sdr_twr_d = req.cfg_sdr_twr_d;
 	vif.cfg_sdr_rfsh = req.cfg_sdr_rfsh;
 	vif.cfg_sdr_rfmax = req.cfg_sdr_rfmax ;
+	vif.cfg_colbits = req.cfg_colbits;
         #10;
   endtask
   

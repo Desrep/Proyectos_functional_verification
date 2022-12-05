@@ -29,6 +29,7 @@ class sdr_seq_item extends uvm_sequence_item;
   rand bit [3:0]  cfg_sdr_twr_d;  
   rand bit [11:0] cfg_sdr_rfsh;
   rand bit [2:0] cfg_sdr_rfmax;
+  rand bit [1:0] cfg_colbits;
  
   //---------------------------------------
   //Utility and Field macros
@@ -49,6 +50,7 @@ class sdr_seq_item extends uvm_sequence_item;
      `uvm_field_int(cfg_sdr_twr_d,UVM_ALL_ON)
      `uvm_field_int(cfg_sdr_rfsh,UVM_ALL_ON)
      `uvm_field_int(cfg_sdr_rfmax,UVM_ALL_ON)
+     `uvm_field_int(cfg_colbits,UVM_ALL_ON)
   `uvm_object_utils_end
   
   //---------------------------------------
@@ -59,19 +61,19 @@ class sdr_seq_item extends uvm_sequence_item;
   endfunction
 
   
-  constraint c1 {  cfg_req_depth == 3; }
+  constraint c1 {  cfg_req_depth >= 1; }
  constraint c2 {  cfg_sdr_mode_reg != 0; }
- constraint c3 {  cfg_sdr_tras_d >= 2 ; }
- constraint c4 {  cfg_sdr_trp_d  >= 2 ; }
- constraint c5 {  cfg_sdr_trcd_d >= 2 ; }
+ constraint c3 {  cfg_sdr_tras_d >= 1 ; }
+ constraint c4 {  cfg_sdr_trp_d  >= 1 ; }
+ constraint c5 {  cfg_sdr_trcd_d >= 1 ; }
  constraint c6 {  cfg_sdr_cas == cfg_sdr_mode_reg[5:4]; }
- constraint c7 {  cfg_sdr_trcar_d > 5;}
+ constraint c7 {  cfg_sdr_trcar_d >= 1;}
  constraint c8 {  cfg_sdr_twr_d >=  1;}
  constraint c9 {  cfg_sdr_rfsh >= 12'h100; cfg_sdr_rfsh < 12'hC35 ;}
- constraint c10 {  cfg_sdr_rfmax == 6;}
+ constraint c10 {  cfg_sdr_rfmax >= 1;}
  constraint c11 {  cfg_sdr_mode_reg[2:0] inside {[0:3]}; cfg_sdr_mode_reg[6:4] inside {2,3}; cfg_sdr_mode_reg[12:10]==0;cfg_sdr_mode_reg[8:7] == 0;}
  constraint c12 { cfg_sdr_en == 1;}
-
+ constraint c13 { cfg_colbits == 0;}
   
   /*
 constraint c1 {  cfg_req_depth == 3; }

@@ -31,7 +31,7 @@ module duv_top();
 	`else 
           .cfg_sdr_width      (2'b10              ), // 8 BIT SDRAM
 	`endif
-          .cfg_colbits        (2'b00), // 8 Bit Column 		Address
+          .cfg_colbits        (intf.cfg_colbits), // 8 Bit Column 		Address
 /* WISH BONE */
      	  .wb_rst_i           (!intf.RESETN            ),
      	  .wb_clk_i           (intf.sys_clk            ),

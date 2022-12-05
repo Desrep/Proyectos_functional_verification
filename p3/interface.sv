@@ -54,7 +54,7 @@ interface sdr_if(input logic clk, sdram_clk);
          logic [3:0]  cfg_sdr_twr_d;
         logic [11:0] cfg_sdr_rfsh;
         logic  [2:0] cfg_sdr_rfmax;
-
+        logic [1:0] cfg_colbits;
 
 
         
