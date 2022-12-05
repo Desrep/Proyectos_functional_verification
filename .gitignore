@@ -23,7 +23,8 @@
 /p3/simv.daidir
 /p3/simv
 /p3/csrc
-
+/p3/simv.cst
+/p3/.inter.vpd.uvm
 
 # Compiled Object files
 *.slo
@@ -121,3 +122,4 @@ wlf*
 /p3/uvm/uvm/uvm_ref/nd/Proj/Menu_save.txt
 /p3/uvm/uvm/uvm_ref/nd/Proj/Topics.txt
 /p3/uvm/uvm/uvm_ref/nd/Images
+p3/*..uvm

@@ -61,15 +61,7 @@ class write_read_sequence extends uvm_sequence#(sdr_seq_item);
   endfunction
   
   virtual task body();
-    for (int i = 0;i<1;i++) begin
-      req = sdr_seq_item::type_id::create($sformatf("req%0d",i));
-      wait_for_grant();
-      //start_item(req);
-    req.randomize();
-      //finish_item(req);
-    send_request(req);
-    wait_for_item_done();
-   end 
+   `uvm_do_with(req,{req.wr_en==1;req.rd_en==1;})
   endtask
 endclass
 //=========================================================================

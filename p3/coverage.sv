@@ -11,10 +11,8 @@ class sr_coverage extends uvm_subscriber #(sdr_seq_item);
     dut_cov0=new();
     dut_cov1 =new();
     dut_cov2 =new();
-    dut_cov3 = new();
     dut_cov4 = new();
     dut_cov5 = new();
-    dut_cov6 = new();
     dut_cov7 = new();
     dut_cov8 = new();
     dut_cov9 = new();
@@ -30,10 +28,8 @@ class sr_coverage extends uvm_subscriber #(sdr_seq_item);
   real cov0;
   real  cov1;
   real  cov2;
-  real  cov3;
   real  cov4;
   real  cov5;
-  real  cov6;
   real  cov7;
   real  cov8;
   real  cov9;
@@ -68,33 +64,7 @@ class sr_coverage extends uvm_subscriber #(sdr_seq_item);
       }
   endgroup:dut_cov2;
   
-  covergroup dut_cov3 @(posedge vif.sys_clk); // WB transitions for 1 bit signals
-   cyc_transitions: coverpoint vif.wb_cyc_i {
-     bins neg = (1=>0);
-     bins pos = (0=>1);
-   }
-   stb_transitions: coverpoint vif.wb_stb_i {
-     bins neg = (1=>0);
-     bins pos = (0 =>1);
-   }
    
- we_transitions: coverpoint vif.wb_we_i {
-     bins neg = (1=>0);
-     bins pos = (0=>1);
-   }
- 
- ack_transitions: coverpoint vif.wb_ack_o {
-     bins neg = (1=>0);
-     bins pos = (0=>1);
-   }
-    
-    
- sel_transitions: coverpoint vif.wb_sel_i {
-     bins neg = (15=>0);
-     bins pos = (0=>15);
-   }  
-   
-endgroup:dut_cov3;
   
   covergroup dut_cov4 @(posedge vif.sys_clk); // data range access
     data_access: coverpoint vif.wb_dat_i {
@@ -110,42 +80,6 @@ endgroup:dut_cov3;
       }
      endgroup:dut_cov5;
   
-  
-  covergroup dut_cov6 @(posedge vif.sys_clk); // Sdr transitions for 1 bit signals
-   cs_transitions: coverpoint vif.sdr_cs_n {
-     bins neg = (1=>0);
-     bins pos = (0=>1);
-   }
-   cke_transitions: coverpoint vif.sdr_cke {
-     bins neg = (1=>0);
-     bins pos = (0 =>1);
-   }
-   
- ras_transitions: coverpoint vif.sdr_ras_n{
-     bins neg = (1=>0);
-     bins pos = (0=>1);
-   }
- 
- cas_transitions: coverpoint vif.sdr_cas_n {
-     bins neg = (1=>0);
-     bins pos = (0=>1);
-   }
-    
-    
- we_transitions: coverpoint vif.sdr_we_n {
-     bins neg = (1=>0);
-     bins pos = (0=>1);
-   }  
-  
-  
-  init_transitions: coverpoint vif.sdr_init_done {
-     bins neg = (1=>0);
-     bins pos = (0=>1);
-   } 
-  
-   
-endgroup:dut_cov6;
-
   covergroup dut_cov7 @(posedge vif.sys_clk); // sdr address range access
     sdr_addr_access: coverpoint vif.sdr_addr {
       bins lower_add = {[0:682]};
@@ -262,10 +196,8 @@ endgroup:dut_cov8;
     cov0=dut_cov0.get_coverage();
     cov1=dut_cov1.get_coverage();
     cov2=dut_cov2.get_coverage();
-    cov3=dut_cov3.get_coverage();
     cov4=dut_cov4.get_coverage();
     cov5=dut_cov5.get_coverage();
-    cov6=dut_cov6.get_coverage();
     cov7=dut_cov7.get_coverage();
     cov8=dut_cov8.get_coverage();
     cov9=dut_cov9.get_coverage();
