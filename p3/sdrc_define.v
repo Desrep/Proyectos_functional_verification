@@ -1,6 +1,6 @@
 
 `define SDR_REQ_ID_W       4
-`define SDR_32BIT// Memory type, this is also used in the TB
+`define SDR_8BIT// Memory type, this is also used in the TB
 `define SDR_RFSH_TIMER_W    12
 `define SDR_RFSH_ROW_CNT_W   3
 
