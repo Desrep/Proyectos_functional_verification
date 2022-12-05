@@ -3,7 +3,7 @@ class sdr_wr_rd_test extends sdr_model_base_test;
 
   `uvm_component_utils(sdr_wr_rd_test)
    parameter cases=500;
-   parameter conf_number  = 15;
+   parameter conf_number  = 10;
   //---------------------------------------
   // sequence instance 
   //--------------------------------------- 

@@ -264,7 +264,7 @@
 @ 0.0 ns: [CFGDB/GET] Configuration 'uvm_test_top.env.sdr_agntp.sequencer.seq_item_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.env.sdr_agntp.sequencer.seq_item_export = null (failed lookup)
 #0 in \sdr_driver::build_phase  at driver.sv:23
 @ 0.0 ns: [CFGDB/GET] Configuration 'uvm_test_top.env.sdr_agntp.driver.vif' (type virtual interface sdr_if#(32,8,5)) read by uvm_test_top.env.sdr_agntp.driver = (virtual interface sdr_if#(32,8,5)) ?
-#0 in \sdr_monitor_decode::build_phase  at monitor_decode.sv:35
+#0 in \sdr_monitor_decode::build_phase  at monitor_decode.sv:37
 @ 0.0 ns: [CFGDB/GET] Configuration 'uvm_test_top.env.sdr_agntp.monitor.vif' (type virtual interface sdr_if#(32,8,5)) read by uvm_test_top.env.sdr_agntp.monitor = (virtual interface sdr_if#(32,8,5)) ?
 #0 in \uvm_sequencer_base::build  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/seq/uvm_sequencer_base.svh:476
 @ 0.0 ns: [CFGDB/GET] Configuration 'uvm_test_top.env.sdr_agntp.sequencer.default_sequence' (type string) read by uvm_test_top.env.sdr_agntp.sequencer = null (failed lookup)
@@ -384,7 +384,7 @@
 @ 0.0 ns: [CFGDB/GET] Configuration 'uvm_test_top.env.sdr_agntpc.sequencer.seq_item_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.env.sdr_agntpc.sequencer.seq_item_export = null (failed lookup)
 #0 in \sdr_driver::build_phase  at driver.sv:23
 @ 0.0 ns: [CFGDB/GET] Configuration 'uvm_test_top.env.sdr_agntpc.driver.vif' (type virtual interface sdr_if#(32,8,5)) read by uvm_test_top.env.sdr_agntpc.driver = (virtual interface sdr_if#(32,8,5)) ?
-#0 in \sdr_monitor_decode_column::build_phase  at monitor_decode_column.sv:35
+#0 in \sdr_monitor_decode_column::build_phase  at monitor_decode_column.sv:37
 @ 0.0 ns: [CFGDB/GET] Configuration 'uvm_test_top.env.sdr_agntpc.monitor.vif' (type virtual interface sdr_if#(32,8,5)) read by uvm_test_top.env.sdr_agntpc.monitor = (virtual interface sdr_if#(32,8,5)) ?
 #0 in \uvm_sequencer_base::build  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/seq/uvm_sequencer_base.svh:476
 @ 0.0 ns: [CFGDB/GET] Configuration 'uvm_test_top.env.sdr_agntpc.sequencer.default_sequence' (type string) read by uvm_test_top.env.sdr_agntpc.sequencer = null (failed lookup)
@@ -396,7 +396,7 @@
 @ 0.0 ns: [CFGDB/GET] Configuration 'uvm_test_top.env.sdr_agntpc.sequencer.max_random_depth' (type logic signed[4095:0]) read by uvm_test_top.env.sdr_agntpc.sequencer = null (failed lookup)
 #0 in \uvm_sequencer_base::build  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/seq/uvm_sequencer_base.svh:494
 @ 0.0 ns: [CFGDB/GET] Configuration 'uvm_test_top.env.sdr_agntpc.sequencer.pound_zero_count' (type logic signed[4095:0]) read by uvm_test_top.env.sdr_agntpc.sequencer = null (failed lookup)
-#0 in \sdr_scoreboard::build_phase  at scoreboard.sv:51
+#0 in \sdr_scoreboard::build_phase  at scoreboard.sv:59
 @ 0.0 ns: [CFGDB/GET] Configuration 'uvm_test_top.env.sdr_scb.vif' (type virtual interface sdr_if#(32,8,5)) read by uvm_test_top.env.sdr_scb = (virtual interface sdr_if#(32,8,5)) ?
 #0 in \uvm_component::new  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_component.svh:1763
 @ 0.0 ns: [CFGDB/GET] Configuration 'uvm_test_top.env.sdr_scb.item_collected_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.env.sdr_scb.item_collected_export = null (failed lookup)
@@ -705,52 +705,52 @@
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
 @ 0.0 ns: [PH/TRC/SKIP] Phase 'uvm.uvm_sched.post_shutdown' (id=498) No objections raised, skipping phase
 #0 in \sdr_wr_rd_test::run_phase  at wr_rd_test.sv:60
-@ 38829370.0 ns: [OBJTN_TRC] common.run Object uvm_test_top dropped 1 objection(s): count=0  total=0
+@ 24529410.0 ns: [OBJTN_TRC] common.run Object uvm_test_top dropped 1 objection(s): count=0  total=0
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:323
-@ 38829370.0 ns: [OBJTN_TRC] common.run Object uvm_test_top all_dropped 1 objection(s): count=0  total=0
+@ 24529410.0 ns: [OBJTN_TRC] common.run Object uvm_test_top all_dropped 1 objection(s): count=0  total=0
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/DONE] Phase 'common.run' (id=287) Completed phase
+@ 24529410.0 ns: [PH/TRC/DONE] Phase 'common.run' (id=287) Completed phase
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_shutdown' (id=498) Completed phase
+@ 24529410.0 ns: [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_shutdown' (id=498) Completed phase
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/SCHEDULED] Phase 'common.extract' (id=294) Scheduled from phase common.run
+@ 24529410.0 ns: [PH/TRC/SCHEDULED] Phase 'common.extract' (id=294) Scheduled from phase common.run
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched_end' (id=354) Scheduled from phase uvm.uvm_sched.post_shutdown
+@ 24529410.0 ns: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched_end' (id=354) Scheduled from phase uvm.uvm_sched.post_shutdown
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/STRT] Phase 'uvm.uvm_sched_end' (id=354) Starting phase
+@ 24529410.0 ns: [PH/TRC/STRT] Phase 'uvm.uvm_sched_end' (id=354) Starting phase
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/DONE] Phase 'uvm.uvm_sched_end' (id=354) Completed phase
+@ 24529410.0 ns: [PH/TRC/DONE] Phase 'uvm.uvm_sched_end' (id=354) Completed phase
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_end' (id=342) Scheduled from phase uvm.uvm_sched_end
+@ 24529410.0 ns: [PH/TRC/SCHEDULED] Phase 'uvm.uvm_end' (id=342) Scheduled from phase uvm.uvm_sched_end
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/STRT] Phase 'uvm.uvm_end' (id=342) Starting phase
+@ 24529410.0 ns: [PH/TRC/STRT] Phase 'uvm.uvm_end' (id=342) Starting phase
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/DONE] Phase 'uvm.uvm_end' (id=342) Completed phase
+@ 24529410.0 ns: [PH/TRC/DONE] Phase 'uvm.uvm_end' (id=342) Completed phase
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/STRT] Phase 'common.extract' (id=294) Starting phase
+@ 24529410.0 ns: [PH/TRC/STRT] Phase 'common.extract' (id=294) Starting phase
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/DONE] Phase 'common.extract' (id=294) Completed phase
+@ 24529410.0 ns: [PH/TRC/DONE] Phase 'common.extract' (id=294) Completed phase
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/SCHEDULED] Phase 'common.check' (id=306) Scheduled from phase common.extract
+@ 24529410.0 ns: [PH/TRC/SCHEDULED] Phase 'common.check' (id=306) Scheduled from phase common.extract
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/STRT] Phase 'common.check' (id=306) Starting phase
+@ 24529410.0 ns: [PH/TRC/STRT] Phase 'common.check' (id=306) Starting phase
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/DONE] Phase 'common.check' (id=306) Completed phase
+@ 24529410.0 ns: [PH/TRC/DONE] Phase 'common.check' (id=306) Completed phase
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/SCHEDULED] Phase 'common.report' (id=318) Scheduled from phase common.check
+@ 24529410.0 ns: [PH/TRC/SCHEDULED] Phase 'common.report' (id=318) Scheduled from phase common.check
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/STRT] Phase 'common.report' (id=318) Starting phase
+@ 24529410.0 ns: [PH/TRC/STRT] Phase 'common.report' (id=318) Starting phase
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/DONE] Phase 'common.report' (id=318) Completed phase
+@ 24529410.0 ns: [PH/TRC/DONE] Phase 'common.report' (id=318) Completed phase
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/SCHEDULED] Phase 'common.final' (id=330) Scheduled from phase common.report
+@ 24529410.0 ns: [PH/TRC/SCHEDULED] Phase 'common.final' (id=330) Scheduled from phase common.report
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/STRT] Phase 'common.final' (id=330) Starting phase
+@ 24529410.0 ns: [PH/TRC/STRT] Phase 'common.final' (id=330) Starting phase
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/DONE] Phase 'common.final' (id=330) Completed phase
+@ 24529410.0 ns: [PH/TRC/DONE] Phase 'common.final' (id=330) Completed phase
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/SCHEDULED] Phase 'common.common_end' (id=227) Scheduled from phase common.final
+@ 24529410.0 ns: [PH/TRC/SCHEDULED] Phase 'common.common_end' (id=227) Scheduled from phase common.final
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/STRT] Phase 'common.common_end' (id=227) Starting phase
+@ 24529410.0 ns: [PH/TRC/STRT] Phase 'common.common_end' (id=227) Starting phase
 #0 in \uvm_root::run_test  at /mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/uvm/uvm/distrib/src/base/uvm_root.svh:395
-@ 38829370.0 ns: [PH/TRC/DONE] Phase 'common.common_end' (id=227) Completed phase
+@ 24529410.0 ns: [PH/TRC/DONE] Phase 'common.common_end' (id=227) Completed phase

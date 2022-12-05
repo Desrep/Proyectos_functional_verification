@@ -4,7 +4,9 @@ class sdr_monitor_decode_column extends uvm_monitor;
   //Interface
   //---------------------------------------
   virtual sdr_if vif;
-
+   int ulim_col;
+  int ulim_bank;
+  int llim_bank;
   //---------------------------------------
   // analysis port, to send the transaction to scoreboard
   //---------------------------------------
@@ -43,6 +45,7 @@ class sdr_monitor_decode_column extends uvm_monitor;
   virtual task run_phase(uvm_phase phase);
     
     forever begin
+	    
       @(posedge (((vif.sdr_ras_n)&&(!vif.sdr_cas_n)&&(!vif.sdr_we_n))||((vif.sdr_ras_n)&&(!vif.sdr_cas_n)&&(vif.sdr_we_n))));
       //@(posedge vif.sdram_clk_d )  
       begin 
@@ -51,10 +54,8 @@ class sdr_monitor_decode_column extends uvm_monitor;
       trans_collected.addr = vif.wb_addr_i;
         
     
-      trans_collected.colum_add_in =  vif.wb_addr_i [7:0];
       trans_collected.colum_add_out =  vif.sdr_addr [11:0];
         trans_collected.bank_add_out =  vif.sdr_ba [1:0];   
-       trans_collected.bank_add_in  = vif.wb_addr_i[9:8];
       
       
 	  item_collected_port.write(trans_collected);

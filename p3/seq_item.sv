@@ -72,9 +72,8 @@ class sdr_seq_item extends uvm_sequence_item;
  constraint c9 {  cfg_sdr_rfsh >= 12'h100; cfg_sdr_rfsh < 12'hC35 ;}
  constraint c10 {  cfg_sdr_rfmax >= 1;}
  constraint c11 {  cfg_sdr_mode_reg[2:0] inside {[0:3]}; cfg_sdr_mode_reg[6:4] inside {2,3}; cfg_sdr_mode_reg[12:10]==0;cfg_sdr_mode_reg[8:7] == 0;}
- constraint c12 { cfg_sdr_en == 1;}
- constraint c13 { cfg_colbits == 0;}
-  
+ constraint c12 {cfg_colbits inside {0,1,2};}
+ constraint c13 {cfg_sdr_en == 1;} 
   /*
 constraint c1 {  cfg_req_depth == 3; }
  constraint c2 {  cfg_sdr_mode_reg != 0; }
