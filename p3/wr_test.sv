@@ -2,8 +2,8 @@ import uvm_pkg::*;
 class sdr_wr_rd_test extends sdr_model_base_test;
 
   `uvm_component_utils(sdr_wr_rd_test)
-   parameter cases=40;
-   parameter conf_number  = 110;
+   parameter cases=105;
+   parameter conf_number  = 120;
   //---------------------------------------
   // sequence instance 
   //--------------------------------------- 
