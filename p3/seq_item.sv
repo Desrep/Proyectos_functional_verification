@@ -63,23 +63,31 @@ class sdr_seq_item extends uvm_sequence_item;
   
   constraint c1 {  cfg_req_depth >= 1; }
  constraint c2 {  cfg_sdr_mode_reg != 0; }
- constraint c3 {  cfg_sdr_tras_d >= 1 ; }
  constraint c4 {  cfg_sdr_trp_d  >= 1 ; }
- constraint c5 {  cfg_sdr_trcd_d >= 1 ; }
  constraint c6 {  cfg_sdr_cas == cfg_sdr_mode_reg[5:4]; }
- constraint c7 {  cfg_sdr_trcar_d >= 1;}
  constraint c8 {  cfg_sdr_twr_d >=  1;}
  constraint c9 {  cfg_sdr_rfsh >= 12'h020; cfg_sdr_rfsh < 12'hC35 ;}
  constraint c10 {  cfg_sdr_rfmax >= 1;}
  `ifdef SDR_32BIT
  constraint c11 {  cfg_sdr_mode_reg[2:0] inside {[0:3]}; cfg_sdr_mode_reg[6:4] inside {2,3}; cfg_sdr_mode_reg[12:10]==0;cfg_sdr_mode_reg[8:7] == 0;}
+ constraint c14 {cfg_colbits inside {0,1,2};}
+constraint c5 {  cfg_sdr_trcd_d >= 1 ; } 
+constraint c7 {  cfg_sdr_trcar_d >= 1;}
+constraint c3 {  cfg_sdr_tras_d >= 1 ; }
  `elsif SDR_16BIT 
  constraint c11 {  cfg_sdr_mode_reg[2:0] inside {[1:3]}; cfg_sdr_mode_reg[6:4] inside {2,3}; cfg_sdr_mode_reg[12:10]==0;cfg_sdr_mode_reg[8:7] == 0; cfg_sdr_mode_reg[9] == 0;}
+ constraint c14 {cfg_colbits inside {0,1,2};}
+ constraint c5 {  cfg_sdr_trcd_d >= 1 ; }
+ constraint c7 {  cfg_sdr_trcar_d >= 11;}
+ constraint c3 {  cfg_sdr_tras_d >= 5 ; }
  `else
 constraint c11 {  cfg_sdr_mode_reg[2:0] inside {[2:3]}; cfg_sdr_mode_reg[6:4] inside {2,3}; cfg_sdr_mode_reg[12:10]==0;cfg_sdr_mode_reg[8:7] == 0; cfg_sdr_mode_reg[9] == 0;}
+constraint c14 {cfg_colbits inside {0,1,2};}
+constraint c5 {  cfg_sdr_trcd_d >= 1 ; }
+constraint c7 {  cfg_sdr_trcar_d >= 10;}
+constraint c3 {  cfg_sdr_tras_d >= 1 ; }
  `endif
  constraint c13 {cfg_sdr_en == 1;}
- constraint c14 {cfg_colbits inside {0,1,2};} 
   /*
 constraint c1 {  cfg_req_depth == 3; }
  constraint c2 {  cfg_sdr_mode_reg != 0; }

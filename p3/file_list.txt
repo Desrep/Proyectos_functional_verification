@@ -29,5 +29,6 @@ scoreboard.sv
 env.sv
 test.sv
 wr_rd_test.sv
+wr_rd_test_long.sv
 tb_top.sv
 assertions.sv

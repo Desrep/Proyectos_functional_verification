@@ -1,9 +1,9 @@
 import uvm_pkg::*;
-class sdr_wr_rd_test extends sdr_model_base_test;
+class sdr_wr_rd_test2 extends sdr_model_base_test;
 
-  `uvm_component_utils(sdr_wr_rd_test)
-   parameter cases=150;
-   parameter conf_number  = 50;
+  `uvm_component_utils(sdr_wr_rd_test2)
+   parameter cases=500;
+   parameter conf_number  =1;
   //---------------------------------------
   // sequence instance 
   //--------------------------------------- 
@@ -63,4 +63,4 @@ class sdr_wr_rd_test extends sdr_model_base_test;
     //phase.phase_done.set_drain_time(this, 50);
   endtask : run_phase
   
-endclass : sdr_wr_rd_test
+endclass : sdr_wr_rd_test2
