@@ -13,8 +13,6 @@ class sdr_model_env extends uvm_env;
   sdr_agent_passive sdr_agntp; //fila
   sdr_agent_passive_col sdr_agntpc;//columna
   sdr_scoreboard sdr_scb;
-  
-  
   `uvm_component_utils(sdr_model_env)
   
   //--------------------------------------- 
@@ -37,7 +35,6 @@ class sdr_model_env extends uvm_env;
     
     uvm_config_db#(uvm_active_passive_enum)::set(this, "sdr_agntp", "is_active", UVM_PASSIVE);
     uvm_config_db#(uvm_active_passive_enum)::set(this, "sdr_agntpc", "is_active", UVM_PASSIVE);
-    
   endfunction : build_phase
   
   //---------------------------------------

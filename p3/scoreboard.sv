@@ -14,6 +14,8 @@ class sdr_scoreboard extends uvm_scoreboard;
   sdr_seq_item pkt_qu[$];
    sdr_seq_item pkt_decode[$];
   sdr_seq_item pkt_col[$];
+  functional_coverage funcov;
+
   int data_check;
   int row_check;
   int bank_check;
@@ -61,6 +63,7 @@ class sdr_scoreboard extends uvm_scoreboard;
       item_collected_export_data = new("item_collected_export", this);
     item_collected_export_decode = new("item_collected_export_decode", this);
     item_collected_export_decode_col = new("item_collected_export_decode_col", this);
+    funcov = new(vif);
     //foreach(sc_mem[i]) sc_mem[i] = 32'hFFFFFFFF;
   endfunction: build_phase
   

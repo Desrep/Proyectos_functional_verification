@@ -1,19 +1,16 @@
-class sr_coverage extends uvm_subscriber #(sdr_seq_item);
-
+class functional_coverage;
   //----------------------------------------------------------------------------
   virtual sdr_if vif;
-  `uvm_component_utils(sr_coverage)
   //----------------------------------------------------------------------------
 
   //----------------------------------------------------------------------------
-  function new(string name="sr_coverage",uvm_component parent);
-    super.new(name,parent);
+  function new(virtual sdr_if vif); 
+    this.vif = vif;
     dut_cov0=new();
     dut_cov1 =new();
     dut_cov2 =new();
     dut_cov4 = new();
     dut_cov5 = new();
-    dut_cov7 = new();
     dut_cov9 = new();
     dut_cov10 = new();
     dut_cov11 = new();
@@ -23,25 +20,8 @@ class sr_coverage extends uvm_subscriber #(sdr_seq_item);
   endfunction
   //----------------------------------------------------------------------------
 
-  //----------------------------------------------------------------------------
-  sdr_seq_item req;
-  real cov0;
-  real  cov1;
-  real  cov2;
-  real  cov4;
-  real  cov5;
-  real  cov7;
-  real  cov9;
-  real  cov10;
-  real  cov11;
-  real  cov12;
-  real  cov13;
-  real cov14;
-  //----------------------------------------------------------------------------
   
-  //----------------------------------------------------------------------------
-  
-  covergroup dut_cov0 @(vif.sys_clk); //active signals
+  covergroup dut_cov0 @(posedge vif.sys_clk); //active signals
     Feature_stv: coverpoint vif.wb_stb_i;
     Feature_cyc: coverpoint vif.wb_cyc_i;
     Feature_we: coverpoint vif.wb_we_i;
@@ -74,15 +54,15 @@ class sr_coverage extends uvm_subscriber #(sdr_seq_item);
       }
   endgroup:dut_cov4;
   
-  covergroup dut_cov5 @(posedge vif.sys_clk); // bank  access
+  covergroup dut_cov5 @(posedge vif.sys_clk); // bank  access, sdr_addr access
     sdr_bank_access: coverpoint vif.sdr_ba   {
       bins bank_access = {0,1,2,3};
+   
       }
+      sdr_addr_access: coverpoint vif.sdr_addr ;
+      all_accesses: cross sdr_addr_access,sdr_bank_access;
      endgroup:dut_cov5;
   
-  covergroup dut_cov7 @(posedge vif.sys_clk); // sdr address range access
-    sdr_addr_access: coverpoint vif.sdr_addr ; 
-  endgroup:dut_cov7;
   
   
 
@@ -163,40 +143,6 @@ class sr_coverage extends uvm_subscriber #(sdr_seq_item);
   endgroup:dut_cov14;
 
 
-  //----------------------------------------------------------------------------
 
-  //---------------------  write method ----------------------------------------
-  function void write(sdr_seq_item t);
-    req=t;
-    //dut_cov.sample();
-  endfunction
-  //----------------------------------------------------------------------------
-
-  //----------------------------------------------------------------------------
-  function void extract_phase(uvm_phase phase);
-    super.extract_phase(phase);
-    cov0=dut_cov0.get_coverage();
-    cov1=dut_cov1.get_coverage();
-    cov2=dut_cov2.get_coverage();
-    cov4=dut_cov4.get_coverage();
-    cov5=dut_cov5.get_coverage();
-    cov7=dut_cov7.get_coverage();
-    cov9=dut_cov9.get_coverage();
-    cov10=dut_cov10.get_coverage();
-    cov11=dut_cov11.get_coverage();
-    cov12=dut_cov12.get_coverage();
-    cov13=dut_cov13.get_coverage();
-    cov14 = dut_cov14.get_coverage();
-    
-  endfunction
-  //----------------------------------------------------------------------------
-
-
-  //----------------------------------------------------------------------------
-  function void report_phase(uvm_phase phase);
-    super.report_phase(phase);
-    `uvm_info(get_type_name(),$sformatf("Coverage is %f",cov0),UVM_MEDIUM)
-  endfunction
-  //----------------------------------------------------------------------------
   
-endclass:sr_coverage
+  endclass:functional_coverage
