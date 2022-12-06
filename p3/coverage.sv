@@ -13,10 +13,8 @@ class functional_coverage;
     dut_cov5 = new();
     dut_cov9 = new();
     dut_cov10 = new();
-    dut_cov11 = new();
-    dut_cov12 = new();
-    dut_cov13 = new();
     dut_cov14 = new();
+    row_col_range = new();
   endfunction
   //----------------------------------------------------------------------------
 
@@ -38,12 +36,25 @@ class functional_coverage;
 
   covergroup dut_cov2 @(posedge vif.sys_clk); // address range access
     address_access: coverpoint vif.wb_addr_i {
+
       bins lower_address = {[0:11184810]};
       bins mid_address = {[11184811:2*11184810]} ;
       bins higher_address = {[2*11184810+1:$]};
       }
   endgroup:dut_cov2;
   
+  covergroup row_col_range @(posedge vif.sys_clk); // cover row range
+  address_access_row0: coverpoint vif.wb_addr_i[21:10] iff(vif.cfg_colbits == 0); 
+  address_access_col1: coverpoint vif.wb_addr_i[7:0] iff(vif.cfg_colbits == 0);
+  address_access_row2: coverpoint vif.wb_addr_i[22:11] iff(vif.cfg_colbits == 1);
+  address_access_col3: coverpoint vif.wb_addr_i[8:0] iff(vif.cfg_colbits == 1);
+  address_access_row4: coverpoint vif.wb_addr_i[23:12] iff(vif.cfg_colbits == 2);
+  address_access_col5: coverpoint vif.wb_addr_i[9:0] iff(vif.cfg_colbits == 2);
+  row_col0: cross address_access_row0,address_access_col1 iff(vif.cfg_colbits == 0);
+  row_col1: cross address_access_row2,address_access_col3 iff(vif.cfg_colbits == 1);
+  row_col2: cross address_access_row4,address_access_col5 iff(vif.cfg_colbits == 2);
+  endgroup: row_col_range;
+
    
   
   covergroup dut_cov4 @(posedge vif.sys_clk); // data range access
@@ -117,17 +128,8 @@ class functional_coverage;
   
 */  
   
-  covergroup dut_cov11 @(posedge vif.sdram_clk_d); // range for dq mask
-  sdr_dqm: coverpoint vif.sdr_dqm ;
-  endgroup:dut_cov11;
   
-  covergroup dut_cov12 @(posedge vif.sdram_clk_d); // range for cti
-  sdr_dqm: coverpoint vif.wb_cti_i;
-  endgroup:dut_cov12;
   
-  covergroup dut_cov13 @(posedge vif.sdram_clk_d); // range for sel
-  sdr_dqm: coverpoint vif.wb_sel_i;
-  endgroup:dut_cov13; 
   
   covergroup dut_cov14 @(posedge vif.sdram_clk_d); // configuration bins
   sdr_col_bits: coverpoint vif.cfg_colbits;

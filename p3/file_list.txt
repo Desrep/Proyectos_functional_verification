@@ -28,7 +28,7 @@ coverage.sv
 scoreboard.sv
 env.sv
 test.sv
-wr_rd_test.sv
-wr_rd_test_long.sv
+wr_test.sv
+wr_test2.sv
 tb_top.sv
 assertions.sv
