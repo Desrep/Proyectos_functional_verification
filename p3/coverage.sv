@@ -14,12 +14,12 @@ class sr_coverage extends uvm_subscriber #(sdr_seq_item);
     dut_cov4 = new();
     dut_cov5 = new();
     dut_cov7 = new();
-    dut_cov8 = new();
     dut_cov9 = new();
     dut_cov10 = new();
     dut_cov11 = new();
     dut_cov12 = new();
     dut_cov13 = new();
+    dut_cov14 = new();
   endfunction
   //----------------------------------------------------------------------------
 
@@ -31,12 +31,12 @@ class sr_coverage extends uvm_subscriber #(sdr_seq_item);
   real  cov4;
   real  cov5;
   real  cov7;
-  real  cov8;
   real  cov9;
   real  cov10;
   real  cov11;
   real  cov12;
   real  cov13;
+  real cov14;
   //----------------------------------------------------------------------------
   
   //----------------------------------------------------------------------------
@@ -81,40 +81,10 @@ class sr_coverage extends uvm_subscriber #(sdr_seq_item);
      endgroup:dut_cov5;
   
   covergroup dut_cov7 @(posedge vif.sys_clk); // sdr address range access
-    sdr_addr_access: coverpoint vif.sdr_addr {
-      bins lower_add = {[0:682]};
-      bins mid_add = {[683:2*682]} ;
-      bins higher_add = {[682*2+1:$]};
-      }
+    sdr_addr_access: coverpoint vif.sdr_addr ; 
   endgroup:dut_cov7;
   
   
-covergroup dut_cov8 @(posedge vif.sys_clk); // WB transitions for 1 bit signals
-   cyc_transitions: coverpoint vif.wb_cyc_i {
-     bins neg = (1 => 0 =>  1);
-     bins pos = (0 => 1 =>  0);
-   }
-   stb_transitions: coverpoint vif.wb_stb_i {
-     bins neg = (1 =>0 =>  1);
-     bins pos = (0 => 1 =>  0);
-   }
-   
- we_transitions: coverpoint vif.wb_we_i {
-   bins neg = (1 =>0 =>  1);
-   bins pos = (0 => 1 =>  0);
-   }
- 
- ack_transitions: coverpoint vif.wb_ack_o {
-   bins neg = (1 => 0 =>  1);
-   bins pos = (0 => 1 =>  0);
-   }
-    
-    
- sel_transitions: coverpoint vif.wb_sel_i {
-   bins neg = (15 => 0 =>  15);
-   bins pos = (0 => 15 => 0);
-   }   
-endgroup:dut_cov8;
 
   covergroup dut_cov9 @(posedge vif.sdram_clk_d); // check if all operations are used
     sdr_commands: coverpoint {vif.sdr_ras_n,vif.sdr_cas_n,vif.sdr_we_n }{
@@ -179,7 +149,19 @@ endgroup:dut_cov8;
   sdr_dqm: coverpoint vif.wb_sel_i;
   endgroup:dut_cov13; 
   
-  
+  covergroup dut_cov14 @(posedge vif.sdram_clk_d); // configuration bins
+  sdr_col_bits: coverpoint vif.cfg_colbits;
+  sdr_req_depth: coverpoint vif.cfg_req_depth;
+  sdr_sdr_tras_d: coverpoint vif.cfg_sdr_tras_d;
+  sdr_trp_d: coverpoint vif.cfg_sdr_trp_d;
+  sdr_trcd_d: coverpoint vif.cfg_sdr_trcd_d;
+  sdr_cas: coverpoint vif.cfg_sdr_cas;
+  sdr_trcar: coverpoint  vif.cfg_sdr_trcar_d;
+  sdr_twr_d: coverpoint vif.cfg_sdr_twr_d;
+  sdr_rfsh: coverpoint vif.cfg_sdr_rfsh;
+  sdr_rfmax: coverpoint vif.cfg_sdr_rfmax;
+  endgroup:dut_cov14;
+
 
   //----------------------------------------------------------------------------
 
@@ -199,12 +181,12 @@ endgroup:dut_cov8;
     cov4=dut_cov4.get_coverage();
     cov5=dut_cov5.get_coverage();
     cov7=dut_cov7.get_coverage();
-    cov8=dut_cov8.get_coverage();
     cov9=dut_cov9.get_coverage();
     cov10=dut_cov10.get_coverage();
     cov11=dut_cov11.get_coverage();
     cov12=dut_cov12.get_coverage();
     cov13=dut_cov13.get_coverage();
+    cov14 = dut_cov14.get_coverage();
     
   endfunction
   //----------------------------------------------------------------------------
