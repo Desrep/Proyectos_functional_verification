@@ -138,31 +138,32 @@ class sdr_scoreboard extends uvm_scoreboard;
 
   `else
 
-  virtual function void write_export_decode(sdr_seq_item pkt);
+      virtual function void write_export_decode(sdr_seq_item pkt);
     //pkt.print();
     pkt_decode.push_back(pkt);
     if(pkt.row_add_out == ((pkt.addr>>(llim_row-2))&(~((-1)<<(ulim_row-llim_row+1))))) begin
       row_decode_buff[pkt.addr] = pkt.row_add_out;
       row_expected_buff[pkt.addr] =((pkt.addr>>(llim_row-2))&(~((-1)<<(ulim_row-llim_row + 1)))) ;
     end
-  endfunction : write_export_decode
+    endfunction : write_export_decode
      
 
-  virtual function void write_export_decode_col(sdr_seq_item pkt);
-    //pkt.print();
+
+     virtual function void write_export_decode_col(sdr_seq_item pkt);
+     bit [11:0] temp = {((pkt.addr>>(llim_col))&(~((-1)<<(ulim_col-llim_col-1)))),2'b0};
+     bit [11:0] temp2 =   ((pkt.addr>>(llim_bank-2))&(~((-1)<<(ulim_bank-llim_bank+1))));
     pkt_col.push_back(pkt);
-    if(pkt.colum_add_out == ((pkt.addr>>llim_col)&(~((-1)<<(ulim_col-llim_col+1))))) begin
+    if(pkt.colum_add_out == temp) begin
     col_decode_buff[pkt.addr] = pkt.colum_add_out;
-      col_expected_buff[pkt.addr] =((pkt.addr>>llim_col)&(~((-1)<<(ulim_col-llim_col+1))));
+      col_expected_buff[pkt.addr] =temp;
     end
 
-    if(pkt.bank_add_out == ((pkt.addr>>llim_bank)&(~((-1)<<(ulim_bank-llim_bank+1)))))begin
+    if(pkt.bank_add_out == temp2)begin
       bank_decode_buff[pkt.addr] = pkt.bank_add_out;
-      bank_expected_buff[pkt.addr] = ((pkt.addr>>llim_bank)&(~((-1)<<(ulim_bank-llim_bank+1))));
+      bank_expected_buff[pkt.addr] = temp2;
     end
-    
+
   endfunction : write_export_decode_col
-    
 
 
   `endif 
@@ -176,7 +177,6 @@ class sdr_scoreboard extends uvm_scoreboard;
     sdr_seq_item sdr_pkt_decode;
     sdr_seq_item sdr_pkt_col;
 
-    int read_count = 0;
     int precharge_count = 0;
     
    
@@ -218,52 +218,28 @@ class sdr_scoreboard extends uvm_scoreboard;
       sdr_pkt_col = pkt_col.pop_front();
       
      
-      if (vif.wb_we_i==0)  begin
+      if (vif.wb_we_i==0&&col_decode_buff.exists(sdr_pkt.addr))  begin
         
-        
-        if(read_count != 0) begin
-        
-          if(col_expected_buff[sdr_pkt.addr]== col_decode_buff[sdr_pkt.addr]) begin 
-           // `uvm_info(get_type_name(),$sformatf("**********:: Col match :: ***********"),UVM_LOW)
-      //  `uvm_info(get_type_name(),$sformatf("Addr: %0h",sdr_pkt.addr),UVM_LOW)
-         // `uvm_info(get_type_name(),$sformatf("Expected Col Addr: %0h Actual Col Addr: %0h",col_expected_buff[sdr_pkt.addr],col_decode_buff[sdr_pkt.addr]),UVM_LOW)
-              col_check++;
-        end
-        if(col_expected_buff[sdr_pkt.addr]!= col_decode_buff[sdr_pkt.addr]) begin 
-           
-          `uvm_error(get_type_name(),"*******:: Col mismatch :: *******")
-        `uvm_info(get_type_name(),$sformatf("Addr: %0h",sdr_pkt.addr),UVM_LOW)
-         `uvm_info(get_type_name(),$sformatf("Expected Col Addr: %0h Actual Col Addr: %0h",sdr_pkt.colum_add_in,col_decode_buff[sdr_pkt.addr]),UVM_LOW)
-          
-       end
-        
-        end 
-        
-        if(read_count == 0) begin
         
           if(col_expected_buff[sdr_pkt.addr]== col_decode_buff[sdr_pkt.addr]) begin 
             //   `uvm_info(get_type_name(),$sformatf("*******:: Col match :: *******"),UVM_LOW)
      //   `uvm_info(get_type_name(),$sformatf("Addr: %0h",sdr_pkt.addr),UVM_LOW)
-         // `uvm_info(get_type_name(),$sformatf("Expected Col Addr: %0h Actual Col Addr: %0h",col_expected_buff[sdr_pkt.addr],col_decode_buff[sdr_pkt.addr]),UVM_LOW)
+     //     `uvm_info(get_type_name(),$sformatf("Expected Col Addr: %0h Actual Col Addr: %0h",col_expected_buff[sdr_pkt.addr],col_decode_buff[sdr_pkt.addr]),UVM_LOW)
             col_check++;
         end
           if(col_expected_buff[sdr_pkt.addr] != col_decode_buff[sdr_pkt.addr]) begin 
            
             `uvm_error(get_type_name(),"****** :: Col mismatch :: ********")
         `uvm_info(get_type_name(),$sformatf("Addr: %0h",sdr_pkt.addr),UVM_LOW)
-         `uvm_info(get_type_name(),$sformatf("Expected Col Addr: %0h Actual Col Addr: %0h",sdr_pkt_col.colum_add_in,col_decode_buff[sdr_pkt.addr]),UVM_LOW)
+         `uvm_info(get_type_name(),$sformatf("Expected Col Addr: %0h Actual Col Addr: %0h",col_expected_buff[sdr_pkt.addr],col_decode_buff[sdr_pkt.addr]),UVM_LOW)
    
        end
-          read_count ++;
-        end
-        
-        
         
         
         if(bank_expected_buff[sdr_pkt.addr] == bank_decode_buff[sdr_pkt.addr]) begin 
            //   `uvm_info(get_type_name(),$sformatf("***** :: Bank match :: ******"),UVM_LOW)
       //  `uvm_info(get_type_name(),$sformatf("Addr: %0h",sdr_pkt.addr),UVM_LOW)
-         // `uvm_info(get_type_name(),$sformatf("Expected bank Addr: %0h Actual bank Addr: %0h",bank_expected_buff[sdr_pkt.addr],bank_decode_buff[sdr_pkt.addr]),UVM_LOW)
+     //     `uvm_info(get_type_name(),$sformatf("Expected bank Addr: %0h Actual bank Addr: %0h",bank_expected_buff[sdr_pkt.addr] ,bank_decode_buff[sdr_pkt.addr]),UVM_LOW)
            bank_check++;
         end
         if(bank_expected_buff[sdr_pkt.addr] != bank_decode_buff[sdr_pkt.addr]) begin 
@@ -273,8 +249,6 @@ class sdr_scoreboard extends uvm_scoreboard;
          `uvm_info(get_type_name(),$sformatf("Expected bank Addr: %0h Actual bank Addr: %0h",bank_expected_buff[sdr_pkt.addr],bank_decode_buff[sdr_pkt.addr]),UVM_LOW)
           
        end
-         //if((pkt_decode.size()>0))
-        // begin
 	if(row_decode_buff.exists(sdr_pkt.addr)) begin
          sdr_pkt_decode = pkt_decode.pop_front();
         if((row_expected_buff[sdr_pkt.addr] == row_decode_buff[sdr_pkt.addr])) begin 
@@ -301,7 +275,6 @@ class sdr_scoreboard extends uvm_scoreboard;
        // `uvm_info(get_type_name(),$sformatf("Addr: %0h",sdr_pkt.addr),UVM_LOW)
        // `uvm_info(get_type_name(),$sformatf("Data: %0h",sdr_pkt.wdata),UVM_LOW)
        // `uvm_info(get_type_name(),"------------------------------------",UVM_LOW)   
-        read_count = 0;
         
       end
       else if((vif.wb_we_i == 0)) begin
@@ -324,18 +297,30 @@ class sdr_scoreboard extends uvm_scoreboard;
     end
   endtask : run_phase
 
-     virtual function void check_phase (uvm_phase phase);
-    if (data_check == 0) begin
-      `uvm_warning("Data Warn", $sformatf("Write and read don't checked"));
+   virtual function void check_phase (uvm_phase phase);
+    if (data_check > 0) begin
+      //`uvm_info(get_type_name(),$sformatf("Write and read checked %d times", data_check),UVM_LOW)
     end
-    if (row_check == 0) begin
-      `uvm_warning("Row Warn", $sformatf("Row decode don't checked"));
+    else begin
+      `uvm_warning("Data Warn", $sformatf("SDRAM not checked. SDRAM didn't check write and read data"));
     end
-    if (bank_check == 0) begin
-      `uvm_warning("Data Warn", $sformatf("Bank decode don't checked"));
+    if (row_check > 0) begin
+      //`uvm_info(get_type_name(),$sformatf("Row decode checked %d times", row_check),UVM_LOW)
     end
-    if (col_check == 0) begin
-      `uvm_warning("Data Warn", $sformatf("SDRAM not empty at check phase. SDRAM didn't check col decode"));
+    else begin
+      `uvm_warning("Row Warn", $sformatf(" SDRAM didn't check row decode"));
+    end
+    if (bank_check > 0) begin
+     // `uvm_info(get_type_name(),$sformatf("Bank decode checked %d times", bank_check),UVM_LOW)
+    end
+    else begin
+      `uvm_warning("Data Warn", $sformatf("SDRAM didn't check bank decode"));
+    end
+    if (col_check > 0) begin
+     // `uvm_info(get_type_name(),$sformatf("Column decode checked %d times", col_check),UVM_LOW)
+    end
+    else begin
+      `uvm_warning("Data Warn", $sformatf("SDRAM didn't check col decode"));
     end
 	endfunction
   
