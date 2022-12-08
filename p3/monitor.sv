@@ -69,15 +69,9 @@ class sdr_monitor extends uvm_monitor;
       end
       
         trans_collected.addr = vif.wb_addr_i;
-	trans_collected.colum_add_in =  vif.wb_addr_i [7:0];
-        trans_collected.bank_add_in  = vif.wb_addr_i[9:8];
        
      
-        trans_collected.colum_add_out =  vif.sdr_addr [11:0];
-      
-
        
-      trans_collected.bank_add_out =  vif.sdr_ba [1:0];
       
 	  item_collected_port.write(trans_collected);
        

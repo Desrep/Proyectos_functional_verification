@@ -45,9 +45,9 @@ class sdr_monitor_decode_column extends uvm_monitor;
   virtual task run_phase(uvm_phase phase);
     
     forever begin
-	    
-      @(posedge (((vif.sdr_ras_n)&&(!vif.sdr_cas_n)&&(!vif.sdr_we_n))||((vif.sdr_ras_n)&&(!vif.sdr_cas_n)&&(vif.sdr_we_n))));
-      //@(posedge vif.sdram_clk_d )  
+      @(posedge (((vif.sdr_ras_n)&&(!vif.sdr_cas_n)&&(!vif.sdr_we_n))))
+      @(posedge vif.sdram_clk_d )  
+      if(vif.sdr_cke)
       begin 
         
         
@@ -56,7 +56,6 @@ class sdr_monitor_decode_column extends uvm_monitor;
     
       trans_collected.colum_add_out =  vif.sdr_addr [11:0];
         trans_collected.bank_add_out =  vif.sdr_ba [1:0];   
-      
       
 	  item_collected_port.write(trans_collected);
       end
