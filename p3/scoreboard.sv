@@ -265,22 +265,22 @@ class sdr_scoreboard extends uvm_scoreboard;
       `uvm_info(get_type_name(),$sformatf("Write and read checked %d times", data_check),UVM_LOW)
     end
     else begin
-      `uvm_warning("Data Warn", $sformatf("SDRAM not empty at check phase. SDRAM didn't check write and read data"));
+      `uvm_warning("Data Warn", $sformatf("Write and read don't checked"));
     end
     if (row_check > 0) begin
       `uvm_info(get_type_name(),$sformatf("Row decode checked %d times", row_check),UVM_LOW)
     end
     else begin
-      `uvm_warning("Row Warn", $sformatf("SDRAM not empty at check phase. SDRAM didn't check row decode"));
+      `uvm_warning("Row Warn", $sformatf("Row decode don't checked"));
     end
     if (bank_check > 0) begin
       `uvm_info(get_type_name(),$sformatf("Bank decode checked %d times", bank_check),UVM_LOW)
     end
     else begin
-      `uvm_warning("Data Warn", $sformatf("SDRAM not empty at check phase. SDRAM didn't check bank decode"));
+      `uvm_warning("Data Warn", $sformatf("Bank decode don't checked"));
     end
     if (col_check > 0) begin
-      `uvm_info(get_type_name(),$sformatf("Column decode checked %d times", col_check),UVM_LOW)
+      `uvm_info(get_type_name(),$sformatf("Column decode don't checked", col_check),UVM_LOW)
     end
     else begin
       `uvm_warning("Data Warn", $sformatf("SDRAM not empty at check phase. SDRAM didn't check col decode"));
