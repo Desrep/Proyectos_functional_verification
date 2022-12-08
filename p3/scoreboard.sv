@@ -75,34 +75,98 @@ class sdr_scoreboard extends uvm_scoreboard;
     pkt_qu.push_back(pkt);
   endfunction : write_export_data
 
-  
+  `ifdef SDR_32BIT
+
+
     virtual function void write_export_decode(sdr_seq_item pkt);
     //pkt.print();
     pkt_decode.push_back(pkt);
-    if(pkt.row_add_out == ((pkt.addr>>llim_row)&&(~((-1)<<(ulim_row-llim_row+1))))) begin
+    if(pkt.row_add_out == ((pkt.addr>>(llim_row))&(~((-1)<<(ulim_row-llim_row+1))))) begin
       row_decode_buff[pkt.addr] = pkt.row_add_out;
-      row_expected_buff[pkt.addr] =((pkt.addr>>llim_row)&&(~((-1)<<(ulim_row-llim_row+1)))) ;
+      row_expected_buff[pkt.addr] =((pkt.addr>>(llim_row))&(~((-1)<<(ulim_row-llim_row + 1)))) ;
     end
-  
+    endfunction : write_export_decode
 
+
+        virtual function void write_export_decode_col(sdr_seq_item pkt);
+     bit [11:0] temp = ((pkt.addr>>(llim_col))&(~((-1)<<(ulim_col-llim_col+1))));
+     bit [11:0] temp2 = ((pkt.addr>>llim_bank)&(~((-1)<<(ulim_bank-llim_bank+1))));
+    pkt_col.push_back(pkt);
+
+    if(pkt.colum_add_out == temp) begin
+    col_decode_buff[pkt.addr] = pkt.colum_add_out;
+      col_expected_buff[pkt.addr] =temp;
+    end
+
+    if(pkt.bank_add_out == temp2)begin
+      bank_decode_buff[pkt.addr] = pkt.bank_add_out;
+      bank_expected_buff[pkt.addr] = temp2;
+    end
+
+  endfunction : write_export_decode_col
+
+
+
+ `elsif SDR_16BIT
+
+      virtual function void write_export_decode(sdr_seq_item pkt);
+    //pkt.print();
+    pkt_decode.push_back(pkt);
+    if(pkt.row_add_out == ((pkt.addr>>(llim_row-1))&(~((-1)<<(ulim_row-llim_row+1))))) begin
+      row_decode_buff[pkt.addr] = pkt.row_add_out;
+      row_expected_buff[pkt.addr] =((pkt.addr>>(llim_row-1))&(~((-1)<<(ulim_row-llim_row + 1)))) ;
+    end
+    endfunction : write_export_decode
+
+    virtual function void write_export_decode_col(sdr_seq_item pkt);
+     bit [11:0] temp = {((pkt.addr>>(llim_col))&(~((-1)<<(ulim_col-llim_col)))),1'b0};
+     bit [11:0] temp2 = ((pkt.addr>>(llim_bank-1))&(~((-1)<<(ulim_bank-llim_bank+1))));
+    pkt_col.push_back(pkt);
+
+    if(pkt.colum_add_out == temp) begin
+    col_decode_buff[pkt.addr] = pkt.colum_add_out;
+      col_expected_buff[pkt.addr] =temp;
+    end
+
+    if(pkt.bank_add_out == temp2)begin
+      bank_decode_buff[pkt.addr] = pkt.bank_add_out;
+      bank_expected_buff[pkt.addr] = temp2;
+    end
+
+  endfunction : write_export_decode_col
+
+
+  `else
+
+  virtual function void write_export_decode(sdr_seq_item pkt);
+    //pkt.print();
+    pkt_decode.push_back(pkt);
+    if(pkt.row_add_out == ((pkt.addr>>(llim_row-2))&(~((-1)<<(ulim_row-llim_row+1))))) begin
+      row_decode_buff[pkt.addr] = pkt.row_add_out;
+      row_expected_buff[pkt.addr] =((pkt.addr>>(llim_row-2))&(~((-1)<<(ulim_row-llim_row + 1)))) ;
+    end
   endfunction : write_export_decode
-  
-  
-  
+     
+
   virtual function void write_export_decode_col(sdr_seq_item pkt);
     //pkt.print();
     pkt_col.push_back(pkt);
-    if(pkt.colum_add_out == ((pkt.addr>>llim_col)&&(~((-1)<<(ulim_col-llim_col+1))))) begin
+    if(pkt.colum_add_out == ((pkt.addr>>llim_col)&(~((-1)<<(ulim_col-llim_col+1))))) begin
     col_decode_buff[pkt.addr] = pkt.colum_add_out;
-      col_expected_buff[pkt.addr] =((pkt.addr>>llim_col)&&(~((-1)<<(ulim_col-llim_col+1))));
+      col_expected_buff[pkt.addr] =((pkt.addr>>llim_col)&(~((-1)<<(ulim_col-llim_col+1))));
     end
 
-    if(pkt.bank_add_out == ((pkt.addr>>llim_bank)&&(~((-1)<<(ulim_bank-llim_bank+1)))))begin
+    if(pkt.bank_add_out == ((pkt.addr>>llim_bank)&(~((-1)<<(ulim_bank-llim_bank+1)))))begin
       bank_decode_buff[pkt.addr] = pkt.bank_add_out;
-      bank_expected_buff[pkt.addr] = ((pkt.addr>>llim_bank)&&(~((-1)<<(ulim_bank-llim_bank+1))));
+      bank_expected_buff[pkt.addr] = ((pkt.addr>>llim_bank)&(~((-1)<<(ulim_bank-llim_bank+1))));
     end
     
   endfunction : write_export_decode_col
+    
+
+
+  `endif 
+  
   //---------------------------------------
   // run_phase - compare's the read data with the expected data(stored in local memory)
   // local memory will be updated on the write operation.
@@ -260,29 +324,17 @@ class sdr_scoreboard extends uvm_scoreboard;
     end
   endtask : run_phase
 
-   virtual function void check_phase (uvm_phase phase);
-    if (data_check > 0) begin
-      `uvm_info(get_type_name(),$sformatf("Write and read checked %d times", data_check),UVM_LOW)
-    end
-    else begin
+     virtual function void check_phase (uvm_phase phase);
+    if (data_check == 0) begin
       `uvm_warning("Data Warn", $sformatf("Write and read don't checked"));
     end
-    if (row_check > 0) begin
-      `uvm_info(get_type_name(),$sformatf("Row decode checked %d times", row_check),UVM_LOW)
-    end
-    else begin
+    if (row_check == 0) begin
       `uvm_warning("Row Warn", $sformatf("Row decode don't checked"));
     end
-    if (bank_check > 0) begin
-      `uvm_info(get_type_name(),$sformatf("Bank decode checked %d times", bank_check),UVM_LOW)
-    end
-    else begin
+    if (bank_check == 0) begin
       `uvm_warning("Data Warn", $sformatf("Bank decode don't checked"));
     end
-    if (col_check > 0) begin
-      `uvm_info(get_type_name(),$sformatf("Column decode don't checked", col_check),UVM_LOW)
-    end
-    else begin
+    if (col_check == 0) begin
       `uvm_warning("Data Warn", $sformatf("SDRAM not empty at check phase. SDRAM didn't check col decode"));
     end
 	endfunction
