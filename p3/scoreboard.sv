@@ -75,31 +75,65 @@ class sdr_scoreboard extends uvm_scoreboard;
     pkt_qu.push_back(pkt);
   endfunction : write_export_data
 
-  
-    virtual function void write_export_decode(sdr_seq_item pkt);
+  `ifdef SDR_32BIT
+
+
+         virtual function void write_export_decode(sdr_seq_item pkt);
     //pkt.print();
     pkt_decode.push_back(pkt);
-    if(pkt.row_add_out == ((pkt.addr>>llim_row)&&(~((-1)<<(ulim_row-llim_row+1))))) begin
+      $display("Out decode is %0h",((pkt.addr>>(llim_row))&(~((-1)<<(ulim_row-llim_row+1)))));
+      $display("ulim is %0d llim is %0d",ulim_row,llim_row);
+    if(pkt.row_add_out == ((pkt.addr>>(llim_row))&(~((-1)<<(ulim_row-llim_row+1))))) begin
       row_decode_buff[pkt.addr] = pkt.row_add_out;
-      row_expected_buff[pkt.addr] =((pkt.addr>>llim_row)&&(~((-1)<<(ulim_row-llim_row+1)))) ;
+      row_expected_buff[pkt.addr] =((pkt.addr>>(llim_row))&(~((-1)<<(ulim_row-llim_row + 1)))) ;
     end
-  
+    endfunction : write_export_decode
 
-  endfunction : write_export_decode
-  
-  
+
+
+
+
+ `elsif SDR_16BIT
+
+      virtual function void write_export_decode(sdr_seq_item pkt);
+    //pkt.print();
+    pkt_decode.push_back(pkt);
+      $display("Out decode is %0h",((pkt.addr>>(llim_row-1))&(~((-1)<<(ulim_row-llim_row+1)))));
+      $display("ulim is %0d llim is %0d",ulim_row,llim_row);
+    if(pkt.row_add_out == ((pkt.addr>>(llim_row-1))&(~((-1)<<(ulim_row-llim_row+1))))) begin
+      row_decode_buff[pkt.addr] = pkt.row_add_out;
+      row_expected_buff[pkt.addr] =((pkt.addr>>(llim_row-1))&(~((-1)<<(ulim_row-llim_row + 1)))) ;
+    end
+    endfunction : write_export_decode
+
+
+
+  `else
+
+      virtual function void write_export_decode(sdr_seq_item pkt);
+    //pkt.print();
+    pkt_decode.push_back(pkt);
+      $display("Out decode is %0h",((pkt.addr>>(llim_row-2))&(~((-1)<<(ulim_row-llim_row+1)))));
+      $display("ulim is %0d llim is %0d",ulim_row,llim_row);
+    if(pkt.row_add_out == ((pkt.addr>>(llim_row-2))&(~((-1)<<(ulim_row-llim_row+1))))) begin
+      row_decode_buff[pkt.addr] = pkt.row_add_out;
+      row_expected_buff[pkt.addr] =((pkt.addr>>(llim_row-2))&(~((-1)<<(ulim_row-llim_row + 1)))) ;
+    end
+    endfunction : write_export_decode
+
+  `endif 
   
   virtual function void write_export_decode_col(sdr_seq_item pkt);
-    //pkt.print();
+     //pkt.print();
     pkt_col.push_back(pkt);
-    if(pkt.colum_add_out == ((pkt.addr>>llim_col)&&(~((-1)<<(ulim_col-llim_col+1))))) begin
+    if(pkt.colum_add_out == ((pkt.addr>>llim_col)&(~((-1)<<(ulim_col-llim_col+1))))) begin
     col_decode_buff[pkt.addr] = pkt.colum_add_out;
-      col_expected_buff[pkt.addr] =((pkt.addr>>llim_col)&&(~((-1)<<(ulim_col-llim_col+1))));
+      col_expected_buff[pkt.addr] =((pkt.addr>>llim_col)&(~((-1)<<(ulim_col-llim_col+1))));
     end
 
-    if(pkt.bank_add_out == ((pkt.addr>>llim_bank)&&(~((-1)<<(ulim_bank-llim_bank+1)))))begin
+    if(pkt.bank_add_out == ((pkt.addr>>llim_bank)&(~((-1)<<(ulim_bank-llim_bank+1)))))begin
       bank_decode_buff[pkt.addr] = pkt.bank_add_out;
-      bank_expected_buff[pkt.addr] = ((pkt.addr>>llim_bank)&&(~((-1)<<(ulim_bank-llim_bank+1))));
+      bank_expected_buff[pkt.addr] = ((pkt.addr>>llim_bank)&(~((-1)<<(ulim_bank-llim_bank+1))));
     end
     
   endfunction : write_export_decode_col

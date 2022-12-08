@@ -1,0 +1,69 @@
+<session version="1.1" release="O-2018.09-SP2-3" timestp="2022-12-07 01:22:58 GMT">
+  <info>
+    <attr name="datetime" value="Tue Dec  6 18:58:47 2022
+"/>
+    <attr name="command" value="urg -full64 -dir simv.vdb/"/>
+    <attr name="top_instance" value="bus_protocol_assertions,IS42VM16400K,top_hvl,duv_top,mt48lc8m8a2"/>
+  </info>
+  <hvp>
+    <datadef>
+      <metdef name="Line" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Toggle" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Assert" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Group" type="percent" aggregator="average" builtin="1" />
+    </datadef>
+  </hvp>
+  <old_coverage>
+  <scope type="top" name="top">
+    <metric name="Line" value="1221/2724" />
+    <metric name="Toggle" value="7316/9662" />
+    <metric name="Assert" value="10/10" />
+    <metric name="Group" value="98.0964%" />
+  </scope>
+  <scope type="instance" name="top">
+  </scope>
+  <scope type="group" name="top">
+    <scope type="group" name="$unit::functional_coverage::dut_cov14">
+      <metric name="Group" value="83.125%" />
+    </scope>
+    <scope type="group" name="$unit::functional_coverage::row_col_range">
+      <metric name="Group" value="99.7423%" />
+    </scope>
+    <scope type="group" name="$unit::functional_coverage::dut_cov0">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="$unit::functional_coverage::dut_cov1">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="$unit::functional_coverage::dut_cov2">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="$unit::functional_coverage::dut_cov4">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="$unit::functional_coverage::dut_cov5">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="$unit::functional_coverage::dut_cov9">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="$unit::functional_coverage::dut_cov10">
+      <metric name="Group" value="100%" />
+    </scope>
+  </scope>
+  <scope type="assert" name="Statistics">
+    <scorelist type="total" name="Design Hierarchy Assert">
+      <score name="Assert" value="10/10" />
+      <score name="Score" value="100.00" />
+    </scorelist>
+    <scorelist type="total" name="Module List Assert">
+      <score name="Assert" value="10/12" />
+      <score name="Score" value="83.33" />
+    </scorelist>
+    <scorelist type="total" name="Assertion">
+      <score name="Assert" value="10/12" />
+      <score name="Score" value="83.33" />
+    </scorelist>
+  </scope>
+  </old_coverage>
+</session>

@@ -45,18 +45,14 @@ class sdr_monitor_decode extends uvm_monitor;
   virtual task run_phase(uvm_phase phase);
     
     forever begin
-
-      @(((!vif.sdr_ras_n)&&vif.sdr_cas_n&&vif.sdr_we_n));
-      @(posedge vif.sdram_clk_d )  
+     @ (posedge vif.sdram_clk_d)
+      if(((!vif.sdr_ras_n)&&vif.sdr_cas_n&&vif.sdr_we_n))
       begin 
         
-     
         trans_collected.addr = vif.wb_addr_i;
-    
+        $display("Monitor addr is %0h",vif.wb_addr_i);
+        $display("Actual value is %0h", vif.sdr_addr [11:0]);	
         trans_collected.row_add_out =  vif.sdr_addr [11:0];
-     
-
-      
       
 	  item_collected_port.write(trans_collected);
       end

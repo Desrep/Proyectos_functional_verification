@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: wb2sdrc</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_wb2sdrc'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_wb2sdrc')">wb2sdrc</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 93.54</td>
+<td class="s10 cl rt"><a href="mod10.html#Line" >100.00</a></td>
+<td class="s8 cl rt"><a href="mod10.html#Toggle" > 87.08</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/wb2sdrc.v')">/mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/wb2sdrc.v</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod10.html#inst_tag_12"  onclick="showContent('inst_tag_12')">duv_top.u_dut.u_wb2sdrc</a></td>
+<td class="s9 cl rt"> 93.54</td>
+<td class="s10 cl rt"><a href="mod10.html#Line" >100.00</a></td>
+<td class="s8 cl rt"><a href="mod10.html#Toggle" > 87.08</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_wb2sdrc'>
+<hr>
+<a name="inst_tag_12"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_12" >duv_top.u_dut.u_wb2sdrc</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 93.54</td>
+<td class="s10 cl rt"><a href="mod10.html#Line" >100.00</a></td>
+<td class="s8 cl rt"><a href="mod10.html#Toggle" > 87.08</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 92.68</td>
+<td class="s9 cl rt"> 97.78</td>
+<td class="s8 cl rt"> 87.59</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 92.50</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 92.50</td>
+<td class="wht cl rt"></td>
+<td><a href="mod4.html#inst_tag_4" >u_dut</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod9.html#inst_tag_9" id="tag_urg_inst_9">u_cmdfifo</a></td>
+<td class="s9 cl rt"> 91.47</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s8 cl rt"> 82.94</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod9.html#inst_tag_11" id="tag_urg_inst_11">u_rddatafifo</a></td>
+<td class="s9 cl rt"> 94.71</td>
+<td class="s9 cl rt"> 95.95</td>
+<td class="s9 cl rt"> 93.47</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod9.html#inst_tag_10" id="tag_urg_inst_10">u_wrdatafifo</a></td>
+<td class="s9 cl rt"> 92.29</td>
+<td class="s9 cl rt"> 97.30</td>
+<td class="s8 cl rt"> 87.28</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_wb2sdrc'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod10.html" >wb2sdrc</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>203</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">ALWAYS</td><td>241</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">ALWAYS</td><td>248</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">ALWAYS</td><td>297</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">ALWAYS</td><td>303</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">ALWAYS</td><td>358</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">ALWAYS</td><td>364</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<pre class="code"><br clear=all>
+202                     always @(posedge wb_rst_i or posedge wb_clk_i) begin
+203        1/1             if(wb_rst_i) begin
+204        1/1                 pending_read &lt;= 1'b0;
+205                        end else begin
+206                           //pending_read &lt;=  wb_stb_i &amp; wb_cyc_i &amp; !wb_we_i &amp; !wb_ack_o;
+207        1/1                pending_read &lt;=   (cmdfifo_wr &amp;&amp; !wb_we_i) ? 1'b1:
+208                     	                (wb_stb_i &amp; wb_cyc_i &amp; !wb_we_i &amp; wb_ack_o) ? 1'b0: pending_read;
+209                        end
+210                     end
+211                     
+212                     //---------------------------------------------------------------------
+213                     // Async Command FIFO. This block handle the clock domain change from
+214                     // Application layer to SDRAM Controller
+215                     // ------------------------------------------------------------------
+216                        // Address + Burst Length + W/R Request 
+217                         async_fifo #(.W(APP_AW+bl+1),.DP(4),.WR_FAST(1'b0), .RD_FAST(1'b0)) u_cmdfifo (
+218                          // Write Path Sys CLock Domain
+219                               .wr_clk             (wb_clk_i           ),
+220                               .wr_reset_n         (!wb_rst_i          ),
+221                               .wr_en              (cmdfifo_wr         ),
+222                               .wr_data            ({burst_length, 
+223                     	                        !wb_we_i, 
+224                     				wb_addr_i}        ),
+225                               .afull              (                   ),
+226                               .full               (cmdfifo_full       ),
+227                     
+228                          // Read Path, SDRAM clock domain
+229                               .rd_clk             (sdram_clk          ),
+230                               .rd_reset_n         (sdram_resetn       ),
+231                               .aempty             (                   ),
+232                               .empty              (cmdfifo_empty      ),
+233                               .rd_en              (cmdfifo_rd         ),
+234                               .rd_data            ({sdr_req_len,
+235                     	                        sdr_req_wr_n,
+236                     		                sdr_req_addr}     )
+237                          );
+238                     
+239                     // synopsys translate_off
+240                     always @(posedge wb_clk_i) begin
+241        <font color = "grey">unreachable  </font>  if (cmdfifo_full == 1'b1 &amp;&amp; cmdfifo_wr == 1'b1)  begin
+242        <font color = "grey">unreachable  </font>     $display(&quot;ERROR:%m COMMAND FIFO WRITE OVERFLOW&quot;);
+243                       end 
+                   <font color = "red">==>  MISSING_ELSE</font>
+244                     end 
+245                     // synopsys translate_on
+246                     // synopsys translate_off
+247                     always @(posedge sdram_clk) begin
+248        <font color = "grey">unreachable  </font>   if (cmdfifo_empty == 1'b1 &amp;&amp; cmdfifo_rd == 1'b1) begin
+249        <font color = "grey">unreachable  </font>      $display(&quot;ERROR:%m COMMAND FIFO READ OVERFLOW&quot;);
+250                        end
+                   <font color = "red">==>  MISSING_ELSE</font>
+251                     end 
+252                     // synopsys translate_on
+253                     
+254                     //---------------------------------------------------------------------
+255                     // Write Data FIFO Write Generation, when ever Acked + Write Request
+256                     //   Note: Ack signal generation already taking account of FIFO full condition
+257                     // ---------------------------------------------------------------------
+258                     
+259                     wire  wrdatafifo_wr  = wb_ack_o &amp; wb_we_i ;
+260                     
+261                     //------------------------------------------------------------------------
+262                     // Write Data FIFO Read Generation, When ever Next Write request generated
+263                     // from SDRAM Controller
+264                     // ------------------------------------------------------------------------
+265                     wire  wrdatafifo_rd  = sdr_wr_next;
+266                     
+267                     
+268                     //------------------------------------------------------------------------
+269                     // Async Write Data FIFO
+270                     //    This block handle the clock domain change over + Write Data + Byte mask 
+271                     //    From Application layer to SDRAM controller layer
+272                     //------------------------------------------------------------------------
+273                     
+274                        // Write DATA + Data Mask FIFO
+275                         async_fifo #(.W(dw+(dw/8)), .DP(8), .WR_FAST(1'b0), .RD_FAST(1'b1)) u_wrdatafifo (
+276                            // Write Path , System clock domain
+277                               .wr_clk             (wb_clk_i           ),
+278                               .wr_reset_n         (!wb_rst_i          ),
+279                               .wr_en              (wrdatafifo_wr      ),
+280                               .wr_data            ({~wb_sel_i, 
+281                     	                         wb_dat_i}        ),
+282                               .afull              (                   ),
+283                               .full               (wrdatafifo_full    ),
+284                     
+285                     
+286                            // Read Path , SDRAM clock domain
+287                               .rd_clk             (sdram_clk          ),
+288                               .rd_reset_n         (sdram_resetn       ),
+289                               .aempty             (                   ),
+290                               .empty              (wrdatafifo_empty   ),
+291                               .rd_en              (wrdatafifo_rd      ),
+292                               .rd_data            ({sdr_wr_en_n,
+293                                                     sdr_wr_data}      )
+294                          );
+295                     // synopsys translate_off
+296                     always @(posedge wb_clk_i) begin
+297        <font color = "grey">unreachable  </font>  if (wrdatafifo_full == 1'b1 &amp;&amp; wrdatafifo_wr == 1'b1)  begin
+298        <font color = "grey">unreachable  </font>     $display(&quot;ERROR:%m WRITE DATA FIFO WRITE OVERFLOW&quot;);
+299                       end 
+                   <font color = "red">==>  MISSING_ELSE</font>
+300                     end 
+301                     
+302                     always @(posedge sdram_clk) begin
+303        <font color = "grey">unreachable  </font>   if (wrdatafifo_empty == 1'b1 &amp;&amp; wrdatafifo_rd == 1'b1) begin
+304        <font color = "grey">unreachable  </font>      $display(&quot;ERROR:%m WRITE DATA FIFO READ OVERFLOW&quot;);
+305                        end
+                   <font color = "red">==>  MISSING_ELSE</font>
+306                     end 
+307                     // synopsys translate_on
+308                     
+309                     // -------------------------------------------------------------------
+310                     //  READ DATA FIFO
+311                     //  ------------------------------------------------------------------
+312                     wire    rd_eop; // last read indication
+313                     
+314                     // Read FIFO write generation, when ever SDRAM controller issues the read
+315                     // valid signal
+316                     wire    rddatafifo_wr = sdr_rd_valid;
+317                     
+318                     // Read FIFO read generation, when ever ack is generated along with read
+319                     // request.
+320                     // Note: Ack generation is already accounted the write FIFO Not Empty
+321                     //       condition
+322                     wire    rddatafifo_rd = wb_ack_o &amp; !wb_we_i;
+323                     
+324                     //-------------------------------------------------------------------------
+325                     // Async Read FIFO
+326                     // This block handles the clock domain change over + Read data from SDRAM
+327                     // controller to Application layer.
+328                     //  Note: 
+329                     //    1. READ DATA FIFO depth is kept small, assuming that Sys-CLock &gt; SDRAM Clock
+330                     //       READ DATA + EOP
+331                     //    2. EOP indicate, last transfer of Burst Read Access. use-full for future
+332                     //       Tag handling per burst
+333                     //
+334                     // ------------------------------------------------------------------------
+335                         async_fifo #(.W(dw+1), .DP(4), .WR_FAST(1'b0), .RD_FAST(1'b1) ) u_rddatafifo (
+336                            // Write Path , SDRAM clock domain
+337                               .wr_clk             (sdram_clk          ),
+338                               .wr_reset_n         (sdram_resetn       ),
+339                               .wr_en              (rddatafifo_wr      ),
+340                               .wr_data            ({sdr_last_rd,
+341                     	                        sdr_rd_data}      ),
+342                               .afull              (                   ),
+343                               .full               (rddatafifo_full    ),
+344                     
+345                     
+346                            // Read Path , SYS clock domain
+347                               .rd_clk             (wb_clk_i           ),
+348                               .rd_reset_n         (!wb_rst_i          ),
+349                               .empty              (rddatafifo_empty   ),
+350                               .aempty             (                   ),
+351                               .rd_en              (rddatafifo_rd      ),
+352                               .rd_data            ({rd_eop,
+353                                                     wb_dat_o}         )
+354                          );
+355                     
+356                     // synopsys translate_off
+357                     always @(posedge sdram_clk) begin
+358        <font color = "grey">unreachable  </font>  if (rddatafifo_full == 1'b1 &amp;&amp; rddatafifo_wr == 1'b1)  begin
+359        <font color = "grey">unreachable  </font>     $display(&quot;ERROR:%m READ DATA FIFO WRITE OVERFLOW&quot;);
+360                       end 
+                   <font color = "red">==>  MISSING_ELSE</font>
+361                     end 
+362                     
+363                     always @(posedge wb_clk_i) begin
+364        <font color = "grey">unreachable  </font>   if (rddatafifo_empty == 1'b1 &amp;&amp; rddatafifo_rd == 1'b1) begin
+365        <font color = "grey">unreachable  </font>      $display(&quot;ERROR:%m READ DATA FIFO READ OVERFLOW&quot;);
+366                        end
+                   <font color = "red">==>  MISSING_ELSE</font>
+</pre>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod10.html" >wb2sdrc</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">42</td>
+<td class="rt">32</td>
+<td class="rt">76.19 </td>
+</tr><tr class="s8">
+<td>Total Bits</td>
+<td class="rt">480</td>
+<td class="rt">418</td>
+<td class="rt">87.08 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">240</td>
+<td class="rt">209</td>
+<td class="rt">87.08 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">240</td>
+<td class="rt">209</td>
+<td class="rt">87.08 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Ports</td>
+<td class="rt">25</td>
+<td class="rt">21</td>
+<td class="rt">84.00 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">430</td>
+<td class="rt">396</td>
+<td class="rt">92.09 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">215</td>
+<td class="rt">198</td>
+<td class="rt">92.09 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">215</td>
+<td class="rt">198</td>
+<td class="rt">92.09 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Signals</td>
+<td class="rt">17</td>
+<td class="rt">11</td>
+<td class="rt">64.71 </td>
+</tr><tr class="s4">
+<td>Signal Bits</td>
+<td class="rt">50</td>
+<td class="rt">22</td>
+<td class="rt">44.00 </td>
+</tr><tr class="s4">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">25</td>
+<td class="rt">11</td>
+<td class="rt">44.00 </td>
+</tr><tr class="s4">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">25</td>
+<td class="rt">11</td>
+<td class="rt">44.00 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>wb_rst_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wb_clk_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wb_stb_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wb_ack_o</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>wb_addr_i[25:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wb_we_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wb_dat_i[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wb_sel_i[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wb_dat_o[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>wb_cyc_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wb_cti_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>sdram_clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>sdram_resetn</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>sdr_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_req_addr[25:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_req_len[8:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_req_wr_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_req_ack</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>sdr_busy_n</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>sdr_wr_en_n[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_wr_next</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>sdr_rd_valid</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>sdr_last_rd</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>sdr_wr_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_rd_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>cmdfifo_full</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>cmdfifo_empty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wrdatafifo_full</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>wrdatafifo_empty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tagfifo_full</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>tagfifo_empty</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rddatafifo_empty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rddatafifo_full</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>pending_read</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>cmdfifo_wr</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>cmdfifo_rd</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>burst_length[8:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>wrdatafifo_wr</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wrdatafifo_rd</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_eop</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rddatafifo_wr</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rddatafifo_rd</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_12">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+  </ul>
+  <ul name="tag_wb2sdrc">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

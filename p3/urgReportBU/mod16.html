@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: sdrc_xfr_ctl</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_sdrc_xfr_ctl'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_sdrc_xfr_ctl')">sdrc_xfr_ctl</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 91.11</td>
+<td class="s9 cl rt"><a href="mod16.html#Line" > 93.81</a></td>
+<td class="s8 cl rt"><a href="mod16.html#Toggle" > 88.40</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/sdrc_xfr_ctl.v')">/mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/sdrc_xfr_ctl.v</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod16.html#inst_tag_21"  onclick="showContent('inst_tag_21')">duv_top.u_dut.u_sdrc_core.u_xfr_ctl</a></td>
+<td class="s9 cl rt"> 91.11</td>
+<td class="s9 cl rt"><a href="mod16.html#Line" > 93.81</a></td>
+<td class="s8 cl rt"><a href="mod16.html#Toggle" > 88.40</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_sdrc_xfr_ctl'>
+<hr>
+<a name="inst_tag_21"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_21" >duv_top.u_dut.u_sdrc_core.u_xfr_ctl</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 91.11</td>
+<td class="s9 cl rt"><a href="mod16.html#Line" > 93.81</a></td>
+<td class="s8 cl rt"><a href="mod16.html#Toggle" > 88.40</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 91.11</td>
+<td class="s9 cl rt"> 93.81</td>
+<td class="s8 cl rt"> 88.40</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 94.40</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s8 cl rt"> 88.81</td>
+<td class="wht cl rt"></td>
+<td><a href="mod5.html#inst_tag_5" >u_sdrc_core</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_sdrc_xfr_ctl'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod16.html" >sdrc_xfr_ctl</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>210</td><td>197</td><td>93.81</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>304</td><td>27</td><td>27</td><td>100.00</td></tr>
+<tr class="s7"><td class="lf">ALWAYS</td><td>342</td><td>54</td><td>41</td><td>75.93</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>553</td><td>15</td><td>15</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>575</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>605</td><td>13</td><td>13</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>641</td><td>97</td><td>97</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+303                        always @ (posedge clk) begin
+304        1/1                if (~reset_n) begin
+305        1/1          	 xfr_caddr &lt;= 13'b0;
+306        1/1          	 l_start &lt;= 1'b0;
+307        1/1          	 l_last &lt;= 1'b0;
+308        1/1          	 l_wrap &lt;= 1'b0;
+309        1/1          	 l_id &lt;= 0;
+310        1/1          	 l_ba &lt;= 0;
+311        1/1          	 l_len &lt;= 0;
+312        1/1          	 l_rd_next &lt;= 7'b0;
+313        1/1          	 l_rd_start &lt;= 7'b0;
+314        1/1          	 l_rd_last &lt;= 7'b0;
+315        1/1          	 act_cmd &lt;= 1'b0;
+316        1/1          	 d_act_cmd &lt;= 1'b0;
+317        1/1          	 xfr_st &lt;= `XFR_IDLE;
+318                           end // if (~reset_n)
+319                     
+320                           else begin
+321        1/1          	 xfr_caddr &lt;= (ld_xfr) ? b2x_addr :
+322                     		      (rd_next | wr_next) ? xfr_caddr + 1 : xfr_caddr; 
+323        1/1          	 l_start &lt;= (dt_next) ? 1'b0 : 
+324                     		   (ld_xfr) ? b2x_start : l_start;
+325        1/1          	 l_last &lt;= (ld_xfr) ? b2x_last : l_last;
+326        1/1          	 l_wrap &lt;= (ld_xfr) ? b2x_wrap : l_wrap;
+327        1/1          	 l_id &lt;= (ld_xfr) ? b2x_id : l_id;
+328        1/1          	 l_ba &lt;= (ld_xfr) ? b2x_ba : l_ba;
+329        1/1          	 l_len &lt;= next_xfr_len;
+330        1/1          	 l_rd_next &lt;= {l_rd_next[5:0], rd_next};
+331        1/1          	 l_rd_start &lt;= {l_rd_start[5:0], rd_start};
+332        1/1          	 l_rd_last &lt;= {l_rd_last[5:0], rd_last};
+333        1/1          	 act_cmd &lt;= (xfr_cmd == `SDR_ACTIVATE) ? 1'b1 : 1'b0;
+334        1/1          	 d_act_cmd &lt;= act_cmd;
+335        1/1          	 xfr_st &lt;= next_xfr_st;
+336                           end // else: !if(~reset_n)
+337                           
+338                        end // always @ (posedge clk)
+339                        
+340                     
+341                        always @ (*) begin 
+342        1/1                case (xfr_st)
+343                     
+344                     	`XFR_IDLE : begin
+345                     
+346        1/1          	   sel_mgmt = mgmt_req;
+347        1/1          	   sel_b2x = ~mgmt_req &amp; sdr_init_done &amp; b2x_req;
+348        1/1          	   i_xfr_cmd = `SDR_DESEL;
+349        1/1          	   rd_next = ~mgmt_req &amp; sdr_init_done &amp; b2x_req &amp; b2x_read;
+350        1/1          	   wr_next = ~mgmt_req &amp; sdr_init_done &amp; b2x_req &amp; b2x_write;
+351        1/1          	   rdok = ~mgmt_req;
+352        1/1          	   cb_pre_ok = 1'b1;
+353        1/1          	   wrok = ~mgmt_req;
+354        1/1          	   next_xfr_st = (mgmt_req | ~sdr_init_done) ? `XFR_IDLE :
+355                     			 (~b2x_req) ? `XFR_IDLE :
+356                     			 (b2x_read) ? `XFR_READ :
+357                     			 (b2x_write) ? `XFR_WRITE : `XFR_IDLE;
+358                     
+359                     	end // case: `XFR_IDLE
+360                     	   
+361                     	`XFR_READ : begin
+362        1/1          	   rd_next = ~l_xfr_end |
+363                     		     l_xfr_end &amp; ~mgmt_req &amp; b2x_req &amp; b2x_read;
+364        1/1          	   wr_next = 1'b0;
+365        1/1          	   rdok = l_xfr_end &amp; ~mgmt_req;
+366                     	   // Break the timing path for FPGA Based Design
+367        1/1          	   cb_pre_ok = (`TARGET_DESIGN == `FPGA) ? 1'b0 : l_xfr_end;
+368        1/1          	   wrok = 1'b0;
+369        1/1          	   sel_mgmt = 1'b0;
+370                     
+371        1/1          	   if (l_xfr_end) begin		  // end of transfer
+372                     
+373        1/1          	      if (~l_wrap) begin
+374                     		 // Current transfer was not wrap mode, may need BT
+375                     		 // If next cmd is a R or W or PRE to same bank allow
+376                     		 // it else issue BT 
+377                     		 // This is a little pessimistic since BT is issued
+378                     		 // for non-wrap mode transfers even if the transfer
+379                     		 // ends on a burst boundary, but is felt to be of
+380                     		 // minimal performance impact.
+381                     
+382        1/1          		 i_xfr_cmd = `SDR_BT;
+383        1/1          		 sel_b2x = b2x_req &amp; ~mgmt_req &amp; (b2x_read | b2x_prechg_hit);
+384                     
+385                     	      end // if (~l_wrap)
+386                     	      
+387                     	      else begin
+388                     		 // Wrap mode transfer, by definition is end of burst
+389                     		 // boundary 
+390                     
+391        <font color = "red">0/1     ==>  		 i_xfr_cmd = `SDR_DESEL;</font>
+392        <font color = "red">0/1     ==>  		 sel_b2x = b2x_req &amp; ~mgmt_req &amp; ~b2x_write;</font>
+393                     
+394                     	      end // else: !if(~l_wrap)
+395                     		 
+396        1/1          	      next_xfr_st = (sdr_init_done) ? ((b2x_req &amp; ~mgmt_req &amp; b2x_read) ? `XFR_READ : `XFR_RDWT) : `XFR_IDLE;
+397                     
+398                     	   end // if (l_xfr_end)
+399                     
+400                     	   else begin
+401                     	      // Not end of transfer
+402                     	      // If current transfer was not wrap mode and we are at
+403                     	      // the start of a burst boundary issue another R cmd to
+404                     	      // step sequemtially thru memory, ELSE,
+405                     	      // issue precharge/activate commands from the bank control
+406                     
+407        <font color = "red">0/1     ==>  	      i_xfr_cmd = (burst_bdry &amp; ~l_wrap) ? `SDR_READ : `SDR_DESEL;</font>
+408        <font color = "red">0/1     ==>  	      sel_b2x = ~(burst_bdry &amp; ~l_wrap) &amp; b2x_req;</font>
+409        <font color = "red">0/1     ==>  	      next_xfr_st = `XFR_READ;</font>
+410                     
+411                     	   end // else: !if(l_xfr_end)
+412                     	   
+413                     	end // case: `XFR_READ
+414                     	
+415                     	`XFR_RDWT : begin 
+416        1/1          	   rd_next = ~mgmt_req &amp; b2x_req &amp; b2x_read;
+417        1/1          	   wr_next = rd_pipe_mt &amp; ~mgmt_req &amp; b2x_req &amp; b2x_write;
+418        1/1          	   rdok = ~mgmt_req;
+419        1/1          	   cb_pre_ok = 1'b1;
+420        1/1          	   wrok = rd_pipe_mt &amp; ~mgmt_req;
+421                     
+422        1/1          	   sel_mgmt = mgmt_req;
+423                     	   
+424        1/1          	   sel_b2x = ~mgmt_req &amp; b2x_req;
+425                     
+426        1/1          	   i_xfr_cmd = `SDR_DESEL;
+427                     
+428        1/1          	   next_xfr_st = (~mgmt_req &amp; b2x_req &amp; b2x_read) ? `XFR_READ : 
+429                     			 (~rd_pipe_mt) ? `XFR_RDWT :
+430                     			 (~mgmt_req &amp; b2x_req &amp; b2x_write) ? `XFR_WRITE : 
+431                     			 `XFR_IDLE;
+432                     
+433                     	end // case: `XFR_RDWT
+434                     	
+435                     	`XFR_WRITE : begin
+436        1/1          	   rd_next = l_xfr_end &amp; ~mgmt_req &amp; b2x_req &amp; b2x_read;
+437        1/1          	   wr_next = ~l_xfr_end |
+438                     		     l_xfr_end &amp; ~mgmt_req &amp; b2x_req &amp; b2x_write;
+439        1/1          	   rdok = l_xfr_end &amp; ~mgmt_req;
+440        1/1          	   cb_pre_ok = 1'b0;
+441        1/1          	   wrok = l_xfr_end &amp; ~mgmt_req;
+442        1/1          	   sel_mgmt = 1'b0;
+443                     
+444        1/1          	   if (l_xfr_end) begin		  // End of transfer
+445                     
+446        1/1          	      if (~l_wrap) begin
+447                     		 // Current transfer was not wrap mode, may need BT
+448                     		 // If next cmd is a R or W allow it else issue BT 
+449                     		 // This is a little pessimistic since BT is issued
+450                     		 // for non-wrap mode transfers even if the transfer
+451                     		 // ends on a burst boundary, but is felt to be of
+452                     		 // minimal performance impact.
+453                     
+454                     
+455        1/1          		 sel_b2x = b2x_req &amp; ~mgmt_req &amp; (b2x_read | b2x_write);
+456        1/1          		 i_xfr_cmd = `SDR_BT;
+457                     	      end // if (~l_wrap)
+458                     
+459                     	      else begin
+460                     		 // Wrap mode transfer, by definition is end of burst
+461                     		 // boundary 
+462                     
+463        <font color = "red">0/1     ==>  		 sel_b2x = b2x_req &amp; ~mgmt_req &amp; ~b2x_prechg_hit;</font>
+464        <font color = "red">0/1     ==>  		 i_xfr_cmd = `SDR_DESEL;</font>
+465                     	      end // else: !if(~l_wrap)
+466                     	      
+467        1/1          	      next_xfr_st = (~mgmt_req &amp; b2x_req &amp; b2x_read) ? `XFR_READ : 
+468                     			    (~mgmt_req &amp; b2x_req &amp; b2x_write) ? `XFR_WRITE : 
+469                     			    `XFR_IDLE;
+470                     
+471                     	   end // if (l_xfr_end)
+472                     
+473                     	   else begin
+474                     	      // Not end of transfer
+475                     	      // If current transfer was not wrap mode and we are at
+476                     	      // the start of a burst boundary issue another R cmd to
+477                     	      // step sequemtially thru memory, ELSE,
+478                     	      // issue precharge/activate commands from the bank control
+479                     
+480        <font color = "red">0/1     ==>  	      if (burst_bdry &amp; ~l_wrap) begin</font>
+481        <font color = "red">0/1     ==>  		 sel_b2x = 1'b0;</font>
+482        <font color = "red">0/1     ==>  		 i_xfr_cmd = `SDR_WRITE;</font>
+483                     	      end // if (burst_bdry &amp; ~l_wrap)
+484                     	      
+485                     	      else begin
+486        <font color = "red">0/1     ==>  		 sel_b2x = b2x_req &amp; ~mgmt_req;</font>
+487        <font color = "red">0/1     ==>  		 i_xfr_cmd = `SDR_DESEL;</font>
+488                     	      end // else: !if(burst_bdry &amp; ~l_wrap)
+489                     
+490        <font color = "red">0/1     ==>  	      next_xfr_st = `XFR_WRITE;</font>
+491                     	   end // else: !if(l_xfr_end)
+492                     
+493                     	end // case: `XFR_WRITE
+                        MISSING_DEFAULT
+494                     
+495                           endcase // case(xfr_st)
+496                     
+497                        end // always @ (xfr_st or ...)
+498                     
+499                        // signals to bank_ctl (x2b_refresh, x2b_act_ok, x2b_rdok, x2b_wrok,
+500                        // x2b_pre_ok[3:0] 
+501                     
+502                        assign x2b_refresh = (xfr_cmd == `SDR_REFRESH) ? 1'b1 : 1'b0;
+503                     
+504                        assign x2b_act_ok = ~act_cmd &amp; ~d_act_cmd;
+505                     
+506                        assign x2b_rdok = rdok;
+507                     
+508                        assign x2b_wrok = wrok;
+509                     
+510                        //assign x2b_pre_ok[0] = (l_ba == 2'b00) ? cb_pre_ok : 1'b1;
+511                        //assign x2b_pre_ok[1] = (l_ba == 2'b01) ? cb_pre_ok : 1'b1;
+512                        //assign x2b_pre_ok[2] = (l_ba == 2'b10) ? cb_pre_ok : 1'b1;
+513                        //assign x2b_pre_ok[3] = (l_ba == 2'b11) ? cb_pre_ok : 1'b1;
+514                        
+515                        assign x2b_pre_ok[0] = cb_pre_ok;
+516                        assign x2b_pre_ok[1] = cb_pre_ok;
+517                        assign x2b_pre_ok[2] = cb_pre_ok;
+518                        assign x2b_pre_ok[3] = cb_pre_ok;
+519                        assign last_burst = (ld_xfr) ? b2x_last : l_last;
+520                        
+521                        /************************************************************************/
+522                        // APP Data I/F
+523                     
+524                        wire [SDR_DW-1:0] 	x2a_rddt;
+525                     
+526                        //assign x2a_start = (ld_xfr) ? b2x_start : l_start;
+527                        assign x2a_rdstart = d_rd_start;
+528                        assign x2a_wrstart = wr_start;
+529                        
+530                        assign x2a_rdlast = d_rd_last;
+531                        assign x2a_wrlast = wr_last;
+532                     
+533                        assign x2a_id = (ld_xfr) ? b2x_id : l_id;
+534                     
+535                        assign x2a_rddt = sdr_din;
+536                     
+537                        assign x2a_wrnext = wr_next;
+538                     
+539                        assign x2a_rdok = d_rd_next;
+540                        
+541                        /************************************************************************/
+542                        // SDRAM I/F
+543                     
+544                        reg 				sdr_cs_n, sdr_cke, sdr_ras_n, sdr_cas_n,
+545                     				sdr_we_n; 
+546                        reg [SDR_BW-1:0] 	sdr_dqm;
+547                        reg [1:0] 			sdr_ba;
+548                        reg [12:0] 			sdr_addr;
+549                        reg [SDR_DW-1:0] 	sdr_dout;
+550                        reg [SDR_BW-1:0] 	sdr_den_n;
+551                     
+552                        always @ (posedge clk)
+553        1/1                if (~reset_n) begin
+554        1/1          	 sdr_cs_n &lt;= 1'b1;
+555        1/1          	 sdr_cke &lt;= 1'b1;
+556        1/1          	 sdr_ras_n &lt;= 1'b1;
+557        1/1          	 sdr_cas_n &lt;= 1'b1;
+558        1/1          	 sdr_we_n &lt;= 1'b1;
+559        1/1          	 sdr_dqm   &lt;= {SDR_BW{1'b1}};
+560        1/1          	 sdr_den_n &lt;= {SDR_BW{1'b1}};
+561                           end // if (~reset_n)
+562                           else begin
+563        1/1          	 sdr_cs_n &lt;= xfr_cmd[3];
+564        1/1          	 sdr_ras_n &lt;= xfr_cmd[2];
+565        1/1          	 sdr_cas_n &lt;= xfr_cmd[1];
+566        1/1          	 sdr_we_n &lt;= xfr_cmd[0];
+567        1/1          	 sdr_cke &lt;= (xfr_st != `XFR_IDLE) ? 1'b1 : 
+568                     		    ~(mgmt_idle &amp; b2x_idle &amp; r2x_idle);
+569        1/1          	 sdr_dqm &lt;= (wr_next) ? a2x_wren_n : {SDR_BW{1'b0}};
+570        1/1                   sdr_den_n &lt;= (wr_next) ? {SDR_BW{1'b0}} : {SDR_BW{1'b1}};
+571                           end // else: !if(~reset_n)
+572                     
+573                        always @ (posedge clk) begin 
+574                     
+575        1/1                if (~xfr_cmd[3]) begin 
+576        1/1          	 sdr_addr &lt;= xfr_addr;
+577        1/1          	 sdr_ba &lt;= xfr_ba;
+578                           end // if (~xfr_cmd[3])
+                        MISSING_ELSE
+579                           
+580        1/1                sdr_dout &lt;= (wr_next) ? a2x_wrdt : sdr_dout;
+581                     
+582                        end // always @ (posedge clk)
+583                        
+584                        /************************************************************************/
+585                        // Refresh and Initialization
+586                     
+587                        `define MGM_POWERUP         3'b000
+588                        `define MGM_PRECHARGE    3'b001
+589                        `define MGM_PCHWT        3'b010
+590                        `define MGM_REFRESH      3'b011
+591                        `define MGM_REFWT        3'b100
+592                        `define MGM_MODE_REG     3'b101
+593                        `define MGM_MODE_WT      3'b110
+594                        `define MGM_ACTIVE       3'b111
+595                        
+596                        reg [2:0]       mgmt_st, next_mgmt_st;
+597                        reg [3:0] 	   tmr0, tmr0_d;
+598                        reg [3:0] 	   cntr1, cntr1_d;
+599                        wire 	   tmr0_tc, cntr1_tc, rfsh_timer_tc, ref_req, precharge_ok;
+600                        reg 		   ld_tmr0, ld_cntr1, dec_cntr1, set_sdr_init_done;
+601                        reg [`SDR_RFSH_TIMER_W-1 : 0]  rfsh_timer;
+602                        reg [`SDR_RFSH_ROW_CNT_W-1:0]  rfsh_row_cnt;
+603                        
+604                        always @ (posedge clk) 
+605        1/1                if (~reset_n) begin
+606        1/1          	 mgmt_st &lt;= `MGM_POWERUP;
+607        1/1          	 tmr0 &lt;= 4'b0;
+608        1/1          	 cntr1 &lt;= 4'h7;
+609        1/1          	 rfsh_timer &lt;= 0;
+610        1/1          	 rfsh_row_cnt &lt;= 0;
+611        1/1          	 sdr_init_done &lt;= 1'b0;
+612                           end // if (~reset_n)
+613                           else begin
+614        1/1          	 mgmt_st &lt;= next_mgmt_st;
+615        1/1          	 tmr0 &lt;= (ld_tmr0) ? tmr0_d :
+616                     		  (~tmr0_tc) ? tmr0 - 1 : tmr0;
+617        1/1          	 cntr1 &lt;= (ld_cntr1) ? cntr1_d :
+618                     		  (dec_cntr1) ? cntr1 - 1 : cntr1;
+619        1/1          	 sdr_init_done &lt;= (set_sdr_init_done | sdr_init_done) &amp; sdram_enable;
+620        1/1          	 rfsh_timer &lt;= (rfsh_timer_tc) ? 0 : rfsh_timer + 1;
+621        1/1          	 rfsh_row_cnt &lt;= (~set_sdr_init_done) ? 0 :
+622                     			 (rfsh_timer_tc) ? rfsh_row_cnt + 1 : rfsh_row_cnt;
+623                           end // else: !if(~reset_n)
+624                     
+625                        assign tmr0_tc = ~|tmr0;
+626                     
+627                        assign cntr1_tc = ~|cntr1;
+628                     
+629                        assign rfsh_timer_tc = (rfsh_timer == rfsh_time) ? 1'b1 : 1'b0;
+630                     
+631                        assign ref_req = (rfsh_row_cnt &gt;= rfsh_rmax) ? 1'b1 : 1'b0;
+632                     
+633                        assign precharge_ok = cb_pre_ok &amp; b2x_tras_ok;
+634                     
+635                        assign xfr_bank_sel = l_ba;
+636                        
+637                        always @ (mgmt_st or sdram_enable or mgmt_ack or trp_delay or tmr0_tc or
+638                     	     cntr1_tc or trcar_delay or rfsh_row_cnt or ref_req or sdr_init_done
+639                     	     or precharge_ok or sdram_mode_reg) begin 
+640                     
+641        1/1                case (mgmt_st)          // synopsys full_case parallel_case
+642                     
+643                     	`MGM_POWERUP : begin
+644        1/1          	   mgmt_idle = 1'b0;
+645        1/1          	   mgmt_req = 1'b0;
+646        1/1          	   mgmt_cmd = `SDR_DESEL;
+647        1/1          	   mgmt_ba = 2'b0;
+648        1/1          	   mgmt_addr = 13'h400;    // A10 = 1 =&gt; all banks
+649        1/1          	   ld_tmr0 = 1'b0;
+650        1/1          	   tmr0_d = 4'b0;
+651        1/1          	   dec_cntr1 = 1'b0;
+652        1/1          	   ld_cntr1 = 1'b1;
+653        1/1          	   cntr1_d = 4'hf; // changed for sdrams with higher refresh cycles during initialization
+654        1/1          	   set_sdr_init_done = 1'b0;
+655        1/1          	   next_mgmt_st = (sdram_enable) ? `MGM_PRECHARGE : `MGM_POWERUP; 
+656                     	end // case: `MGM_POWERUP
+657                     
+658                     	`MGM_PRECHARGE : begin	   // Precharge all banks
+659        1/1          	   mgmt_idle = 1'b0;
+660        1/1          	   mgmt_req = 1'b1;
+661        1/1          	   mgmt_cmd = (precharge_ok) ? `SDR_PRECHARGE : `SDR_DESEL;
+662        1/1          	   mgmt_ba = 2'b0;
+663        1/1          	   mgmt_addr = 13'h400;	   // A10 = 1 =&gt; all banks
+664        1/1          	   ld_tmr0 = mgmt_ack;
+665        1/1          	   tmr0_d = trp_delay;
+666        1/1          	   ld_cntr1 = 1'b0;
+667        1/1          	   cntr1_d = 4'h7;
+668        1/1          	   dec_cntr1 = 1'b0;
+669        1/1          	   set_sdr_init_done = 1'b0;
+670        1/1          	   next_mgmt_st = (precharge_ok &amp; mgmt_ack) ? `MGM_PCHWT : `MGM_PRECHARGE;
+671                     	end // case: `MGM_PRECHARGE
+672                     	
+673                     	`MGM_PCHWT : begin	   // Wait for Trp
+674        1/1          	   mgmt_idle = 1'b0;
+675        1/1          	   mgmt_req = 1'b1;
+676        1/1          	   mgmt_cmd = `SDR_DESEL;
+677        1/1          	   mgmt_ba = 2'b0;
+678        1/1          	   mgmt_addr = 13'h400;	   // A10 = 1 =&gt; all banks
+679        1/1          	   ld_tmr0 = 1'b0;
+680        1/1          	   tmr0_d = trp_delay;
+681        1/1          	   ld_cntr1 = 1'b0;
+682        1/1          	   cntr1_d = 4'b0;
+683        1/1          	   dec_cntr1 = 1'b0;
+684        1/1          	   set_sdr_init_done = 1'b0;
+685        1/1          	   next_mgmt_st = (tmr0_tc) ? `MGM_REFRESH : `MGM_PCHWT;
+686                     	end // case: `MGM_PRECHARGE
+687                     	
+688                     	`MGM_REFRESH : begin	   // Refresh
+689        1/1          	   mgmt_idle = 1'b0;
+690        1/1          	   mgmt_req = 1'b1;
+691        1/1          	   mgmt_cmd = `SDR_REFRESH;
+692        1/1          	   mgmt_ba = 2'b0;
+693        1/1          	   mgmt_addr = 13'h400;	   // A10 = 1 =&gt; all banks
+694        1/1          	   ld_tmr0 = mgmt_ack;
+695        1/1          	   tmr0_d = trcar_delay;
+696        1/1          	   dec_cntr1 = mgmt_ack;
+697        1/1          	   ld_cntr1 = 1'b0;
+698        1/1          	   cntr1_d = 4'h7;
+699        1/1          	   set_sdr_init_done = 1'b0;
+700        1/1          	   next_mgmt_st = (mgmt_ack) ? `MGM_REFWT : `MGM_REFRESH;
+701                     	end // case: `MGM_REFRESH
+702                     	
+703                     	`MGM_REFWT : begin	   // Wait for trcar
+704        1/1          	   mgmt_idle = 1'b0;
+705        1/1          	   mgmt_req = 1'b1;
+706        1/1          	   mgmt_cmd = `SDR_DESEL;
+707        1/1          	   mgmt_ba = 2'b0;
+708        1/1          	   mgmt_addr = 13'h400;	   // A10 = 1 =&gt; all banks
+709        1/1          	   ld_tmr0 = 1'b0;
+710        1/1          	   tmr0_d = trcar_delay;
+711        1/1          	   dec_cntr1 = 1'b0;
+712        1/1          	   ld_cntr1 = 1'b0;
+713        1/1          	   cntr1_d = 4'h7;
+714        1/1          	   set_sdr_init_done = 1'b0;
+715        1/1          	   next_mgmt_st = (~tmr0_tc) ? `MGM_REFWT : 
+716                     			  (~cntr1_tc) ? `MGM_REFRESH :
+717                     			  (sdr_init_done) ? `MGM_ACTIVE : `MGM_MODE_REG;
+718                     	end // case: `MGM_REFWT
+719                     	
+720                     	`MGM_MODE_REG : begin	   // Program mode Register &amp; wait for 
+721        1/1          	   mgmt_idle = 1'b0;
+722        1/1          	   mgmt_req = 1'b1;
+723        1/1          	   mgmt_cmd = `SDR_MODE;
+724        1/1          	   mgmt_ba = {1'b0, sdram_mode_reg[11]};
+725        1/1          	   mgmt_addr = sdram_mode_reg;
+726        1/1          	   ld_tmr0 = mgmt_ack;
+727        1/1          	   tmr0_d = 4'h7;
+728        1/1          	   dec_cntr1 = 1'b0;
+729        1/1          	   ld_cntr1 = 1'b0;
+730        1/1          	   cntr1_d = 4'h7;
+731        1/1          	   set_sdr_init_done = 1'b0;
+732        1/1          	   next_mgmt_st = (mgmt_ack) ? `MGM_MODE_WT : `MGM_MODE_REG;
+733                     	end // case: `MGM_MODE_REG
+734                     	
+735                     	`MGM_MODE_WT : begin	   // Wait for tMRD
+736        1/1          	   mgmt_idle = 1'b0;
+737        1/1          	   mgmt_req = 1'b1;
+738        1/1          	   mgmt_cmd = `SDR_DESEL;
+739        1/1          	   mgmt_ba = 2'bx;
+740        1/1          	   mgmt_addr = 13'bx;
+741        1/1          	   ld_tmr0 = 1'b0;
+742        1/1          	   tmr0_d = 4'h7;
+743        1/1          	   dec_cntr1 = 1'b0;
+744        1/1          	   ld_cntr1 = 1'b0;
+745        1/1          	   cntr1_d = 4'h7;
+746        1/1          	   set_sdr_init_done = 1'b0;
+747        1/1          	   next_mgmt_st = (~tmr0_tc) ? `MGM_MODE_WT : `MGM_ACTIVE;
+748                     	end // case: `MGM_MODE_WT
+749                     	
+750                     	`MGM_ACTIVE : begin	   // Wait for ref_req
+751        1/1          	   mgmt_idle = ~ref_req;
+752        1/1          	   mgmt_req = 1'b0;
+753        1/1          	   mgmt_cmd = `SDR_DESEL;
+754        1/1          	   mgmt_ba = 2'bx;
+755        1/1          	   mgmt_addr = 13'bx;
+756        1/1          	   ld_tmr0 = 1'b0;
+757        1/1          	   tmr0_d = 4'h7;
+758        1/1          	   dec_cntr1 = 1'b0;
+759        1/1          	   ld_cntr1 = ref_req;
+760        1/1          	   cntr1_d = rfsh_row_cnt;
+761        1/1          	   set_sdr_init_done = 1'b1;
+762        1/1          	   next_mgmt_st =  (~sdram_enable) ? `MGM_POWERUP :
+763                                                (ref_req) ? `MGM_PRECHARGE : `MGM_ACTIVE;
+764                     	end // case: `MGM_MODE_WT
+                        MISSING_DEFAULT
+</pre>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod16.html" >sdrc_xfr_ctl</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s8">
+<td>Totals</td>
+<td class="rt">123</td>
+<td class="rt">106</td>
+<td class="rt">86.18 </td>
+</tr><tr class="s8">
+<td>Total Bits</td>
+<td class="rt">914</td>
+<td class="rt">808</td>
+<td class="rt">88.40 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">457</td>
+<td class="rt">404</td>
+<td class="rt">88.40 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">457</td>
+<td class="rt">404</td>
+<td class="rt">88.40 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Ports</td>
+<td class="rt">51</td>
+<td class="rt">43</td>
+<td class="rt">84.31 </td>
+</tr><tr class="s8">
+<td>Port Bits</td>
+<td class="rt">526</td>
+<td class="rt">466</td>
+<td class="rt">88.59 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">263</td>
+<td class="rt">233</td>
+<td class="rt">88.59 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">263</td>
+<td class="rt">233</td>
+<td class="rt">88.59 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Signals</td>
+<td class="rt">72</td>
+<td class="rt">63</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s8">
+<td>Signal Bits</td>
+<td class="rt">388</td>
+<td class="rt">342</td>
+<td class="rt">88.14 </td>
+</tr><tr class="s8">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">194</td>
+<td class="rt">171</td>
+<td class="rt">88.14 </td>
+</tr><tr class="s8">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">194</td>
+<td class="rt">171</td>
+<td class="rt">88.14 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_tras_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2x_idle</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_idle</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_ba[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_addr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_cmd[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_ack</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2b_pre_ok[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2b_refresh</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2b_act_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2b_rdok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2b_wrok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2a_rdstart</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2a_wrstart</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2a_rdlast</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2a_wrlast</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2a_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>a2x_wrdt[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>a2x_wren_n[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2a_rddt[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2a_wrnext</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2a_rdok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_init_done</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_cs_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_cke</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_ras_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_cas_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_we_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_dqm[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_ba[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_addr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_din[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>sdr_dout[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_den_n[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>xfr_bank_sel[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdram_enable</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>sdram_mode_reg[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>sdram_mode_reg[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>sdram_mode_reg[4:3]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>sdram_mode_reg[8:5]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>sdram_mode_reg[9]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>sdram_mode_reg[12:10]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>cas_latency[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>cas_latency[2:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>trp_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>trcar_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>twr_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rfsh_time[11:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rfsh_rmax[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>xfr_st[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>next_xfr_st[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_caddr[9:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_caddr[12:10]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>last_burst</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>xfr_ba[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_ba[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_addr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_len[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>next_xfr_len[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_len[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mgmt_idle</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mgmt_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mgmt_cmd[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mgmt_addr[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mgmt_addr[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>mgmt_addr[5:3]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mgmt_addr[8:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>mgmt_addr[10:9]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mgmt_addr[12:11]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>mgmt_ba[1:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>sel_mgmt</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sel_b2x</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>cb_pre_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rdok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wrok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_next</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_next</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>act_cmd</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>d_act_cmd</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>b2x_sdr_cmd[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>b2x_sdr_cmd[3]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>xfr_cmd[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i_xfr_cmd[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i_xfr_cmd[2:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i_xfr_cmd[3]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mgmt_ack</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>b2x_read</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>b2x_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>b2x_prechg</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>d_rd_next</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>dt_next</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_end</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_pipe_mt</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ld_xfr</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>d_rd_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_xfr_end</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>d_rd_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>page_hit</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>burst_bdry</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>b2x_prechg_hit</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_rd_next[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_rd_start[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_rd_last[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_caddr_lsb[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>mgmt_st[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>next_mgmt_st[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tmr0[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tmr0_d[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>cntr1[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>cntr1_d[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tmr0_tc</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>cntr1_tc</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rfsh_timer_tc</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ref_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>precharge_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ld_tmr0</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ld_cntr1</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>dec_cntr1</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>set_sdr_init_done</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rfsh_timer[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rfsh_timer[11:9]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rfsh_row_cnt[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_21">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+  </ul>
+  <ul name="tag_sdrc_xfr_ctl">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

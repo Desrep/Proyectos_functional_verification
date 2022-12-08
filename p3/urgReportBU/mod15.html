@@ -1,0 +1,3999 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: sdrc_bank_fsm</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_sdrc_bank_fsm'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_sdrc_bank_fsm')">sdrc_bank_fsm</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s7 cl rt"> 76.31</td>
+<td class="s7 cl rt"><a href="mod15.html#Line" > 77.36</a></td>
+<td class="s7 cl rt"><a href="mod15.html#Toggle" > 75.26</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/sdrc_bank_fsm.v')">/mnt/vol_NFS_alajuela/qtree_NFS_rh003/MP6134_3_2022_maestria/fporras/p3/sdrc_bank_fsm.v</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod15.html#inst_tag_17"  onclick="showContent('inst_tag_17')">duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank0_fsm</a></td>
+<td class="s7 cl rt"> 76.31</td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_17_Line" > 77.36</a></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_17_Toggle" > 75.26</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod15.html#inst_tag_18"  onclick="showContent('inst_tag_18')">duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank1_fsm</a></td>
+<td class="s7 cl rt"> 76.31</td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_18_Line" > 77.36</a></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_18_Toggle" > 75.26</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod15.html#inst_tag_19"  onclick="showContent('inst_tag_19')">duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank2_fsm</a></td>
+<td class="s7 cl rt"> 76.31</td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_19_Line" > 77.36</a></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_19_Toggle" > 75.26</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod15.html#inst_tag_20"  onclick="showContent('inst_tag_20')">duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank3_fsm</a></td>
+<td class="s7 cl rt"> 76.31</td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_20_Line" > 77.36</a></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_20_Toggle" > 75.26</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='inst_tag_17'>
+<hr>
+<a name="inst_tag_17"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_17" >duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank0_fsm</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s7 cl rt"> 76.31</td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_17_Line" > 77.36</a></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_17_Toggle" > 75.26</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s7 cl rt"> 76.31</td>
+<td class="s7 cl rt"> 77.36</td>
+<td class="s7 cl rt"> 75.26</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s6 cl rt"> 61.66</td>
+<td class="s4 cl rt"> 48.39</td>
+<td class="s7 cl rt"> 74.93</td>
+<td class="wht cl rt"></td>
+<td><a href="mod1.html#inst_tag_1" >u_bank_ctl</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div name='inst_tag_18'>
+<hr>
+<a name="inst_tag_18"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_18" >duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank1_fsm</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s7 cl rt"> 76.31</td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_18_Line" > 77.36</a></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_18_Toggle" > 75.26</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s7 cl rt"> 76.31</td>
+<td class="s7 cl rt"> 77.36</td>
+<td class="s7 cl rt"> 75.26</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s6 cl rt"> 61.66</td>
+<td class="s4 cl rt"> 48.39</td>
+<td class="s7 cl rt"> 74.93</td>
+<td class="wht cl rt"></td>
+<td><a href="mod1.html#inst_tag_1" >u_bank_ctl</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div name='inst_tag_19'>
+<hr>
+<a name="inst_tag_19"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_19" >duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank2_fsm</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s7 cl rt"> 76.31</td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_19_Line" > 77.36</a></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_19_Toggle" > 75.26</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s7 cl rt"> 76.31</td>
+<td class="s7 cl rt"> 77.36</td>
+<td class="s7 cl rt"> 75.26</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s6 cl rt"> 61.66</td>
+<td class="s4 cl rt"> 48.39</td>
+<td class="s7 cl rt"> 74.93</td>
+<td class="wht cl rt"></td>
+<td><a href="mod1.html#inst_tag_1" >u_bank_ctl</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div name='inst_tag_20'>
+<hr>
+<a name="inst_tag_20"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_20" >duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank3_fsm</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s7 cl rt"> 76.31</td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_20_Line" > 77.36</a></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_20_Toggle" > 75.26</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s7 cl rt"> 76.31</td>
+<td class="s7 cl rt"> 77.36</td>
+<td class="s7 cl rt"> 75.26</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s6 cl rt"> 61.66</td>
+<td class="s4 cl rt"> 48.39</td>
+<td class="s7 cl rt"> 74.93</td>
+<td class="wht cl rt"></td>
+<td><a href="mod1.html#inst_tag_1" >u_bank_ctl</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_sdrc_bank_fsm'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod15.html" >sdrc_bank_fsm</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s7"><td class="lf">TOTAL</td><td></td><td>106</td><td>82</td><td>77.36</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>163</td><td>17</td><td>17</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>197</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>222</td><td>21</td><td>21</td><td>100.00</td></tr>
+<tr class="s5"><td class="lf">ALWAYS</td><td>267</td><td>59</td><td>35</td><td>59.32</td></tr>
+</table>
+<pre class="code"><br clear=all>
+162                        always @ (posedge clk)
+163        1/1                if (~reset_n) begin
+164        1/1          	 x2b_wrok_r &lt;= 1'b0;
+165        1/1          	 xfr_ok_r   &lt;= 1'b0;
+166        1/1          	 x2b_rdok_r &lt;= 1'b0;
+167        1/1          	 b2x_cmd_r  &lt;= 2'b0;
+168        1/1          	 timer0_tc_r  &lt;= 1'b0;
+169        1/1          	 tras_ok_r    &lt;= 1'b0;
+170        1/1          	 x2b_pre_ok_r &lt;= 1'b0;
+171        1/1          	 x2b_act_ok_r &lt;= 1'b0;
+172                           end
+173                           else begin
+174        1/1          	 x2b_wrok_r &lt;= x2b_wrok;
+175        1/1          	 xfr_ok_r   &lt;= xfr_ok;
+176        1/1          	 x2b_rdok_r &lt;= x2b_rdok;
+177        1/1          	 b2x_cmd_r  &lt;= b2x_cmd_t;
+178        1/1          	 timer0_tc_r &lt;= (ld_trp | ld_trcd) ? 1'b0 : timer0_tc_t;
+179        1/1          	 tras_ok_r   &lt;= tras_ok_internal;
+180        1/1          	 x2b_pre_ok_r  &lt;= x2b_pre_ok;
+181        1/1          	 x2b_act_ok_r  &lt;= x2b_act_ok;
+182                           end
+183                     
+184                      wire  x2b_wrok_t     = (`TARGET_DESIGN == `FPGA) ? x2b_wrok_r : x2b_wrok;
+185                      wire  xfr_ok_t       = (`TARGET_DESIGN == `FPGA) ? xfr_ok_r : xfr_ok;
+186                      wire  x2b_rdok_t     = (`TARGET_DESIGN == `FPGA) ? x2b_rdok_r : x2b_rdok;
+187                      wire [1:0] b2x_cmd   = (`TARGET_DESIGN == `FPGA) ? b2x_cmd_r : b2x_cmd_t;
+188                      wire  timer0_tc      = (`TARGET_DESIGN == `FPGA) ? timer0_tc_r : timer0_tc_t;
+189                      assign  tras_ok      = (`TARGET_DESIGN == `FPGA) ? tras_ok_r : tras_ok_internal;
+190                      wire  x2b_pre_ok_t   = (`TARGET_DESIGN == `FPGA) ? x2b_pre_ok_r : x2b_pre_ok;
+191                      wire  x2b_act_ok_t   = (`TARGET_DESIGN == `FPGA) ? x2b_act_ok_r : x2b_act_ok;
+192                     
+193                        /*** Timing Break Logic Added for FPGA - End****/
+194                     
+195                     
+196                        always @ (posedge clk)
+197        1/1                if (~reset_n) begin
+198        1/1          	 bank_valid &lt;= 1'b0;
+199        1/1          	 tras_cntr &lt;= 4'b0;
+200        1/1          	 timer0 &lt;= 4'b0;
+201        1/1          	 bank_st &lt;= `BANK_IDLE;
+202                           end // if (~reset_n)
+203                     
+204                           else begin
+205                     
+206        1/1          	 bank_valid &lt;= (x2b_refresh || bank_prech_page_closed) ? 1'b0 :  // force the bank status to be invalid
+207                     		       (activate_bank) ? 1'b1 : bank_valid;
+208                     
+209        1/1          	 tras_cntr &lt;= (activate_bank) ? tras_delay :
+210                     		      (~tras_ok_internal) ? tras_cntr - 4'b1 : 4'b0;
+211                     	 
+212        1/1          	 timer0 &lt;= (ld_trp) ? trp_delay :
+213                     		   (ld_trcd) ? trcd_delay :
+214                     		   (timer0 != 'h0) ? timer0 - 4'b1 : timer0;
+215                     	 
+216        1/1          	 bank_st &lt;= next_bank_st;
+217                     
+218                           end // else: !if(~reset_n)
+219                     
+220                        always @ (posedge clk) begin 
+221                     
+222        1/1                bank_row &lt;= (bank_st == `BANK_ACT) ? b2x_addr : bank_row;
+223                     
+224        1/1                if (~reset_n) begin
+225        1/1          	 l_start &lt;= 1'b0;
+226        1/1          	 l_last &lt;= 1'b0;
+227        1/1          	 l_id &lt;= 1'b0;
+228        1/1          	 l_len &lt;= 1'b0;
+229        1/1          	 l_wrap &lt;= 1'b0;
+230        1/1          	 l_write &lt;= 1'b0;
+231        1/1          	 l_raddr &lt;= 1'b0;
+232        1/1          	 l_caddr &lt;= 1'b0;
+233        1/1                   l_sdr_dma_last &lt;= 1'b0;
+234                           end
+235                           else begin
+236        1/1                  if (b2r_ack) begin
+237        1/1            	   l_start &lt;= r2b_start;
+238        1/1            	   l_last &lt;= r2b_last;
+239        1/1            	   l_id &lt;= r2b_req_id;
+240        1/1            	   l_len &lt;= r2b_len;
+241        1/1            	   l_wrap &lt;= r2b_wrap;
+242        1/1            	   l_write &lt;= r2b_write;
+243        1/1            	   l_raddr &lt;= r2b_raddr;
+244        1/1            	   l_caddr &lt;= r2b_caddr;
+245        1/1                     l_sdr_dma_last &lt;= sdr_dma_last;
+246                             end // if (b2r_ack)
+                        MISSING_ELSE
+247                           end
+248                     
+249                        end // always @ (posedge clk)
+250                        
+251                        assign tras_ok_internal = ~|tras_cntr;
+252                     
+253                        assign activate_bank = (b2x_cmd == `OP_ACT) &amp; x2b_ack;
+254                     
+255                        assign page_hit = (r2b_raddr == bank_row) ? bank_valid : 1'b0;    // its a hit only if bank is valid
+256                     
+257                        assign timer0_tc_t = ~|timer0;
+258                     
+259                        assign ld_trp = (b2x_cmd == `OP_PRE) ? x2b_ack : 1'b0;
+260                     
+261                        assign ld_trcd = (b2x_cmd == `OP_ACT) ? x2b_ack : 1'b0;
+262                        
+263                     
+264                     
+265                        always @ (*) begin
+266                     
+267        1/1                 bank_prech_page_closed = 1'b0;
+268        1/1                 b2x_req = 1'b0;
+269        1/1                 b2x_cmd_t = 2'bx;
+270        1/1                 b2r_ack = 1'b0;
+271        1/1                 b2x_addr = 13'bx;
+272        1/1                 next_bank_st = bank_st;
+273                     
+274        1/1                case (bank_st)
+275                     
+276                     	`BANK_IDLE : begin
+277        1/1          		if(`TARGET_DESIGN == `FPGA) begin // To break the timing, b2x request are generated delayed
+278        1/1          	             if (~r2b_req) begin
+279        1/1          	                next_bank_st = `BANK_IDLE;
+280                     	             end // if (~r2b_req)
+281        1/1          	             else if (page_hit) begin 
+282        1/1          	                b2r_ack = 1'b1;
+283        1/1          	                b2x_cmd_t = (r2b_write) ? `OP_WR : `OP_RD;
+284        1/1          	                next_bank_st = `BANK_XFR;  
+285                     	             end // if (page_hit)
+286                     	             else begin  // page_miss
+287        1/1          	                b2r_ack = 1'b1;
+288        1/1          	                b2x_cmd_t = `OP_PRE;
+289        1/1          	                next_bank_st = `BANK_PRE;  // bank was precharged on l_sdr_dma_last
+290                     	             end // else: !if(page_hit)
+291                     		end else begin // ASIC
+292        <font color = "red">0/1     ==>  	             if (~r2b_req) begin</font>
+293        <font color = "red">0/1     ==>                          bank_prech_page_closed = 1'b0;</font>
+294        <font color = "red">0/1     ==>  	                b2x_req = 1'b0;</font>
+295        <font color = "red">0/1     ==>  	                b2x_cmd_t = 2'bx;</font>
+296        <font color = "red">0/1     ==>  	                b2r_ack = 1'b0;</font>
+297        <font color = "red">0/1     ==>  	                b2x_addr = 13'bx;</font>
+298        <font color = "red">0/1     ==>  	                next_bank_st = `BANK_IDLE;</font>
+299                     	             end // if (~r2b_req)
+300        <font color = "red">0/1     ==>  	             else if (page_hit) begin </font>
+301        <font color = "red">0/1     ==>  	                b2x_req = (r2b_write) ? x2b_wrok_t &amp; xfr_ok_t : </font>
+302                     			                       x2b_rdok_t &amp; xfr_ok_t;
+303        <font color = "red">0/1     ==>  	                b2x_cmd_t = (r2b_write) ? `OP_WR : `OP_RD;</font>
+304        <font color = "red">0/1     ==>  	                b2r_ack = 1'b1;</font>
+305        <font color = "red">0/1     ==>  	                b2x_addr = r2b_caddr;</font>
+306        <font color = "red">0/1     ==>  	                next_bank_st = (x2b_ack) ? `BANK_IDLE : `BANK_XFR;  // in case of hit, stay here till xfr sm acks</font>
+307                     	             end // if (page_hit)
+308                     	             else begin  // page_miss
+309        <font color = "red">0/1     ==>  	                b2x_req = tras_ok &amp; x2b_pre_ok_t;</font>
+310        <font color = "red">0/1     ==>  	                b2x_cmd_t = `OP_PRE;</font>
+311        <font color = "red">0/1     ==>  	                b2r_ack = 1'b1;</font>
+312        <font color = "red">0/1     ==>  	                b2x_addr = r2b_raddr &amp; 13'hBFF;	   // Dont want to pre all banks!</font>
+313        <font color = "red">0/1     ==>  	                next_bank_st = (l_sdr_dma_last) ? `BANK_PRE : (x2b_ack) ? `BANK_ACT : `BANK_PRE;  // bank was precharged on l_sdr_dma_last</font>
+314                     	             end // else: !if(page_hit)
+315                     	        end
+316                     	end // case: `BANK_IDLE
+317                     
+318                     	`BANK_PRE : begin
+319        1/1          	   b2x_req = tras_ok &amp; x2b_pre_ok_t;
+320        1/1          	   b2x_cmd_t = `OP_PRE;
+321        1/1          	   b2r_ack = 1'b0;
+322        1/1          	   b2x_addr = l_raddr &amp; 13'hBFF;	   // Dont want to pre all banks!
+323        1/1                     bank_prech_page_closed = 1'b0;
+324        1/1          	   next_bank_st = (x2b_ack) ? `BANK_ACT : `BANK_PRE;
+325                     	end // case: `BANK_PRE
+326                     
+327                     	`BANK_ACT : begin
+328        1/1          	   b2x_req = timer0_tc &amp; x2b_act_ok_t;
+329        1/1          	   b2x_cmd_t = `OP_ACT;
+330        1/1          	   b2r_ack = 1'b0;
+331        1/1          	   b2x_addr = l_raddr;
+332        1/1                     bank_prech_page_closed = 1'b0;
+333        1/1          	   next_bank_st = (x2b_ack) ? `BANK_XFR : `BANK_ACT;
+334                     	end // case: `BANK_ACT
+335                     	
+336                     	`BANK_XFR : begin
+337        1/1          	   b2x_req = (l_write) ? timer0_tc &amp; x2b_wrok_t &amp; xfr_ok_t :
+338                     		     timer0_tc &amp; x2b_rdok_t &amp; xfr_ok_t; 
+339        1/1          	   b2x_cmd_t = (l_write) ? `OP_WR : `OP_RD;
+340        1/1          	   b2r_ack = 1'b0;
+341        1/1          	   b2x_addr = l_caddr;
+342        1/1                     bank_prech_page_closed = 1'b0;
+343        1/1          	   next_bank_st = (x2b_refresh) ? `BANK_ACT : 
+344                                               (x2b_ack &amp; l_sdr_dma_last) ? `BANK_DMA_LAST_PRE :
+345                     			  (x2b_ack) ? `BANK_IDLE : `BANK_XFR;
+346                     	end // case: `BANK_XFR
+347                     
+348                             `BANK_DMA_LAST_PRE : begin
+349        <font color = "red">0/1     ==>  	   b2x_req = tras_ok &amp; x2b_pre_ok_t;</font>
+350        <font color = "red">0/1     ==>  	   b2x_cmd_t = `OP_PRE;</font>
+351        <font color = "red">0/1     ==>  	   b2r_ack = 1'b0;</font>
+352        <font color = "red">0/1     ==>  	   b2x_addr = l_raddr &amp; 13'hBFF;	   // Dont want to pre all banks!</font>
+353        <font color = "red">0/1     ==>             bank_prech_page_closed = 1'b1;</font>
+354        <font color = "red">0/1     ==>  	   next_bank_st = (x2b_ack) ? `BANK_IDLE : `BANK_DMA_LAST_PRE;</font>
+355                     	end // case: `BANK_DMA_LAST_PRE
+                        MISSING_DEFAULT
+</pre>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod15.html" >sdrc_bank_fsm</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">69</td>
+<td class="rt">49</td>
+<td class="rt">71.01 </td>
+</tr><tr class="s7">
+<td>Total Bits</td>
+<td class="rt">388</td>
+<td class="rt">292</td>
+<td class="rt">75.26 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">194</td>
+<td class="rt">146</td>
+<td class="rt">75.26 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">194</td>
+<td class="rt">146</td>
+<td class="rt">75.26 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Ports</td>
+<td class="rt">33</td>
+<td class="rt">25</td>
+<td class="rt">75.76 </td>
+</tr><tr class="s7">
+<td>Port Bits</td>
+<td class="rt">218</td>
+<td class="rt">166</td>
+<td class="rt">76.15 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">109</td>
+<td class="rt">83</td>
+<td class="rt">76.15 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">109</td>
+<td class="rt">83</td>
+<td class="rt">76.15 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Signals</td>
+<td class="rt">36</td>
+<td class="rt">24</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s7">
+<td>Signal Bits</td>
+<td class="rt">170</td>
+<td class="rt">126</td>
+<td class="rt">74.12 </td>
+</tr><tr class="s7">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">85</td>
+<td class="rt">63</td>
+<td class="rt">74.12 </td>
+</tr><tr class="s7">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">85</td>
+<td class="rt">63</td>
+<td class="rt">74.12 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_req_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_raddr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_caddr[9:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_caddr[12:10]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2r_ack</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_dma_last</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>tras_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_addr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_cmd[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2b_ack</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_refresh</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_act_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_rdok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_wrok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_pre_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>xfr_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>tras_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>trp_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>trcd_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>bank_row[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>bank_st[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>bank_st[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>next_bank_st[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>next_bank_st[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>b2x_cmd_t[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>bank_valid</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tras_cntr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_raddr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_caddr[9:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_caddr[12:10]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_sdr_dma_last</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>bank_prech_page_closed</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>tras_ok_internal</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>activate_bank</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>page_hit</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ld_trp</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ld_trcd</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_wrok_r</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_ok_r</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_rdok_r</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>b2x_cmd_r[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>tras_ok_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tras_ok_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2b_pre_ok_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_pre_ok_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2b_act_ok_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_act_ok_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2b_wrok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_ok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_rdok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_pre_ok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_act_ok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+</div>
+<div name='inst_tag_17'>
+<a name="inst_tag_17_Line"></a>
+<b>Line Coverage for Instance : <a href="mod15.html#inst_tag_17" >duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank0_fsm</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s7"><td class="lf">TOTAL</td><td></td><td>106</td><td>82</td><td>77.36</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>163</td><td>17</td><td>17</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>197</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>222</td><td>21</td><td>21</td><td>100.00</td></tr>
+<tr class="s5"><td class="lf">ALWAYS</td><td>267</td><td>59</td><td>35</td><td>59.32</td></tr>
+</table>
+<pre class="code"><br clear=all>
+162                        always @ (posedge clk)
+163        1/1                if (~reset_n) begin
+164        1/1          	 x2b_wrok_r &lt;= 1'b0;
+165        1/1          	 xfr_ok_r   &lt;= 1'b0;
+166        1/1          	 x2b_rdok_r &lt;= 1'b0;
+167        1/1          	 b2x_cmd_r  &lt;= 2'b0;
+168        1/1          	 timer0_tc_r  &lt;= 1'b0;
+169        1/1          	 tras_ok_r    &lt;= 1'b0;
+170        1/1          	 x2b_pre_ok_r &lt;= 1'b0;
+171        1/1          	 x2b_act_ok_r &lt;= 1'b0;
+172                           end
+173                           else begin
+174        1/1          	 x2b_wrok_r &lt;= x2b_wrok;
+175        1/1          	 xfr_ok_r   &lt;= xfr_ok;
+176        1/1          	 x2b_rdok_r &lt;= x2b_rdok;
+177        1/1          	 b2x_cmd_r  &lt;= b2x_cmd_t;
+178        1/1          	 timer0_tc_r &lt;= (ld_trp | ld_trcd) ? 1'b0 : timer0_tc_t;
+179        1/1          	 tras_ok_r   &lt;= tras_ok_internal;
+180        1/1          	 x2b_pre_ok_r  &lt;= x2b_pre_ok;
+181        1/1          	 x2b_act_ok_r  &lt;= x2b_act_ok;
+182                           end
+183                     
+184                      wire  x2b_wrok_t     = (`TARGET_DESIGN == `FPGA) ? x2b_wrok_r : x2b_wrok;
+185                      wire  xfr_ok_t       = (`TARGET_DESIGN == `FPGA) ? xfr_ok_r : xfr_ok;
+186                      wire  x2b_rdok_t     = (`TARGET_DESIGN == `FPGA) ? x2b_rdok_r : x2b_rdok;
+187                      wire [1:0] b2x_cmd   = (`TARGET_DESIGN == `FPGA) ? b2x_cmd_r : b2x_cmd_t;
+188                      wire  timer0_tc      = (`TARGET_DESIGN == `FPGA) ? timer0_tc_r : timer0_tc_t;
+189                      assign  tras_ok      = (`TARGET_DESIGN == `FPGA) ? tras_ok_r : tras_ok_internal;
+190                      wire  x2b_pre_ok_t   = (`TARGET_DESIGN == `FPGA) ? x2b_pre_ok_r : x2b_pre_ok;
+191                      wire  x2b_act_ok_t   = (`TARGET_DESIGN == `FPGA) ? x2b_act_ok_r : x2b_act_ok;
+192                     
+193                        /*** Timing Break Logic Added for FPGA - End****/
+194                     
+195                     
+196                        always @ (posedge clk)
+197        1/1                if (~reset_n) begin
+198        1/1          	 bank_valid &lt;= 1'b0;
+199        1/1          	 tras_cntr &lt;= 4'b0;
+200        1/1          	 timer0 &lt;= 4'b0;
+201        1/1          	 bank_st &lt;= `BANK_IDLE;
+202                           end // if (~reset_n)
+203                     
+204                           else begin
+205                     
+206        1/1          	 bank_valid &lt;= (x2b_refresh || bank_prech_page_closed) ? 1'b0 :  // force the bank status to be invalid
+207                     		       (activate_bank) ? 1'b1 : bank_valid;
+208                     
+209        1/1          	 tras_cntr &lt;= (activate_bank) ? tras_delay :
+210                     		      (~tras_ok_internal) ? tras_cntr - 4'b1 : 4'b0;
+211                     	 
+212        1/1          	 timer0 &lt;= (ld_trp) ? trp_delay :
+213                     		   (ld_trcd) ? trcd_delay :
+214                     		   (timer0 != 'h0) ? timer0 - 4'b1 : timer0;
+215                     	 
+216        1/1          	 bank_st &lt;= next_bank_st;
+217                     
+218                           end // else: !if(~reset_n)
+219                     
+220                        always @ (posedge clk) begin 
+221                     
+222        1/1                bank_row &lt;= (bank_st == `BANK_ACT) ? b2x_addr : bank_row;
+223                     
+224        1/1                if (~reset_n) begin
+225        1/1          	 l_start &lt;= 1'b0;
+226        1/1          	 l_last &lt;= 1'b0;
+227        1/1          	 l_id &lt;= 1'b0;
+228        1/1          	 l_len &lt;= 1'b0;
+229        1/1          	 l_wrap &lt;= 1'b0;
+230        1/1          	 l_write &lt;= 1'b0;
+231        1/1          	 l_raddr &lt;= 1'b0;
+232        1/1          	 l_caddr &lt;= 1'b0;
+233        1/1                   l_sdr_dma_last &lt;= 1'b0;
+234                           end
+235                           else begin
+236        1/1                  if (b2r_ack) begin
+237        1/1            	   l_start &lt;= r2b_start;
+238        1/1            	   l_last &lt;= r2b_last;
+239        1/1            	   l_id &lt;= r2b_req_id;
+240        1/1            	   l_len &lt;= r2b_len;
+241        1/1            	   l_wrap &lt;= r2b_wrap;
+242        1/1            	   l_write &lt;= r2b_write;
+243        1/1            	   l_raddr &lt;= r2b_raddr;
+244        1/1            	   l_caddr &lt;= r2b_caddr;
+245        1/1                     l_sdr_dma_last &lt;= sdr_dma_last;
+246                             end // if (b2r_ack)
+                        MISSING_ELSE
+247                           end
+248                     
+249                        end // always @ (posedge clk)
+250                        
+251                        assign tras_ok_internal = ~|tras_cntr;
+252                     
+253                        assign activate_bank = (b2x_cmd == `OP_ACT) &amp; x2b_ack;
+254                     
+255                        assign page_hit = (r2b_raddr == bank_row) ? bank_valid : 1'b0;    // its a hit only if bank is valid
+256                     
+257                        assign timer0_tc_t = ~|timer0;
+258                     
+259                        assign ld_trp = (b2x_cmd == `OP_PRE) ? x2b_ack : 1'b0;
+260                     
+261                        assign ld_trcd = (b2x_cmd == `OP_ACT) ? x2b_ack : 1'b0;
+262                        
+263                     
+264                     
+265                        always @ (*) begin
+266                     
+267        1/1                 bank_prech_page_closed = 1'b0;
+268        1/1                 b2x_req = 1'b0;
+269        1/1                 b2x_cmd_t = 2'bx;
+270        1/1                 b2r_ack = 1'b0;
+271        1/1                 b2x_addr = 13'bx;
+272        1/1                 next_bank_st = bank_st;
+273                     
+274        1/1                case (bank_st)
+275                     
+276                     	`BANK_IDLE : begin
+277        1/1          		if(`TARGET_DESIGN == `FPGA) begin // To break the timing, b2x request are generated delayed
+278        1/1          	             if (~r2b_req) begin
+279        1/1          	                next_bank_st = `BANK_IDLE;
+280                     	             end // if (~r2b_req)
+281        1/1          	             else if (page_hit) begin 
+282        1/1          	                b2r_ack = 1'b1;
+283        1/1          	                b2x_cmd_t = (r2b_write) ? `OP_WR : `OP_RD;
+284        1/1          	                next_bank_st = `BANK_XFR;  
+285                     	             end // if (page_hit)
+286                     	             else begin  // page_miss
+287        1/1          	                b2r_ack = 1'b1;
+288        1/1          	                b2x_cmd_t = `OP_PRE;
+289        1/1          	                next_bank_st = `BANK_PRE;  // bank was precharged on l_sdr_dma_last
+290                     	             end // else: !if(page_hit)
+291                     		end else begin // ASIC
+292        <font color = "red">0/1     ==>  	             if (~r2b_req) begin</font>
+293        <font color = "red">0/1     ==>                          bank_prech_page_closed = 1'b0;</font>
+294        <font color = "red">0/1     ==>  	                b2x_req = 1'b0;</font>
+295        <font color = "red">0/1     ==>  	                b2x_cmd_t = 2'bx;</font>
+296        <font color = "red">0/1     ==>  	                b2r_ack = 1'b0;</font>
+297        <font color = "red">0/1     ==>  	                b2x_addr = 13'bx;</font>
+298        <font color = "red">0/1     ==>  	                next_bank_st = `BANK_IDLE;</font>
+299                     	             end // if (~r2b_req)
+300        <font color = "red">0/1     ==>  	             else if (page_hit) begin </font>
+301        <font color = "red">0/1     ==>  	                b2x_req = (r2b_write) ? x2b_wrok_t &amp; xfr_ok_t : </font>
+302                     			                       x2b_rdok_t &amp; xfr_ok_t;
+303        <font color = "red">0/1     ==>  	                b2x_cmd_t = (r2b_write) ? `OP_WR : `OP_RD;</font>
+304        <font color = "red">0/1     ==>  	                b2r_ack = 1'b1;</font>
+305        <font color = "red">0/1     ==>  	                b2x_addr = r2b_caddr;</font>
+306        <font color = "red">0/1     ==>  	                next_bank_st = (x2b_ack) ? `BANK_IDLE : `BANK_XFR;  // in case of hit, stay here till xfr sm acks</font>
+307                     	             end // if (page_hit)
+308                     	             else begin  // page_miss
+309        <font color = "red">0/1     ==>  	                b2x_req = tras_ok &amp; x2b_pre_ok_t;</font>
+310        <font color = "red">0/1     ==>  	                b2x_cmd_t = `OP_PRE;</font>
+311        <font color = "red">0/1     ==>  	                b2r_ack = 1'b1;</font>
+312        <font color = "red">0/1     ==>  	                b2x_addr = r2b_raddr &amp; 13'hBFF;	   // Dont want to pre all banks!</font>
+313        <font color = "red">0/1     ==>  	                next_bank_st = (l_sdr_dma_last) ? `BANK_PRE : (x2b_ack) ? `BANK_ACT : `BANK_PRE;  // bank was precharged on l_sdr_dma_last</font>
+314                     	             end // else: !if(page_hit)
+315                     	        end
+316                     	end // case: `BANK_IDLE
+317                     
+318                     	`BANK_PRE : begin
+319        1/1          	   b2x_req = tras_ok &amp; x2b_pre_ok_t;
+320        1/1          	   b2x_cmd_t = `OP_PRE;
+321        1/1          	   b2r_ack = 1'b0;
+322        1/1          	   b2x_addr = l_raddr &amp; 13'hBFF;	   // Dont want to pre all banks!
+323        1/1                     bank_prech_page_closed = 1'b0;
+324        1/1          	   next_bank_st = (x2b_ack) ? `BANK_ACT : `BANK_PRE;
+325                     	end // case: `BANK_PRE
+326                     
+327                     	`BANK_ACT : begin
+328        1/1          	   b2x_req = timer0_tc &amp; x2b_act_ok_t;
+329        1/1          	   b2x_cmd_t = `OP_ACT;
+330        1/1          	   b2r_ack = 1'b0;
+331        1/1          	   b2x_addr = l_raddr;
+332        1/1                     bank_prech_page_closed = 1'b0;
+333        1/1          	   next_bank_st = (x2b_ack) ? `BANK_XFR : `BANK_ACT;
+334                     	end // case: `BANK_ACT
+335                     	
+336                     	`BANK_XFR : begin
+337        1/1          	   b2x_req = (l_write) ? timer0_tc &amp; x2b_wrok_t &amp; xfr_ok_t :
+338                     		     timer0_tc &amp; x2b_rdok_t &amp; xfr_ok_t; 
+339        1/1          	   b2x_cmd_t = (l_write) ? `OP_WR : `OP_RD;
+340        1/1          	   b2r_ack = 1'b0;
+341        1/1          	   b2x_addr = l_caddr;
+342        1/1                     bank_prech_page_closed = 1'b0;
+343        1/1          	   next_bank_st = (x2b_refresh) ? `BANK_ACT : 
+344                                               (x2b_ack &amp; l_sdr_dma_last) ? `BANK_DMA_LAST_PRE :
+345                     			  (x2b_ack) ? `BANK_IDLE : `BANK_XFR;
+346                     	end // case: `BANK_XFR
+347                     
+348                             `BANK_DMA_LAST_PRE : begin
+349        <font color = "red">0/1     ==>  	   b2x_req = tras_ok &amp; x2b_pre_ok_t;</font>
+350        <font color = "red">0/1     ==>  	   b2x_cmd_t = `OP_PRE;</font>
+351        <font color = "red">0/1     ==>  	   b2r_ack = 1'b0;</font>
+352        <font color = "red">0/1     ==>  	   b2x_addr = l_raddr &amp; 13'hBFF;	   // Dont want to pre all banks!</font>
+353        <font color = "red">0/1     ==>             bank_prech_page_closed = 1'b1;</font>
+354        <font color = "red">0/1     ==>  	   next_bank_st = (x2b_ack) ? `BANK_IDLE : `BANK_DMA_LAST_PRE;</font>
+355                     	end // case: `BANK_DMA_LAST_PRE
+                        MISSING_DEFAULT
+</pre>
+<hr>
+<a name="inst_tag_17_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod15.html#inst_tag_17" >duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank0_fsm</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">69</td>
+<td class="rt">49</td>
+<td class="rt">71.01 </td>
+</tr><tr class="s7">
+<td>Total Bits</td>
+<td class="rt">388</td>
+<td class="rt">292</td>
+<td class="rt">75.26 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">194</td>
+<td class="rt">146</td>
+<td class="rt">75.26 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">194</td>
+<td class="rt">146</td>
+<td class="rt">75.26 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Ports</td>
+<td class="rt">33</td>
+<td class="rt">25</td>
+<td class="rt">75.76 </td>
+</tr><tr class="s7">
+<td>Port Bits</td>
+<td class="rt">218</td>
+<td class="rt">166</td>
+<td class="rt">76.15 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">109</td>
+<td class="rt">83</td>
+<td class="rt">76.15 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">109</td>
+<td class="rt">83</td>
+<td class="rt">76.15 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Signals</td>
+<td class="rt">36</td>
+<td class="rt">24</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s7">
+<td>Signal Bits</td>
+<td class="rt">170</td>
+<td class="rt">126</td>
+<td class="rt">74.12 </td>
+</tr><tr class="s7">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">85</td>
+<td class="rt">63</td>
+<td class="rt">74.12 </td>
+</tr><tr class="s7">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">85</td>
+<td class="rt">63</td>
+<td class="rt">74.12 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_req_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_raddr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_caddr[9:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_caddr[12:10]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2r_ack</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_dma_last</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>tras_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_addr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_cmd[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2b_ack</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_refresh</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_act_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_rdok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_wrok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_pre_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>xfr_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>tras_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>trp_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>trcd_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>bank_row[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>bank_st[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>bank_st[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>next_bank_st[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>next_bank_st[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>b2x_cmd_t[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>bank_valid</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tras_cntr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_raddr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_caddr[9:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_caddr[12:10]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_sdr_dma_last</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>bank_prech_page_closed</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>tras_ok_internal</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>activate_bank</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>page_hit</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ld_trp</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ld_trcd</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_wrok_r</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_ok_r</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_rdok_r</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>b2x_cmd_r[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>tras_ok_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tras_ok_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2b_pre_ok_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_pre_ok_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2b_act_ok_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_act_ok_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2b_wrok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_ok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_rdok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_pre_ok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_act_ok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+</div>
+<div name='inst_tag_18'>
+<a name="inst_tag_18_Line"></a>
+<b>Line Coverage for Instance : <a href="mod15.html#inst_tag_18" >duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank1_fsm</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s7"><td class="lf">TOTAL</td><td></td><td>106</td><td>82</td><td>77.36</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>163</td><td>17</td><td>17</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>197</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>222</td><td>21</td><td>21</td><td>100.00</td></tr>
+<tr class="s5"><td class="lf">ALWAYS</td><td>267</td><td>59</td><td>35</td><td>59.32</td></tr>
+</table>
+<pre class="code"><br clear=all>
+162                        always @ (posedge clk)
+163        1/1                if (~reset_n) begin
+164        1/1          	 x2b_wrok_r &lt;= 1'b0;
+165        1/1          	 xfr_ok_r   &lt;= 1'b0;
+166        1/1          	 x2b_rdok_r &lt;= 1'b0;
+167        1/1          	 b2x_cmd_r  &lt;= 2'b0;
+168        1/1          	 timer0_tc_r  &lt;= 1'b0;
+169        1/1          	 tras_ok_r    &lt;= 1'b0;
+170        1/1          	 x2b_pre_ok_r &lt;= 1'b0;
+171        1/1          	 x2b_act_ok_r &lt;= 1'b0;
+172                           end
+173                           else begin
+174        1/1          	 x2b_wrok_r &lt;= x2b_wrok;
+175        1/1          	 xfr_ok_r   &lt;= xfr_ok;
+176        1/1          	 x2b_rdok_r &lt;= x2b_rdok;
+177        1/1          	 b2x_cmd_r  &lt;= b2x_cmd_t;
+178        1/1          	 timer0_tc_r &lt;= (ld_trp | ld_trcd) ? 1'b0 : timer0_tc_t;
+179        1/1          	 tras_ok_r   &lt;= tras_ok_internal;
+180        1/1          	 x2b_pre_ok_r  &lt;= x2b_pre_ok;
+181        1/1          	 x2b_act_ok_r  &lt;= x2b_act_ok;
+182                           end
+183                     
+184                      wire  x2b_wrok_t     = (`TARGET_DESIGN == `FPGA) ? x2b_wrok_r : x2b_wrok;
+185                      wire  xfr_ok_t       = (`TARGET_DESIGN == `FPGA) ? xfr_ok_r : xfr_ok;
+186                      wire  x2b_rdok_t     = (`TARGET_DESIGN == `FPGA) ? x2b_rdok_r : x2b_rdok;
+187                      wire [1:0] b2x_cmd   = (`TARGET_DESIGN == `FPGA) ? b2x_cmd_r : b2x_cmd_t;
+188                      wire  timer0_tc      = (`TARGET_DESIGN == `FPGA) ? timer0_tc_r : timer0_tc_t;
+189                      assign  tras_ok      = (`TARGET_DESIGN == `FPGA) ? tras_ok_r : tras_ok_internal;
+190                      wire  x2b_pre_ok_t   = (`TARGET_DESIGN == `FPGA) ? x2b_pre_ok_r : x2b_pre_ok;
+191                      wire  x2b_act_ok_t   = (`TARGET_DESIGN == `FPGA) ? x2b_act_ok_r : x2b_act_ok;
+192                     
+193                        /*** Timing Break Logic Added for FPGA - End****/
+194                     
+195                     
+196                        always @ (posedge clk)
+197        1/1                if (~reset_n) begin
+198        1/1          	 bank_valid &lt;= 1'b0;
+199        1/1          	 tras_cntr &lt;= 4'b0;
+200        1/1          	 timer0 &lt;= 4'b0;
+201        1/1          	 bank_st &lt;= `BANK_IDLE;
+202                           end // if (~reset_n)
+203                     
+204                           else begin
+205                     
+206        1/1          	 bank_valid &lt;= (x2b_refresh || bank_prech_page_closed) ? 1'b0 :  // force the bank status to be invalid
+207                     		       (activate_bank) ? 1'b1 : bank_valid;
+208                     
+209        1/1          	 tras_cntr &lt;= (activate_bank) ? tras_delay :
+210                     		      (~tras_ok_internal) ? tras_cntr - 4'b1 : 4'b0;
+211                     	 
+212        1/1          	 timer0 &lt;= (ld_trp) ? trp_delay :
+213                     		   (ld_trcd) ? trcd_delay :
+214                     		   (timer0 != 'h0) ? timer0 - 4'b1 : timer0;
+215                     	 
+216        1/1          	 bank_st &lt;= next_bank_st;
+217                     
+218                           end // else: !if(~reset_n)
+219                     
+220                        always @ (posedge clk) begin 
+221                     
+222        1/1                bank_row &lt;= (bank_st == `BANK_ACT) ? b2x_addr : bank_row;
+223                     
+224        1/1                if (~reset_n) begin
+225        1/1          	 l_start &lt;= 1'b0;
+226        1/1          	 l_last &lt;= 1'b0;
+227        1/1          	 l_id &lt;= 1'b0;
+228        1/1          	 l_len &lt;= 1'b0;
+229        1/1          	 l_wrap &lt;= 1'b0;
+230        1/1          	 l_write &lt;= 1'b0;
+231        1/1          	 l_raddr &lt;= 1'b0;
+232        1/1          	 l_caddr &lt;= 1'b0;
+233        1/1                   l_sdr_dma_last &lt;= 1'b0;
+234                           end
+235                           else begin
+236        1/1                  if (b2r_ack) begin
+237        1/1            	   l_start &lt;= r2b_start;
+238        1/1            	   l_last &lt;= r2b_last;
+239        1/1            	   l_id &lt;= r2b_req_id;
+240        1/1            	   l_len &lt;= r2b_len;
+241        1/1            	   l_wrap &lt;= r2b_wrap;
+242        1/1            	   l_write &lt;= r2b_write;
+243        1/1            	   l_raddr &lt;= r2b_raddr;
+244        1/1            	   l_caddr &lt;= r2b_caddr;
+245        1/1                     l_sdr_dma_last &lt;= sdr_dma_last;
+246                             end // if (b2r_ack)
+                        MISSING_ELSE
+247                           end
+248                     
+249                        end // always @ (posedge clk)
+250                        
+251                        assign tras_ok_internal = ~|tras_cntr;
+252                     
+253                        assign activate_bank = (b2x_cmd == `OP_ACT) &amp; x2b_ack;
+254                     
+255                        assign page_hit = (r2b_raddr == bank_row) ? bank_valid : 1'b0;    // its a hit only if bank is valid
+256                     
+257                        assign timer0_tc_t = ~|timer0;
+258                     
+259                        assign ld_trp = (b2x_cmd == `OP_PRE) ? x2b_ack : 1'b0;
+260                     
+261                        assign ld_trcd = (b2x_cmd == `OP_ACT) ? x2b_ack : 1'b0;
+262                        
+263                     
+264                     
+265                        always @ (*) begin
+266                     
+267        1/1                 bank_prech_page_closed = 1'b0;
+268        1/1                 b2x_req = 1'b0;
+269        1/1                 b2x_cmd_t = 2'bx;
+270        1/1                 b2r_ack = 1'b0;
+271        1/1                 b2x_addr = 13'bx;
+272        1/1                 next_bank_st = bank_st;
+273                     
+274        1/1                case (bank_st)
+275                     
+276                     	`BANK_IDLE : begin
+277        1/1          		if(`TARGET_DESIGN == `FPGA) begin // To break the timing, b2x request are generated delayed
+278        1/1          	             if (~r2b_req) begin
+279        1/1          	                next_bank_st = `BANK_IDLE;
+280                     	             end // if (~r2b_req)
+281        1/1          	             else if (page_hit) begin 
+282        1/1          	                b2r_ack = 1'b1;
+283        1/1          	                b2x_cmd_t = (r2b_write) ? `OP_WR : `OP_RD;
+284        1/1          	                next_bank_st = `BANK_XFR;  
+285                     	             end // if (page_hit)
+286                     	             else begin  // page_miss
+287        1/1          	                b2r_ack = 1'b1;
+288        1/1          	                b2x_cmd_t = `OP_PRE;
+289        1/1          	                next_bank_st = `BANK_PRE;  // bank was precharged on l_sdr_dma_last
+290                     	             end // else: !if(page_hit)
+291                     		end else begin // ASIC
+292        <font color = "red">0/1     ==>  	             if (~r2b_req) begin</font>
+293        <font color = "red">0/1     ==>                          bank_prech_page_closed = 1'b0;</font>
+294        <font color = "red">0/1     ==>  	                b2x_req = 1'b0;</font>
+295        <font color = "red">0/1     ==>  	                b2x_cmd_t = 2'bx;</font>
+296        <font color = "red">0/1     ==>  	                b2r_ack = 1'b0;</font>
+297        <font color = "red">0/1     ==>  	                b2x_addr = 13'bx;</font>
+298        <font color = "red">0/1     ==>  	                next_bank_st = `BANK_IDLE;</font>
+299                     	             end // if (~r2b_req)
+300        <font color = "red">0/1     ==>  	             else if (page_hit) begin </font>
+301        <font color = "red">0/1     ==>  	                b2x_req = (r2b_write) ? x2b_wrok_t &amp; xfr_ok_t : </font>
+302                     			                       x2b_rdok_t &amp; xfr_ok_t;
+303        <font color = "red">0/1     ==>  	                b2x_cmd_t = (r2b_write) ? `OP_WR : `OP_RD;</font>
+304        <font color = "red">0/1     ==>  	                b2r_ack = 1'b1;</font>
+305        <font color = "red">0/1     ==>  	                b2x_addr = r2b_caddr;</font>
+306        <font color = "red">0/1     ==>  	                next_bank_st = (x2b_ack) ? `BANK_IDLE : `BANK_XFR;  // in case of hit, stay here till xfr sm acks</font>
+307                     	             end // if (page_hit)
+308                     	             else begin  // page_miss
+309        <font color = "red">0/1     ==>  	                b2x_req = tras_ok &amp; x2b_pre_ok_t;</font>
+310        <font color = "red">0/1     ==>  	                b2x_cmd_t = `OP_PRE;</font>
+311        <font color = "red">0/1     ==>  	                b2r_ack = 1'b1;</font>
+312        <font color = "red">0/1     ==>  	                b2x_addr = r2b_raddr &amp; 13'hBFF;	   // Dont want to pre all banks!</font>
+313        <font color = "red">0/1     ==>  	                next_bank_st = (l_sdr_dma_last) ? `BANK_PRE : (x2b_ack) ? `BANK_ACT : `BANK_PRE;  // bank was precharged on l_sdr_dma_last</font>
+314                     	             end // else: !if(page_hit)
+315                     	        end
+316                     	end // case: `BANK_IDLE
+317                     
+318                     	`BANK_PRE : begin
+319        1/1          	   b2x_req = tras_ok &amp; x2b_pre_ok_t;
+320        1/1          	   b2x_cmd_t = `OP_PRE;
+321        1/1          	   b2r_ack = 1'b0;
+322        1/1          	   b2x_addr = l_raddr &amp; 13'hBFF;	   // Dont want to pre all banks!
+323        1/1                     bank_prech_page_closed = 1'b0;
+324        1/1          	   next_bank_st = (x2b_ack) ? `BANK_ACT : `BANK_PRE;
+325                     	end // case: `BANK_PRE
+326                     
+327                     	`BANK_ACT : begin
+328        1/1          	   b2x_req = timer0_tc &amp; x2b_act_ok_t;
+329        1/1          	   b2x_cmd_t = `OP_ACT;
+330        1/1          	   b2r_ack = 1'b0;
+331        1/1          	   b2x_addr = l_raddr;
+332        1/1                     bank_prech_page_closed = 1'b0;
+333        1/1          	   next_bank_st = (x2b_ack) ? `BANK_XFR : `BANK_ACT;
+334                     	end // case: `BANK_ACT
+335                     	
+336                     	`BANK_XFR : begin
+337        1/1          	   b2x_req = (l_write) ? timer0_tc &amp; x2b_wrok_t &amp; xfr_ok_t :
+338                     		     timer0_tc &amp; x2b_rdok_t &amp; xfr_ok_t; 
+339        1/1          	   b2x_cmd_t = (l_write) ? `OP_WR : `OP_RD;
+340        1/1          	   b2r_ack = 1'b0;
+341        1/1          	   b2x_addr = l_caddr;
+342        1/1                     bank_prech_page_closed = 1'b0;
+343        1/1          	   next_bank_st = (x2b_refresh) ? `BANK_ACT : 
+344                                               (x2b_ack &amp; l_sdr_dma_last) ? `BANK_DMA_LAST_PRE :
+345                     			  (x2b_ack) ? `BANK_IDLE : `BANK_XFR;
+346                     	end // case: `BANK_XFR
+347                     
+348                             `BANK_DMA_LAST_PRE : begin
+349        <font color = "red">0/1     ==>  	   b2x_req = tras_ok &amp; x2b_pre_ok_t;</font>
+350        <font color = "red">0/1     ==>  	   b2x_cmd_t = `OP_PRE;</font>
+351        <font color = "red">0/1     ==>  	   b2r_ack = 1'b0;</font>
+352        <font color = "red">0/1     ==>  	   b2x_addr = l_raddr &amp; 13'hBFF;	   // Dont want to pre all banks!</font>
+353        <font color = "red">0/1     ==>             bank_prech_page_closed = 1'b1;</font>
+354        <font color = "red">0/1     ==>  	   next_bank_st = (x2b_ack) ? `BANK_IDLE : `BANK_DMA_LAST_PRE;</font>
+355                     	end // case: `BANK_DMA_LAST_PRE
+                        MISSING_DEFAULT
+</pre>
+<hr>
+<a name="inst_tag_18_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod15.html#inst_tag_18" >duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank1_fsm</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">69</td>
+<td class="rt">49</td>
+<td class="rt">71.01 </td>
+</tr><tr class="s7">
+<td>Total Bits</td>
+<td class="rt">388</td>
+<td class="rt">292</td>
+<td class="rt">75.26 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">194</td>
+<td class="rt">146</td>
+<td class="rt">75.26 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">194</td>
+<td class="rt">146</td>
+<td class="rt">75.26 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Ports</td>
+<td class="rt">33</td>
+<td class="rt">25</td>
+<td class="rt">75.76 </td>
+</tr><tr class="s7">
+<td>Port Bits</td>
+<td class="rt">218</td>
+<td class="rt">166</td>
+<td class="rt">76.15 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">109</td>
+<td class="rt">83</td>
+<td class="rt">76.15 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">109</td>
+<td class="rt">83</td>
+<td class="rt">76.15 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Signals</td>
+<td class="rt">36</td>
+<td class="rt">24</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s7">
+<td>Signal Bits</td>
+<td class="rt">170</td>
+<td class="rt">126</td>
+<td class="rt">74.12 </td>
+</tr><tr class="s7">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">85</td>
+<td class="rt">63</td>
+<td class="rt">74.12 </td>
+</tr><tr class="s7">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">85</td>
+<td class="rt">63</td>
+<td class="rt">74.12 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_req_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_raddr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_caddr[9:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_caddr[12:10]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2r_ack</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_dma_last</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>tras_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_addr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_cmd[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2b_ack</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_refresh</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_act_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_rdok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_wrok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_pre_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>xfr_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>tras_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>trp_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>trcd_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>bank_row[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>bank_st[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>bank_st[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>next_bank_st[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>next_bank_st[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>b2x_cmd_t[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>bank_valid</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tras_cntr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_raddr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_caddr[9:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_caddr[12:10]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_sdr_dma_last</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>bank_prech_page_closed</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>tras_ok_internal</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>activate_bank</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>page_hit</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ld_trp</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ld_trcd</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_wrok_r</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_ok_r</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_rdok_r</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>b2x_cmd_r[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>tras_ok_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tras_ok_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2b_pre_ok_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_pre_ok_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2b_act_ok_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_act_ok_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2b_wrok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_ok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_rdok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_pre_ok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_act_ok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+</div>
+<div name='inst_tag_19'>
+<a name="inst_tag_19_Line"></a>
+<b>Line Coverage for Instance : <a href="mod15.html#inst_tag_19" >duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank2_fsm</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s7"><td class="lf">TOTAL</td><td></td><td>106</td><td>82</td><td>77.36</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>163</td><td>17</td><td>17</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>197</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>222</td><td>21</td><td>21</td><td>100.00</td></tr>
+<tr class="s5"><td class="lf">ALWAYS</td><td>267</td><td>59</td><td>35</td><td>59.32</td></tr>
+</table>
+<pre class="code"><br clear=all>
+162                        always @ (posedge clk)
+163        1/1                if (~reset_n) begin
+164        1/1          	 x2b_wrok_r &lt;= 1'b0;
+165        1/1          	 xfr_ok_r   &lt;= 1'b0;
+166        1/1          	 x2b_rdok_r &lt;= 1'b0;
+167        1/1          	 b2x_cmd_r  &lt;= 2'b0;
+168        1/1          	 timer0_tc_r  &lt;= 1'b0;
+169        1/1          	 tras_ok_r    &lt;= 1'b0;
+170        1/1          	 x2b_pre_ok_r &lt;= 1'b0;
+171        1/1          	 x2b_act_ok_r &lt;= 1'b0;
+172                           end
+173                           else begin
+174        1/1          	 x2b_wrok_r &lt;= x2b_wrok;
+175        1/1          	 xfr_ok_r   &lt;= xfr_ok;
+176        1/1          	 x2b_rdok_r &lt;= x2b_rdok;
+177        1/1          	 b2x_cmd_r  &lt;= b2x_cmd_t;
+178        1/1          	 timer0_tc_r &lt;= (ld_trp | ld_trcd) ? 1'b0 : timer0_tc_t;
+179        1/1          	 tras_ok_r   &lt;= tras_ok_internal;
+180        1/1          	 x2b_pre_ok_r  &lt;= x2b_pre_ok;
+181        1/1          	 x2b_act_ok_r  &lt;= x2b_act_ok;
+182                           end
+183                     
+184                      wire  x2b_wrok_t     = (`TARGET_DESIGN == `FPGA) ? x2b_wrok_r : x2b_wrok;
+185                      wire  xfr_ok_t       = (`TARGET_DESIGN == `FPGA) ? xfr_ok_r : xfr_ok;
+186                      wire  x2b_rdok_t     = (`TARGET_DESIGN == `FPGA) ? x2b_rdok_r : x2b_rdok;
+187                      wire [1:0] b2x_cmd   = (`TARGET_DESIGN == `FPGA) ? b2x_cmd_r : b2x_cmd_t;
+188                      wire  timer0_tc      = (`TARGET_DESIGN == `FPGA) ? timer0_tc_r : timer0_tc_t;
+189                      assign  tras_ok      = (`TARGET_DESIGN == `FPGA) ? tras_ok_r : tras_ok_internal;
+190                      wire  x2b_pre_ok_t   = (`TARGET_DESIGN == `FPGA) ? x2b_pre_ok_r : x2b_pre_ok;
+191                      wire  x2b_act_ok_t   = (`TARGET_DESIGN == `FPGA) ? x2b_act_ok_r : x2b_act_ok;
+192                     
+193                        /*** Timing Break Logic Added for FPGA - End****/
+194                     
+195                     
+196                        always @ (posedge clk)
+197        1/1                if (~reset_n) begin
+198        1/1          	 bank_valid &lt;= 1'b0;
+199        1/1          	 tras_cntr &lt;= 4'b0;
+200        1/1          	 timer0 &lt;= 4'b0;
+201        1/1          	 bank_st &lt;= `BANK_IDLE;
+202                           end // if (~reset_n)
+203                     
+204                           else begin
+205                     
+206        1/1          	 bank_valid &lt;= (x2b_refresh || bank_prech_page_closed) ? 1'b0 :  // force the bank status to be invalid
+207                     		       (activate_bank) ? 1'b1 : bank_valid;
+208                     
+209        1/1          	 tras_cntr &lt;= (activate_bank) ? tras_delay :
+210                     		      (~tras_ok_internal) ? tras_cntr - 4'b1 : 4'b0;
+211                     	 
+212        1/1          	 timer0 &lt;= (ld_trp) ? trp_delay :
+213                     		   (ld_trcd) ? trcd_delay :
+214                     		   (timer0 != 'h0) ? timer0 - 4'b1 : timer0;
+215                     	 
+216        1/1          	 bank_st &lt;= next_bank_st;
+217                     
+218                           end // else: !if(~reset_n)
+219                     
+220                        always @ (posedge clk) begin 
+221                     
+222        1/1                bank_row &lt;= (bank_st == `BANK_ACT) ? b2x_addr : bank_row;
+223                     
+224        1/1                if (~reset_n) begin
+225        1/1          	 l_start &lt;= 1'b0;
+226        1/1          	 l_last &lt;= 1'b0;
+227        1/1          	 l_id &lt;= 1'b0;
+228        1/1          	 l_len &lt;= 1'b0;
+229        1/1          	 l_wrap &lt;= 1'b0;
+230        1/1          	 l_write &lt;= 1'b0;
+231        1/1          	 l_raddr &lt;= 1'b0;
+232        1/1          	 l_caddr &lt;= 1'b0;
+233        1/1                   l_sdr_dma_last &lt;= 1'b0;
+234                           end
+235                           else begin
+236        1/1                  if (b2r_ack) begin
+237        1/1            	   l_start &lt;= r2b_start;
+238        1/1            	   l_last &lt;= r2b_last;
+239        1/1            	   l_id &lt;= r2b_req_id;
+240        1/1            	   l_len &lt;= r2b_len;
+241        1/1            	   l_wrap &lt;= r2b_wrap;
+242        1/1            	   l_write &lt;= r2b_write;
+243        1/1            	   l_raddr &lt;= r2b_raddr;
+244        1/1            	   l_caddr &lt;= r2b_caddr;
+245        1/1                     l_sdr_dma_last &lt;= sdr_dma_last;
+246                             end // if (b2r_ack)
+                        MISSING_ELSE
+247                           end
+248                     
+249                        end // always @ (posedge clk)
+250                        
+251                        assign tras_ok_internal = ~|tras_cntr;
+252                     
+253                        assign activate_bank = (b2x_cmd == `OP_ACT) &amp; x2b_ack;
+254                     
+255                        assign page_hit = (r2b_raddr == bank_row) ? bank_valid : 1'b0;    // its a hit only if bank is valid
+256                     
+257                        assign timer0_tc_t = ~|timer0;
+258                     
+259                        assign ld_trp = (b2x_cmd == `OP_PRE) ? x2b_ack : 1'b0;
+260                     
+261                        assign ld_trcd = (b2x_cmd == `OP_ACT) ? x2b_ack : 1'b0;
+262                        
+263                     
+264                     
+265                        always @ (*) begin
+266                     
+267        1/1                 bank_prech_page_closed = 1'b0;
+268        1/1                 b2x_req = 1'b0;
+269        1/1                 b2x_cmd_t = 2'bx;
+270        1/1                 b2r_ack = 1'b0;
+271        1/1                 b2x_addr = 13'bx;
+272        1/1                 next_bank_st = bank_st;
+273                     
+274        1/1                case (bank_st)
+275                     
+276                     	`BANK_IDLE : begin
+277        1/1          		if(`TARGET_DESIGN == `FPGA) begin // To break the timing, b2x request are generated delayed
+278        1/1          	             if (~r2b_req) begin
+279        1/1          	                next_bank_st = `BANK_IDLE;
+280                     	             end // if (~r2b_req)
+281        1/1          	             else if (page_hit) begin 
+282        1/1          	                b2r_ack = 1'b1;
+283        1/1          	                b2x_cmd_t = (r2b_write) ? `OP_WR : `OP_RD;
+284        1/1          	                next_bank_st = `BANK_XFR;  
+285                     	             end // if (page_hit)
+286                     	             else begin  // page_miss
+287        1/1          	                b2r_ack = 1'b1;
+288        1/1          	                b2x_cmd_t = `OP_PRE;
+289        1/1          	                next_bank_st = `BANK_PRE;  // bank was precharged on l_sdr_dma_last
+290                     	             end // else: !if(page_hit)
+291                     		end else begin // ASIC
+292        <font color = "red">0/1     ==>  	             if (~r2b_req) begin</font>
+293        <font color = "red">0/1     ==>                          bank_prech_page_closed = 1'b0;</font>
+294        <font color = "red">0/1     ==>  	                b2x_req = 1'b0;</font>
+295        <font color = "red">0/1     ==>  	                b2x_cmd_t = 2'bx;</font>
+296        <font color = "red">0/1     ==>  	                b2r_ack = 1'b0;</font>
+297        <font color = "red">0/1     ==>  	                b2x_addr = 13'bx;</font>
+298        <font color = "red">0/1     ==>  	                next_bank_st = `BANK_IDLE;</font>
+299                     	             end // if (~r2b_req)
+300        <font color = "red">0/1     ==>  	             else if (page_hit) begin </font>
+301        <font color = "red">0/1     ==>  	                b2x_req = (r2b_write) ? x2b_wrok_t &amp; xfr_ok_t : </font>
+302                     			                       x2b_rdok_t &amp; xfr_ok_t;
+303        <font color = "red">0/1     ==>  	                b2x_cmd_t = (r2b_write) ? `OP_WR : `OP_RD;</font>
+304        <font color = "red">0/1     ==>  	                b2r_ack = 1'b1;</font>
+305        <font color = "red">0/1     ==>  	                b2x_addr = r2b_caddr;</font>
+306        <font color = "red">0/1     ==>  	                next_bank_st = (x2b_ack) ? `BANK_IDLE : `BANK_XFR;  // in case of hit, stay here till xfr sm acks</font>
+307                     	             end // if (page_hit)
+308                     	             else begin  // page_miss
+309        <font color = "red">0/1     ==>  	                b2x_req = tras_ok &amp; x2b_pre_ok_t;</font>
+310        <font color = "red">0/1     ==>  	                b2x_cmd_t = `OP_PRE;</font>
+311        <font color = "red">0/1     ==>  	                b2r_ack = 1'b1;</font>
+312        <font color = "red">0/1     ==>  	                b2x_addr = r2b_raddr &amp; 13'hBFF;	   // Dont want to pre all banks!</font>
+313        <font color = "red">0/1     ==>  	                next_bank_st = (l_sdr_dma_last) ? `BANK_PRE : (x2b_ack) ? `BANK_ACT : `BANK_PRE;  // bank was precharged on l_sdr_dma_last</font>
+314                     	             end // else: !if(page_hit)
+315                     	        end
+316                     	end // case: `BANK_IDLE
+317                     
+318                     	`BANK_PRE : begin
+319        1/1          	   b2x_req = tras_ok &amp; x2b_pre_ok_t;
+320        1/1          	   b2x_cmd_t = `OP_PRE;
+321        1/1          	   b2r_ack = 1'b0;
+322        1/1          	   b2x_addr = l_raddr &amp; 13'hBFF;	   // Dont want to pre all banks!
+323        1/1                     bank_prech_page_closed = 1'b0;
+324        1/1          	   next_bank_st = (x2b_ack) ? `BANK_ACT : `BANK_PRE;
+325                     	end // case: `BANK_PRE
+326                     
+327                     	`BANK_ACT : begin
+328        1/1          	   b2x_req = timer0_tc &amp; x2b_act_ok_t;
+329        1/1          	   b2x_cmd_t = `OP_ACT;
+330        1/1          	   b2r_ack = 1'b0;
+331        1/1          	   b2x_addr = l_raddr;
+332        1/1                     bank_prech_page_closed = 1'b0;
+333        1/1          	   next_bank_st = (x2b_ack) ? `BANK_XFR : `BANK_ACT;
+334                     	end // case: `BANK_ACT
+335                     	
+336                     	`BANK_XFR : begin
+337        1/1          	   b2x_req = (l_write) ? timer0_tc &amp; x2b_wrok_t &amp; xfr_ok_t :
+338                     		     timer0_tc &amp; x2b_rdok_t &amp; xfr_ok_t; 
+339        1/1          	   b2x_cmd_t = (l_write) ? `OP_WR : `OP_RD;
+340        1/1          	   b2r_ack = 1'b0;
+341        1/1          	   b2x_addr = l_caddr;
+342        1/1                     bank_prech_page_closed = 1'b0;
+343        1/1          	   next_bank_st = (x2b_refresh) ? `BANK_ACT : 
+344                                               (x2b_ack &amp; l_sdr_dma_last) ? `BANK_DMA_LAST_PRE :
+345                     			  (x2b_ack) ? `BANK_IDLE : `BANK_XFR;
+346                     	end // case: `BANK_XFR
+347                     
+348                             `BANK_DMA_LAST_PRE : begin
+349        <font color = "red">0/1     ==>  	   b2x_req = tras_ok &amp; x2b_pre_ok_t;</font>
+350        <font color = "red">0/1     ==>  	   b2x_cmd_t = `OP_PRE;</font>
+351        <font color = "red">0/1     ==>  	   b2r_ack = 1'b0;</font>
+352        <font color = "red">0/1     ==>  	   b2x_addr = l_raddr &amp; 13'hBFF;	   // Dont want to pre all banks!</font>
+353        <font color = "red">0/1     ==>             bank_prech_page_closed = 1'b1;</font>
+354        <font color = "red">0/1     ==>  	   next_bank_st = (x2b_ack) ? `BANK_IDLE : `BANK_DMA_LAST_PRE;</font>
+355                     	end // case: `BANK_DMA_LAST_PRE
+                        MISSING_DEFAULT
+</pre>
+<hr>
+<a name="inst_tag_19_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod15.html#inst_tag_19" >duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank2_fsm</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">69</td>
+<td class="rt">49</td>
+<td class="rt">71.01 </td>
+</tr><tr class="s7">
+<td>Total Bits</td>
+<td class="rt">388</td>
+<td class="rt">292</td>
+<td class="rt">75.26 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">194</td>
+<td class="rt">146</td>
+<td class="rt">75.26 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">194</td>
+<td class="rt">146</td>
+<td class="rt">75.26 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Ports</td>
+<td class="rt">33</td>
+<td class="rt">25</td>
+<td class="rt">75.76 </td>
+</tr><tr class="s7">
+<td>Port Bits</td>
+<td class="rt">218</td>
+<td class="rt">166</td>
+<td class="rt">76.15 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">109</td>
+<td class="rt">83</td>
+<td class="rt">76.15 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">109</td>
+<td class="rt">83</td>
+<td class="rt">76.15 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Signals</td>
+<td class="rt">36</td>
+<td class="rt">24</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s7">
+<td>Signal Bits</td>
+<td class="rt">170</td>
+<td class="rt">126</td>
+<td class="rt">74.12 </td>
+</tr><tr class="s7">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">85</td>
+<td class="rt">63</td>
+<td class="rt">74.12 </td>
+</tr><tr class="s7">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">85</td>
+<td class="rt">63</td>
+<td class="rt">74.12 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_req_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_raddr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_caddr[9:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_caddr[12:10]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2r_ack</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_dma_last</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>tras_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_addr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_cmd[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2b_ack</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_refresh</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_act_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_rdok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_wrok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_pre_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>xfr_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>tras_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>trp_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>trcd_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>bank_row[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>bank_st[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>bank_st[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>next_bank_st[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>next_bank_st[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>b2x_cmd_t[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>bank_valid</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tras_cntr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_raddr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_caddr[9:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_caddr[12:10]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_sdr_dma_last</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>bank_prech_page_closed</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>tras_ok_internal</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>activate_bank</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>page_hit</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ld_trp</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ld_trcd</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_wrok_r</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_ok_r</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_rdok_r</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>b2x_cmd_r[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>tras_ok_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tras_ok_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2b_pre_ok_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_pre_ok_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2b_act_ok_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_act_ok_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2b_wrok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_ok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_rdok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_pre_ok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_act_ok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+</div>
+<div name='inst_tag_20'>
+<a name="inst_tag_20_Line"></a>
+<b>Line Coverage for Instance : <a href="mod15.html#inst_tag_20" >duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank3_fsm</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s7"><td class="lf">TOTAL</td><td></td><td>106</td><td>82</td><td>77.36</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>163</td><td>17</td><td>17</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>197</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>222</td><td>21</td><td>21</td><td>100.00</td></tr>
+<tr class="s5"><td class="lf">ALWAYS</td><td>267</td><td>59</td><td>35</td><td>59.32</td></tr>
+</table>
+<pre class="code"><br clear=all>
+162                        always @ (posedge clk)
+163        1/1                if (~reset_n) begin
+164        1/1          	 x2b_wrok_r &lt;= 1'b0;
+165        1/1          	 xfr_ok_r   &lt;= 1'b0;
+166        1/1          	 x2b_rdok_r &lt;= 1'b0;
+167        1/1          	 b2x_cmd_r  &lt;= 2'b0;
+168        1/1          	 timer0_tc_r  &lt;= 1'b0;
+169        1/1          	 tras_ok_r    &lt;= 1'b0;
+170        1/1          	 x2b_pre_ok_r &lt;= 1'b0;
+171        1/1          	 x2b_act_ok_r &lt;= 1'b0;
+172                           end
+173                           else begin
+174        1/1          	 x2b_wrok_r &lt;= x2b_wrok;
+175        1/1          	 xfr_ok_r   &lt;= xfr_ok;
+176        1/1          	 x2b_rdok_r &lt;= x2b_rdok;
+177        1/1          	 b2x_cmd_r  &lt;= b2x_cmd_t;
+178        1/1          	 timer0_tc_r &lt;= (ld_trp | ld_trcd) ? 1'b0 : timer0_tc_t;
+179        1/1          	 tras_ok_r   &lt;= tras_ok_internal;
+180        1/1          	 x2b_pre_ok_r  &lt;= x2b_pre_ok;
+181        1/1          	 x2b_act_ok_r  &lt;= x2b_act_ok;
+182                           end
+183                     
+184                      wire  x2b_wrok_t     = (`TARGET_DESIGN == `FPGA) ? x2b_wrok_r : x2b_wrok;
+185                      wire  xfr_ok_t       = (`TARGET_DESIGN == `FPGA) ? xfr_ok_r : xfr_ok;
+186                      wire  x2b_rdok_t     = (`TARGET_DESIGN == `FPGA) ? x2b_rdok_r : x2b_rdok;
+187                      wire [1:0] b2x_cmd   = (`TARGET_DESIGN == `FPGA) ? b2x_cmd_r : b2x_cmd_t;
+188                      wire  timer0_tc      = (`TARGET_DESIGN == `FPGA) ? timer0_tc_r : timer0_tc_t;
+189                      assign  tras_ok      = (`TARGET_DESIGN == `FPGA) ? tras_ok_r : tras_ok_internal;
+190                      wire  x2b_pre_ok_t   = (`TARGET_DESIGN == `FPGA) ? x2b_pre_ok_r : x2b_pre_ok;
+191                      wire  x2b_act_ok_t   = (`TARGET_DESIGN == `FPGA) ? x2b_act_ok_r : x2b_act_ok;
+192                     
+193                        /*** Timing Break Logic Added for FPGA - End****/
+194                     
+195                     
+196                        always @ (posedge clk)
+197        1/1                if (~reset_n) begin
+198        1/1          	 bank_valid &lt;= 1'b0;
+199        1/1          	 tras_cntr &lt;= 4'b0;
+200        1/1          	 timer0 &lt;= 4'b0;
+201        1/1          	 bank_st &lt;= `BANK_IDLE;
+202                           end // if (~reset_n)
+203                     
+204                           else begin
+205                     
+206        1/1          	 bank_valid &lt;= (x2b_refresh || bank_prech_page_closed) ? 1'b0 :  // force the bank status to be invalid
+207                     		       (activate_bank) ? 1'b1 : bank_valid;
+208                     
+209        1/1          	 tras_cntr &lt;= (activate_bank) ? tras_delay :
+210                     		      (~tras_ok_internal) ? tras_cntr - 4'b1 : 4'b0;
+211                     	 
+212        1/1          	 timer0 &lt;= (ld_trp) ? trp_delay :
+213                     		   (ld_trcd) ? trcd_delay :
+214                     		   (timer0 != 'h0) ? timer0 - 4'b1 : timer0;
+215                     	 
+216        1/1          	 bank_st &lt;= next_bank_st;
+217                     
+218                           end // else: !if(~reset_n)
+219                     
+220                        always @ (posedge clk) begin 
+221                     
+222        1/1                bank_row &lt;= (bank_st == `BANK_ACT) ? b2x_addr : bank_row;
+223                     
+224        1/1                if (~reset_n) begin
+225        1/1          	 l_start &lt;= 1'b0;
+226        1/1          	 l_last &lt;= 1'b0;
+227        1/1          	 l_id &lt;= 1'b0;
+228        1/1          	 l_len &lt;= 1'b0;
+229        1/1          	 l_wrap &lt;= 1'b0;
+230        1/1          	 l_write &lt;= 1'b0;
+231        1/1          	 l_raddr &lt;= 1'b0;
+232        1/1          	 l_caddr &lt;= 1'b0;
+233        1/1                   l_sdr_dma_last &lt;= 1'b0;
+234                           end
+235                           else begin
+236        1/1                  if (b2r_ack) begin
+237        1/1            	   l_start &lt;= r2b_start;
+238        1/1            	   l_last &lt;= r2b_last;
+239        1/1            	   l_id &lt;= r2b_req_id;
+240        1/1            	   l_len &lt;= r2b_len;
+241        1/1            	   l_wrap &lt;= r2b_wrap;
+242        1/1            	   l_write &lt;= r2b_write;
+243        1/1            	   l_raddr &lt;= r2b_raddr;
+244        1/1            	   l_caddr &lt;= r2b_caddr;
+245        1/1                     l_sdr_dma_last &lt;= sdr_dma_last;
+246                             end // if (b2r_ack)
+                        MISSING_ELSE
+247                           end
+248                     
+249                        end // always @ (posedge clk)
+250                        
+251                        assign tras_ok_internal = ~|tras_cntr;
+252                     
+253                        assign activate_bank = (b2x_cmd == `OP_ACT) &amp; x2b_ack;
+254                     
+255                        assign page_hit = (r2b_raddr == bank_row) ? bank_valid : 1'b0;    // its a hit only if bank is valid
+256                     
+257                        assign timer0_tc_t = ~|timer0;
+258                     
+259                        assign ld_trp = (b2x_cmd == `OP_PRE) ? x2b_ack : 1'b0;
+260                     
+261                        assign ld_trcd = (b2x_cmd == `OP_ACT) ? x2b_ack : 1'b0;
+262                        
+263                     
+264                     
+265                        always @ (*) begin
+266                     
+267        1/1                 bank_prech_page_closed = 1'b0;
+268        1/1                 b2x_req = 1'b0;
+269        1/1                 b2x_cmd_t = 2'bx;
+270        1/1                 b2r_ack = 1'b0;
+271        1/1                 b2x_addr = 13'bx;
+272        1/1                 next_bank_st = bank_st;
+273                     
+274        1/1                case (bank_st)
+275                     
+276                     	`BANK_IDLE : begin
+277        1/1          		if(`TARGET_DESIGN == `FPGA) begin // To break the timing, b2x request are generated delayed
+278        1/1          	             if (~r2b_req) begin
+279        1/1          	                next_bank_st = `BANK_IDLE;
+280                     	             end // if (~r2b_req)
+281        1/1          	             else if (page_hit) begin 
+282        1/1          	                b2r_ack = 1'b1;
+283        1/1          	                b2x_cmd_t = (r2b_write) ? `OP_WR : `OP_RD;
+284        1/1          	                next_bank_st = `BANK_XFR;  
+285                     	             end // if (page_hit)
+286                     	             else begin  // page_miss
+287        1/1          	                b2r_ack = 1'b1;
+288        1/1          	                b2x_cmd_t = `OP_PRE;
+289        1/1          	                next_bank_st = `BANK_PRE;  // bank was precharged on l_sdr_dma_last
+290                     	             end // else: !if(page_hit)
+291                     		end else begin // ASIC
+292        <font color = "red">0/1     ==>  	             if (~r2b_req) begin</font>
+293        <font color = "red">0/1     ==>                          bank_prech_page_closed = 1'b0;</font>
+294        <font color = "red">0/1     ==>  	                b2x_req = 1'b0;</font>
+295        <font color = "red">0/1     ==>  	                b2x_cmd_t = 2'bx;</font>
+296        <font color = "red">0/1     ==>  	                b2r_ack = 1'b0;</font>
+297        <font color = "red">0/1     ==>  	                b2x_addr = 13'bx;</font>
+298        <font color = "red">0/1     ==>  	                next_bank_st = `BANK_IDLE;</font>
+299                     	             end // if (~r2b_req)
+300        <font color = "red">0/1     ==>  	             else if (page_hit) begin </font>
+301        <font color = "red">0/1     ==>  	                b2x_req = (r2b_write) ? x2b_wrok_t &amp; xfr_ok_t : </font>
+302                     			                       x2b_rdok_t &amp; xfr_ok_t;
+303        <font color = "red">0/1     ==>  	                b2x_cmd_t = (r2b_write) ? `OP_WR : `OP_RD;</font>
+304        <font color = "red">0/1     ==>  	                b2r_ack = 1'b1;</font>
+305        <font color = "red">0/1     ==>  	                b2x_addr = r2b_caddr;</font>
+306        <font color = "red">0/1     ==>  	                next_bank_st = (x2b_ack) ? `BANK_IDLE : `BANK_XFR;  // in case of hit, stay here till xfr sm acks</font>
+307                     	             end // if (page_hit)
+308                     	             else begin  // page_miss
+309        <font color = "red">0/1     ==>  	                b2x_req = tras_ok &amp; x2b_pre_ok_t;</font>
+310        <font color = "red">0/1     ==>  	                b2x_cmd_t = `OP_PRE;</font>
+311        <font color = "red">0/1     ==>  	                b2r_ack = 1'b1;</font>
+312        <font color = "red">0/1     ==>  	                b2x_addr = r2b_raddr &amp; 13'hBFF;	   // Dont want to pre all banks!</font>
+313        <font color = "red">0/1     ==>  	                next_bank_st = (l_sdr_dma_last) ? `BANK_PRE : (x2b_ack) ? `BANK_ACT : `BANK_PRE;  // bank was precharged on l_sdr_dma_last</font>
+314                     	             end // else: !if(page_hit)
+315                     	        end
+316                     	end // case: `BANK_IDLE
+317                     
+318                     	`BANK_PRE : begin
+319        1/1          	   b2x_req = tras_ok &amp; x2b_pre_ok_t;
+320        1/1          	   b2x_cmd_t = `OP_PRE;
+321        1/1          	   b2r_ack = 1'b0;
+322        1/1          	   b2x_addr = l_raddr &amp; 13'hBFF;	   // Dont want to pre all banks!
+323        1/1                     bank_prech_page_closed = 1'b0;
+324        1/1          	   next_bank_st = (x2b_ack) ? `BANK_ACT : `BANK_PRE;
+325                     	end // case: `BANK_PRE
+326                     
+327                     	`BANK_ACT : begin
+328        1/1          	   b2x_req = timer0_tc &amp; x2b_act_ok_t;
+329        1/1          	   b2x_cmd_t = `OP_ACT;
+330        1/1          	   b2r_ack = 1'b0;
+331        1/1          	   b2x_addr = l_raddr;
+332        1/1                     bank_prech_page_closed = 1'b0;
+333        1/1          	   next_bank_st = (x2b_ack) ? `BANK_XFR : `BANK_ACT;
+334                     	end // case: `BANK_ACT
+335                     	
+336                     	`BANK_XFR : begin
+337        1/1          	   b2x_req = (l_write) ? timer0_tc &amp; x2b_wrok_t &amp; xfr_ok_t :
+338                     		     timer0_tc &amp; x2b_rdok_t &amp; xfr_ok_t; 
+339        1/1          	   b2x_cmd_t = (l_write) ? `OP_WR : `OP_RD;
+340        1/1          	   b2r_ack = 1'b0;
+341        1/1          	   b2x_addr = l_caddr;
+342        1/1                     bank_prech_page_closed = 1'b0;
+343        1/1          	   next_bank_st = (x2b_refresh) ? `BANK_ACT : 
+344                                               (x2b_ack &amp; l_sdr_dma_last) ? `BANK_DMA_LAST_PRE :
+345                     			  (x2b_ack) ? `BANK_IDLE : `BANK_XFR;
+346                     	end // case: `BANK_XFR
+347                     
+348                             `BANK_DMA_LAST_PRE : begin
+349        <font color = "red">0/1     ==>  	   b2x_req = tras_ok &amp; x2b_pre_ok_t;</font>
+350        <font color = "red">0/1     ==>  	   b2x_cmd_t = `OP_PRE;</font>
+351        <font color = "red">0/1     ==>  	   b2r_ack = 1'b0;</font>
+352        <font color = "red">0/1     ==>  	   b2x_addr = l_raddr &amp; 13'hBFF;	   // Dont want to pre all banks!</font>
+353        <font color = "red">0/1     ==>             bank_prech_page_closed = 1'b1;</font>
+354        <font color = "red">0/1     ==>  	   next_bank_st = (x2b_ack) ? `BANK_IDLE : `BANK_DMA_LAST_PRE;</font>
+355                     	end // case: `BANK_DMA_LAST_PRE
+                        MISSING_DEFAULT
+</pre>
+<hr>
+<a name="inst_tag_20_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod15.html#inst_tag_20" >duv_top.u_dut.u_sdrc_core.u_bank_ctl.bank3_fsm</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">69</td>
+<td class="rt">49</td>
+<td class="rt">71.01 </td>
+</tr><tr class="s7">
+<td>Total Bits</td>
+<td class="rt">388</td>
+<td class="rt">292</td>
+<td class="rt">75.26 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">194</td>
+<td class="rt">146</td>
+<td class="rt">75.26 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">194</td>
+<td class="rt">146</td>
+<td class="rt">75.26 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Ports</td>
+<td class="rt">33</td>
+<td class="rt">25</td>
+<td class="rt">75.76 </td>
+</tr><tr class="s7">
+<td>Port Bits</td>
+<td class="rt">218</td>
+<td class="rt">166</td>
+<td class="rt">76.15 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">109</td>
+<td class="rt">83</td>
+<td class="rt">76.15 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">109</td>
+<td class="rt">83</td>
+<td class="rt">76.15 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Signals</td>
+<td class="rt">36</td>
+<td class="rt">24</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s7">
+<td>Signal Bits</td>
+<td class="rt">170</td>
+<td class="rt">126</td>
+<td class="rt">74.12 </td>
+</tr><tr class="s7">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">85</td>
+<td class="rt">63</td>
+<td class="rt">74.12 </td>
+</tr><tr class="s7">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">85</td>
+<td class="rt">63</td>
+<td class="rt">74.12 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_req_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_raddr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_caddr[9:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_caddr[12:10]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2r_ack</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_dma_last</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>tras_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_addr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_cmd[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2b_ack</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_refresh</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_act_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_rdok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_wrok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_pre_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>xfr_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>tras_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>trp_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>trcd_delay[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>bank_row[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>bank_st[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>bank_st[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>next_bank_st[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>next_bank_st[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_len[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_len[6:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>b2x_cmd_t[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>bank_valid</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tras_cntr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_raddr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_caddr[9:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>l_caddr[12:10]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>l_sdr_dma_last</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>bank_prech_page_closed</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>tras_ok_internal</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>activate_bank</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>page_hit</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ld_trp</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ld_trcd</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_wrok_r</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_ok_r</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_rdok_r</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>b2x_cmd_r[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>tras_ok_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>tras_ok_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2b_pre_ok_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_pre_ok_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2b_act_ok_r[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_act_ok_r[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2b_wrok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_ok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_rdok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>timer0_tc</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_pre_ok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x2b_act_ok_t</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_17">
+    <li>
+      <a href="#inst_tag_17_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_17_Toggle">Toggle</a>    </li>
+  </ul>
+  <ul name="inst_tag_18">
+    <li>
+      <a href="#inst_tag_18_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_18_Toggle">Toggle</a>    </li>
+  </ul>
+  <ul name="inst_tag_19">
+    <li>
+      <a href="#inst_tag_19_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_19_Toggle">Toggle</a>    </li>
+  </ul>
+  <ul name="inst_tag_20">
+    <li>
+      <a href="#inst_tag_20_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_20_Toggle">Toggle</a>    </li>
+  </ul>
+  <ul name="tag_sdrc_bank_fsm">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>
