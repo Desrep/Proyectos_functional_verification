@@ -227,7 +227,7 @@ class sdr_scoreboard extends uvm_scoreboard;
           if(col_expected_buff[sdr_pkt.addr]== col_decode_buff[sdr_pkt.addr]) begin 
            // `uvm_info(get_type_name(),$sformatf("**********:: Col match :: ***********"),UVM_LOW)
       //  `uvm_info(get_type_name(),$sformatf("Addr: %0h",sdr_pkt.addr),UVM_LOW)
-       //   `uvm_info(get_type_name(),$sformatf("Expected Col Addr: %0h Actual Col Addr: %0h",sdr_pkt.colum_add_in,sdr_pkt.colum_add_out),UVM_LOW)
+         // `uvm_info(get_type_name(),$sformatf("Expected Col Addr: %0h Actual Col Addr: %0h",col_expected_buff[sdr_pkt.addr],col_decode_buff[sdr_pkt.addr]),UVM_LOW)
               col_check++;
         end
         if(col_expected_buff[sdr_pkt.addr]!= col_decode_buff[sdr_pkt.addr]) begin 
@@ -245,7 +245,7 @@ class sdr_scoreboard extends uvm_scoreboard;
           if(col_expected_buff[sdr_pkt.addr]== col_decode_buff[sdr_pkt.addr]) begin 
             //   `uvm_info(get_type_name(),$sformatf("*******:: Col match :: *******"),UVM_LOW)
      //   `uvm_info(get_type_name(),$sformatf("Addr: %0h",sdr_pkt.addr),UVM_LOW)
-     //     `uvm_info(get_type_name(),$sformatf("Expected Col Addr: %0h Actual Col Addr: %0h",sdr_pkt_col.colum_add_in,sdr_pkt_col.colum_add_out),UVM_LOW)
+         // `uvm_info(get_type_name(),$sformatf("Expected Col Addr: %0h Actual Col Addr: %0h",col_expected_buff[sdr_pkt.addr],col_decode_buff[sdr_pkt.addr]),UVM_LOW)
             col_check++;
         end
           if(col_expected_buff[sdr_pkt.addr] != col_decode_buff[sdr_pkt.addr]) begin 
@@ -264,7 +264,7 @@ class sdr_scoreboard extends uvm_scoreboard;
         if(bank_expected_buff[sdr_pkt.addr] == bank_decode_buff[sdr_pkt.addr]) begin 
            //   `uvm_info(get_type_name(),$sformatf("***** :: Bank match :: ******"),UVM_LOW)
       //  `uvm_info(get_type_name(),$sformatf("Addr: %0h",sdr_pkt.addr),UVM_LOW)
-     //     `uvm_info(get_type_name(),$sformatf("Expected bank Addr: %0h Actual bank Addr: %0h",sdr_pkt.bank_add_in,sdr_pkt.bank_add_out),UVM_LOW)
+         // `uvm_info(get_type_name(),$sformatf("Expected bank Addr: %0h Actual bank Addr: %0h",bank_expected_buff[sdr_pkt.addr],bank_decode_buff[sdr_pkt.addr]),UVM_LOW)
            bank_check++;
         end
         if(bank_expected_buff[sdr_pkt.addr] != bank_decode_buff[sdr_pkt.addr]) begin 
