@@ -1,11 +1,12 @@
-//-------------------------------------------------------------------------
-//						sdr_seq_item - www.verificationguide.com 
-//-------------------------------------------------------------------------
+//Reference https://verificationguide.com/uvm/uvm-testbench-architecture/
+
+
+
 
 class sdr_seq_item extends uvm_sequence_item;
-  //---------------------------------------
-  //data and control fields
-  //---------------------------------------
+  
+  
+  
   rand bit [25:0] addr;
   rand bit       wr_en;
   rand bit       rd_en;
@@ -31,9 +32,9 @@ class sdr_seq_item extends uvm_sequence_item;
   rand bit [2:0] cfg_sdr_rfmax;
   rand bit [1:0] cfg_colbits;
  
-  //---------------------------------------
-  //Utility and Field macros
-  //---------------------------------------
+  
+  
+  
   `uvm_object_utils_begin(sdr_seq_item)
     `uvm_field_int(addr,UVM_ALL_ON)
     `uvm_field_int(wr_en,UVM_ALL_ON)
@@ -53,9 +54,9 @@ class sdr_seq_item extends uvm_sequence_item;
      `uvm_field_int(cfg_colbits,UVM_ALL_ON)
   `uvm_object_utils_end
   
-  //---------------------------------------
-  //Constructor
-  //---------------------------------------
+  
+  
+  
   function new(string name = "sdr_seq_item");
     super.new(name);
   endfunction

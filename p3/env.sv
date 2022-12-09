@@ -1,30 +1,31 @@
-//-------------------------------------------------------------------------
-//						sdr_env - www.verificationguide.com
-//-------------------------------------------------------------------------
+//Reference https://verificationguide.com/uvm/uvm-testbench-architecture/
+
+
+
 
 
 
 class sdr_model_env extends uvm_env;
   
-  //---------------------------------------
-  // agent and scoreboard instance
-  //---------------------------------------
-  sdr_agent      sdr_agnt; //datos
-  sdr_agent_passive sdr_agntp; //fila
-  sdr_agent_passive_col sdr_agntpc;//columna
+  
+  
+  
+  sdr_agent      sdr_agnt; 
+  sdr_agent_passive sdr_agntp; 
+  sdr_agent_passive_col sdr_agntpc;
   sdr_scoreboard sdr_scb;
   `uvm_component_utils(sdr_model_env)
   
-  //--------------------------------------- 
-  // constructor
-  //---------------------------------------
+  
+  
+  
   function new(string name, uvm_component parent);
     super.new(name, parent);
   endfunction : new
 
-  //---------------------------------------
-  // build_phase - crate the components
-  //---------------------------------------
+  
+  
+  
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     
@@ -37,9 +38,9 @@ class sdr_model_env extends uvm_env;
     uvm_config_db#(uvm_active_passive_enum)::set(this, "sdr_agntpc", "is_active", UVM_PASSIVE);
   endfunction : build_phase
   
-  //---------------------------------------
-  // connect_phase - connecting monitor and scoreboard port
-  //---------------------------------------
+  
+  
+  
   function void connect_phase(uvm_phase phase);
     sdr_agnt.monitor.item_collected_port.connect(sdr_scb.item_collected_export_data);
     sdr_agntp.monitor.item_collected_port.connect(sdr_scb.item_collected_export_decode);

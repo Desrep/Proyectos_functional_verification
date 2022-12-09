@@ -16,5 +16,5 @@
 `include "wr_rd_test.sv"
 `include "tb_top.sv"
 `include "coverage.sv"
-//`include "assertions.sv"
+
 

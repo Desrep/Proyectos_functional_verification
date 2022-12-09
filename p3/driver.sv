@@ -1,32 +1,34 @@
+//Reference https://verificationguide.com/uvm/uvm-testbench-architecture/
+
 
 
 class sdr_driver extends uvm_driver #(sdr_seq_item);
 
-  //--------------------------------------- 
-  // Interface
-  //--------------------------------------- 
+  
+  
+  
   virtual sdr_if vif;
   `uvm_component_utils(sdr_driver)
     
-  //--------------------------------------- 
-  // Constructor
-  //--------------------------------------- 
+  
+  
+  
   function new (string name, uvm_component parent);
     super.new(name, parent);
   endfunction : new
 
-  //--------------------------------------- 
-  // build phase
-  //---------------------------------------
+  
+  
+  
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
      if(!uvm_config_db#(virtual sdr_if)::get(this, "", "vif", vif))
        `uvm_fatal("NO_VIF",{"virtual interface must be set for: ",get_full_name(),".vif"});
   endfunction: build_phase
 
-  //---------------------------------------  
-  // run phase
-  //---------------------------------------  
+  
+  
+  
   virtual task run_phase(uvm_phase phase);
     forever begin
       seq_item_port.get_next_item(req);
@@ -36,10 +38,10 @@ class sdr_driver extends uvm_driver #(sdr_seq_item);
     end
   endtask : run_phase
   
-  //---------------------------------------
-  // drive - transaction level to signal level
-  // drives the value's from seq_item to interface signals
-  //---------------------------------------
+  
+  
+  
+  
 
   
     virtual task write_read_sdrm(sdr_seq_item req);
@@ -55,7 +57,7 @@ class sdr_driver extends uvm_driver #(sdr_seq_item);
       		vif.wb_we_i         = 1;
       		vif.wb_sel_i        = 4'b1111;
       		vif.wb_addr_i       = req.addr+i;
-        	vif.wb_dat_i = req.wdata; // Drive to DUT
+        	vif.wb_dat_i = req.wdata; 
           while(vif.wb_ack_o == 1'b0) begin
             @ (posedge vif.sys_clk);
           	end
@@ -98,7 +100,7 @@ class sdr_driver extends uvm_driver #(sdr_seq_item);
       		vif.wb_we_i         = 1;
       		vif.wb_sel_i        = 4'b1111;
       		vif.wb_addr_i       = req.addr+i;
-        	vif.wb_dat_i = req.wdata; // Drive to DUT
+        	vif.wb_dat_i = req.wdata; 
           while(vif.wb_ack_o == 1'b0) begin
             @ (posedge vif.sys_clk);
           	end
@@ -145,7 +147,7 @@ class sdr_driver extends uvm_driver #(sdr_seq_item);
       
   endtask
   
-    virtual task sdrm_init();  // Reset method
+    virtual task sdrm_init();  
 	vif.wb_addr_i = 0;
    	vif.wb_dat_i  = 0;
    	vif.wb_sel_i  = 4'h0;
@@ -172,11 +174,11 @@ class sdr_driver extends uvm_driver #(sdr_seq_item);
         #10;
   endtask
   
-   virtual task sdrm_reset();  // Reset method
+   virtual task sdrm_reset();  
 	#100
-	vif.RESETN    = 1'h0;  // Applying reset
+	vif.RESETN    = 1'h0;  
   	#100
-	vif.RESETN    = 1'h1; ;// Releasing reset
+	vif.RESETN    = 1'h1; ;
   	#100;
      
    wait(vif.sdr_init_done == 1); 
