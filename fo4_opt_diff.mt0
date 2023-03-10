@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='R-2020.12-SP2 linux64' PARAM_COUNT=2
+.TITLE '* optimizacion de wp para un inversor'
+ index            p1               bestratio        tpdr            
+                  tpdf             tpd              diff            
+                  temper           alter#          
+ 6                 1.578e+03          4.3821         1.585e-10      
+                   1.585e-10        1.585e-10       -9.586e-20      
+                    70.0000        1               
