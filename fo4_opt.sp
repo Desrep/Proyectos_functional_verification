@@ -35,13 +35,22 @@ X5 gnd vdd e f inv P='P1' M=256 * load on load
 *----------------------------------------------------------------------
 * Optimization setup
 *----------------------------------------------------------------------
-.param P1=optrange(2040,520,4600) * busca de 520nm a 4600nm
+
+****************************************************************
+* Cuando usa tpd como RESULTS descomente el de arriba
+*para diff descomente el de abajo
+*Comentar el que nose esta usando
+**************************************************************
+.param P1=optrange(820,520,2160) * busca de 520nm a 4600nm *Para tpd
+*.param P1=optrange(2040,520,4600) * busca de 520nm a 4600nm  *para diff
+**************************************************************
+
 .model optmod opt itropt=100 * maximum of 30 iterations
 .measure bestratio param='P1/360' * compute best P/N ratio
 *----------------------------------------------------------------------
 * Stimulus
 *----------------------------------------------------------------------
-.tran 0.1ps 30ns SWEEP OPTIMIZE=optrange RESULTS=diff MODEL=optmod
+.tran 0.1ps 30ns SWEEP OPTIMIZE=optrange RESULTS=tpd MODEL=optmod
 .measure tpdr * rising propagation delay
 + TRIG v(c) VAL='SUPPLY/2' FALL=1
 + TARG v(d) VAL='SUPPLY/2' RISE=1
