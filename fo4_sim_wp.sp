@@ -39,7 +39,7 @@ X5 gnd vdd e f inv M='H**4' * load on load
 *----------------------------------------------------------------------
 * Stimulus
 *----------------------------------------------------------------------
-.tran 0.1ps 30ns sweep wp 520 1600 5
+.tran 0.1ps 30ns sweep wp 520 4600 5
 .measure tpdr * rising prop delay
 + TRIG v(c) VAL='SUPPLY/2' FALL=1
 + TARG v(d) VAL='SUPPLY/2' RISE=1
@@ -54,3 +54,6 @@ X5 gnd vdd e f inv M='H**4' * load on load
 + TRIG v(d) VAL='0.8*SUPPLY' FALL=1
 + TARG v(d) VAL='0.2*SUPPLY' FALL=1
 .end
+
+.plot tpdr tpd tpdf trise tfall
+
